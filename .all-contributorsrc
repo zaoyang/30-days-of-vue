@@ -1,0 +1,33 @@
+{
+  "projectName": "thirty-days-of-vue",
+  "projectOwner": "fullstackvue",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 140,
+  "commit": true,
+  "contributorTemplate": "<a href='<%= contributor.profile %>'><img src='<%= contributor.avatar_url %>' width='<%= options.imageSize %>px;'/><h4 align='center'><a href='<%= contributor.profile %>'><%= contributor.name %></a></h4>",
+  "contributorsPerLine": 5,
+  "contributors": [
+    {
+      "login": "djirdehh",
+      "name": "Hassan Djirdeh",
+      "avatar_url": "https://pbs.twimg.com/profile_images/973750616487993344/fqDSTrb__400x400.jpg",
+      "profile": "https://twitter.com/djirdehh",
+      "contributions": [
+        "blog"
+      ]
+    },
+    {
+      "login": "jashmenn",
+      "name": "Nate Murray",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4318?v=4",
+      "profile": "https://newline.co",
+      "contributions": [
+        "blog"
+      ]
+    }
+  ]
+}
