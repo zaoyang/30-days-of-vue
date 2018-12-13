@@ -101,7 +101,7 @@ To have the `greeting` data value be presented in the template, we’ll first ne
 
 We’ll now be able to display the value of the greeting property in our Vue instance on the HTML template. To bind data values as the text content of elements, we’ll use the [Mustache Syntax](https://vuejs.org/v2/guide/syntax.html#Text):
 
-```javascript
+```html
 <html>
   <body>
     <div id="app">
