@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>{{ greeting }}</h2>
+      <p>by {{ user }} who lives in {{ city }}</p>
+      <img v-bind:src="cityImage" />
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

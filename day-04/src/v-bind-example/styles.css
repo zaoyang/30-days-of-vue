@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   background: #f3f5f6;
 }
@@ -19,4 +18,8 @@ h2 {
 p {
   margin-top: 0;
   font-size: 18px;
+}
+
+img {
+  max-width: 400px;
 }
