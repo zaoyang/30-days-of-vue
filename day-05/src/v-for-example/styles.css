@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  background: #f3f5f6;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+}
+
+li {
+  font-size: 20px;
+}

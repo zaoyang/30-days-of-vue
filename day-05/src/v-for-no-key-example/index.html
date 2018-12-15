@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="number in numbers">
+          <p>{{ number }}</p>
+          <input placeholder="type something..."/>
+        </li>
+      </ul>
+      <button @click="shuffle">Shuffle!</button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
