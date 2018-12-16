@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            {{name}}
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>{{company.name}}</p>
+            <p>"{{company.catchPhrase}}"</p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">{{email}}</a>
+        </footer>
+      </div>
+      </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
