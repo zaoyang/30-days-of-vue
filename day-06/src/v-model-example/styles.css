@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+  background: #f3f5f6;
+}
+
+#app {
+  height: 100%;
+  max-width: 400px;
+  padding-left: 20px;
+  padding-top: 0px;
+}
+
+#app .field {
+  padding: 10px 0;
+}

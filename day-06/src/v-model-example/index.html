@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="field">
+        <label class="label">Name</label>
+        <input v-model="name"
+              class="input"
+              type="text"
+              placeholder="Text input" />
+      </div>
+
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="select">
+          <select v-model="subject">
+            <option disabled value="">Select dropdown</option>
+            <option>Engineering</option>
+            <option>Computer Science</option>
+            <option>Biology</option>
+            <option>Other...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="checkbox">
+          <input v-model="termsAndConditions" type="checkbox" />
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="radio">
+          <input type="radio" value="Yes" v-model="yesOrNo" /> Yes
+        </label>
+        <label class="radio"> 
+          <input type="radio" value="No" v-model="yesOrNo" /> No
+        </label>
+      </div>
+
+      <div class="field">
+        <button class="button is-info" @click="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
