@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="card">
+        <header class="card-header card-header-title">
+          <span>Original:</span> {{ message }}
+        </header>
+        
+        <header class="card-header card-header-title">
+          <span>Reversed:</span> {{ reverseString(message) }}
+        </header>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
