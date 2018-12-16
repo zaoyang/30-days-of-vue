@@ -1,6 +1,6 @@
 # Methods & Computed Properties
 
-Phew! We made it to week two (relatively unscathed)! Through this point, we've talked through some of the basic features of the Vue instance (data reactivity), template binding (directives), and the Vue Devtools.
+Phew! We made it to week two (relatively unscathed)! Through this point, we've talked through some of the basic features of the Vue instance (data reactivity), template binding (Mustache syntax/directives), and the Vue Devtools.
 
 In this article, we're going to look at two specific properties of the Vue instance - __Methods__ and __Computed Properties__.
 
@@ -144,4 +144,4 @@ A good rule of thumb to follow:
 - Use __methods__ when responding to changes (e.g. clicking a button, submitting a form, etc.) or to run explicit functionality change within the instance (e.g. have a method be called from a lifecycle hook).
 - Use __computed__ properties for data manipulation (e.g. create a sorted array from an unsorted array in the instance).
 
-We’ll be stopping here for today! We’ll be taking a look at another instance property called __watchers__ tomorrow.
+We’ll be stopping here for today and be taking a look at another instance property called __watchers__ tomorrow.

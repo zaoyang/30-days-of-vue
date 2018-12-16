@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  padding-top: 10px;
+  background: #e6ecf1;
+}
+
+#app {
+  height: 100%;
+  max-width: 400px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#app .field {
+  padding: 10px 0;
+}
+
+#app .error {
+  color: red;
+  display: block;
+}
