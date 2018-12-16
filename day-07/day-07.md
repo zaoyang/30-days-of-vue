@@ -18,7 +18,7 @@ When successfully installed on to a browser, we'll be able to see the icon avail
 
 For applications that use Vue, the browser menu won’t be greyed out. However, we’ll be notified that we’re unable to use the extension if the app is in production or the Devtools is explicitly disabled:
 
-![This app is \[chess.com\](https://www.chess.com/)!](./public/assets/vue-devtools-prod.png)
+![This app is chess.com!](./public/assets/vue-devtools-prod.png)
 
 Finally, for applications we develop locally and don’t have the Devtools explicitly disabled, we’ll be notified that Vue is detected and we’re able to use the extension:
 
@@ -51,7 +51,7 @@ In the "Components" tab, we're able to survey all the components (i.e. instances
 To better recognize how the **v-model** directive allows for _two-way_ data binding, we can:
 
 -   Change something directly in our form and verify that `data` of our `<Root>` instance, in the Vue Devtools, is automatically updated.
--   Change the value of a `data` property directly on the Vue Devtools and verify that our template re-renders to show the updated value.
+-   Change the value of a `data` property directly in the Vue Devtools and verify that our template re-renders to show the updated value.
 
 Here's a GIF displaying just that.
 
@@ -59,6 +59,6 @@ Here's a GIF displaying just that.
 
 By being able to directly update our application and monitor data changes (and vice-versa), the Vue Devtools is an especially useful tool for debugging Vue apps.
 
-The Vue Devtools also offers a lot more capabilities like being able to track Custom Events, inspect the props (data) being passed from one component to its child and conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we start to investigate the relevant concept in the course.
+The Vue Devtools offers a lot more capabilities like being able to track Custom Events, inspect the props (data) being passed from one component to its child, and conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we start to investigate the relevant concepts in the course.
 
 Congrats on getting through the first week! In the next coming sections, we’ll be taking a deeper dive into the Vue instance.
