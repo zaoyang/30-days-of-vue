@@ -1,4 +1,4 @@
-# Methods & Computed Properties
+# Methods and Computed Properties
 
 Phew! We made it to week two (relatively unscathed)! Through this point, we've talked through some of the basic features of the Vue instance (data reactivity), template binding (Mustache syntax/directives), and the Vue Devtools.
 
