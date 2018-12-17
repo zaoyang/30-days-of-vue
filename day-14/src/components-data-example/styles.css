@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  padding-top: 10px;
+  background: #e6ecf1;
+}
+
+#app {
+  height: 100%;
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+}
