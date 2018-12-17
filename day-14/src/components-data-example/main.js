@@ -16,9 +16,6 @@ let counterTwo = {
     <button class="button is-primary" @click="counter++">
       You clicked me {{counter}} times
     </button>
-    <button class="button is-primary" @click="counter++">
-      You clicked me {{counter}} times
-    </button>
   `,
   data() {
     return {
