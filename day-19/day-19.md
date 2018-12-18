@@ -31,7 +31,7 @@ export default {
 
 `numbers` is the array stored within the `data()` function of `NumberComponent`. What if `numbers` needed to be accessed from _another_ component? For example, we may need a component to be responsible in displaying `numbers` (like above) and another to manipulate the value of `numbers`. 
 
-To see how `numbers` can be accessed between two components, we'll replicate what `NumberComponent` is doing with a `ParentComponent` and a `ChildComponent`. We’ll have `ParentComponent` pass the `numbers` array to `ChildComponent` which will render this value. As we’ve seen from before, Vue gives us the ability to use **props** to pass data from the parent down to the child.
+To see how `numbers` can be accessed between two components, we'll replicate what `NumberComponent` is doing with a `ParentComponent` and a `ChildComponent`. We’ll have `ParentComponent` pass the `numbers` array to `ChildComponent` where `ChildComponent` will render the `numbers` value. As we’ve seen from before, Vue gives us the ability to use **props** to pass data from the parent down to the child.
 
 ### ParentComponent.vue
 
@@ -94,7 +94,7 @@ What if we needed to find a way to communicate information in the opposite direc
 
 ![](./public/assets/custom-events-diagram.png)
 
-We'll use custom events to have `ChildComponent` be able to facilitate a change to the `ParentComponent`'s numbers data property.
+We'll use custom events to have `ChildComponent` be able to facilitate a change to the `ParentComponent`'s `numbers` data property.
 
 ### ChildComponent.vue
 
@@ -283,4 +283,4 @@ This is the primary reason as to why the Vue style-guide states that [**an Event
 
 I> Instead of using an external Vue instance (an EventBus), application wide custom events can also be propagated with the help of the application root instance itself - [this.$root](https://vuejs.org/v2/guide/components-edge-cases.html#Accessing-the-Root-Instance). Using either the app root instance or an EventBus to facilitate communication is not a recommended approach to handling application data.
 
-We’ll be looking at how a simple global store can be a much more useful method to handling application data tomorrow. We'll see you tomorrow!
+We’ll be looking at how a simple global store can be a much more useful method to handling application data tomorrow. See you then!
