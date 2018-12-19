@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Nunito:600");
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(to bottom right, #024, #402);
+}
+
+.container {
+  height: 100%;
+  font-family: Cinzel Decorative, sans-serif;
+}
+
+.pokemon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon .card {
+  max-width: 400px;
+  border-radius: 20px;
+  border: 1px solid #ffdd56;
+  padding-bottom: 0.5rem;
+
+  background: none;
+}
+
+.pokemon .card .card-image {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+
+.pokemon .hp {
+  position: relative;
+}
+
+.pokemon .hp::before {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 50%;
+  height: 5px;
+  border-radius: 3px;
+  content: " ";
+  transform: translateX(-50%);
+}
+
+.pokemon .card--charizard {
+  border-color: #ffdd56;
+}
+
+.pokemon .card--blastoise {
+  border-color: #72d0fb;
+}
+
+.pokemon .card--venusaur {
+  border-color: #ff3860;
+}
+
+.pokemon .card--charizard .card-image-container {
+  position: absolute;
+  width: 500px;
+  top: -100px;
+  left: -39px;
+}
+
+.pokemon .card--charizard .hp::before {
+  background: linear-gradient(to right, #a86e3c, #f5ae67);
+}
+
+.pokemon .card--blastoise .card-image-container {
+  position: absolute;
+  width: 375px;
+  top: 0px;
+  left: 25px;
+}
+
+.pokemon .card--blastoise .hp::before {
+  background: linear-gradient(to right, #c3fcff, #00a5f8);
+}
+
+.pokemon .card--venusaur .card-image-container {
+  position: absolute;
+  width: 515px;
+  top: 20px;
+  left: -55px;
+}
+
+.pokemon .card--venusaur .hp::before {
+  background: linear-gradient(to right, #92df00, #4ea13f);
+}
+
+.pokemon .card-content .main {
+  padding-bottom: 30px;
+}
+
+.pokemon .card-content .title {
+  letter-spacing: 4px;
+}
+
+.pokemon .card-content .stats {
+  font-size: 20px;
+}
+
+.pokemon .card-content .stats .tag {
+  border-radius: 10px;
+}
+
+.pokemon .card-content .stats .center-column {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.pokemon-links {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+.pokemon-links a {
+  font-weight: 600;
+  margin: 0 40px;
+}
+
+.pokemon-links a:hover {
+  color: #fff;
+}

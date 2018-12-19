@@ -74,4 +74,4 @@ Did you happen to enjoy this course and are interested in going deeper with Vue,
 
 All the above are all done within the context of building **much larger applications** as well. Check out the book page at [www.fullstack.io/vue](https://www.fullstack.io/vue) for more details.
 
-With that said, congrats on making it to day 30! We look forward to see what you all accomplish with Vue 🎉.
+With that said, congrats on making it to day 30! We look forward to see what you accomplish with Vue 🎉.
