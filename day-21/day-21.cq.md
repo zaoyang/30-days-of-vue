@@ -30,9 +30,9 @@ Facebook’s implementation is not the exclusive option. Since Facebook started 
 
 Within the Vue community, however, [Vuex](https://github.com/vuejs/vuex) is the most-widely used, flux-like, state management library.
 
-I> __Plug for fullstackvue__
-I>
-I> We discuss this material in-depth with regards Flux, using Vuex, and even integrating Vuex to a large server-persisted shopping-cart app. Check it out at [fullstack.io/vue](https://www.fullstack.io/vue/).
+>  __Plug for fullstackvue__
+>
+> We discuss this material in-depth with regards Flux, using Vuex, and even integrating Vuex to a large server-persisted shopping-cart app. Check it out at [fullstack.io/vue](https://www.fullstack.io/vue/).
 
 ## Vuex
 
