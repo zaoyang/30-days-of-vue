@@ -29,7 +29,7 @@ describe('App', () => {
 For the upcoming tests that we want to write, we'll want to import and bring in the `vue` library into our test file:
 
 ```javascript
-import Vue from "vue";
+import Vue from 'vue';
 
 describe('App', () => {
   // Tests go here
@@ -39,8 +39,8 @@ describe('App', () => {
 Since we’re testing the `App` component, we'll want to bring that into our workspace as well:
 
 ```javascript
-import Vue from "vue";
-import App from "@/App";
+import Vue from 'vue';
+import App from '@/App';
 
 describe('App', () => {
   // Tests go here
@@ -52,8 +52,8 @@ describe('App', () => {
 Let's write our first test. Our first test will cover the first two assumptions listed above - the header title and input should have the correct initial text content and placeholder respectively.
 
 ```javascript
-import Vue from "vue";
-import App from "@/App";
+import Vue from 'vue';
+import App from '@/App';
 
 describe('App', () => {
   it('should render correct contents', () => {
@@ -65,8 +65,8 @@ describe('App', () => {
 Since we'll be asserting the rendered DOM within this particular test, we'll need to have our component be in the __mounted__ state. There are a few ways of achieving this but one way would involve first extending the `App` module like so:
 
 ```javascript
-import Vue from "vue";
-import App from "@/App";
+import Vue from 'vue';
+import App from '@/App';
 
 describe('App', () => {
   it('should render correct contents', () => {
@@ -80,8 +80,8 @@ describe('App', () => {
 With our constructor extended, we can now mount our component with the `$mount()` method:
 
 ```javascript
-import Vue from "vue";
-import App from "@/App";
+import Vue from 'vue';
+import App from '@/App';
 
 describe('App', () => {
   it('should render correct contents', () => {
@@ -94,17 +94,17 @@ describe('App', () => {
 `vm` will now reference the mounted component that we can use to access the rendered HTML. The component’s HTML can be accessed with `vm.$el`. With the component's HTML available to us, we’ll use the standard JavaScript [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) method to return the appropriate elements and assert their text content and placeholder.
 
 ```javascript
-import Vue from "vue";
-import App from "@/App";
+import Vue from 'vue';
+import App from '@/App';
 
 describe('App', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(App);
     const vm = new Constructor().$mount();
 
-    expect(vm.$el.querySelector(".title").textContent).toBe("todos");
-    expect(vm.$el.querySelector(".new-todo").placeholder).toBe(
-      "What needs to be done?"
+    expect(vm.$el.querySelector('.title').textContent).toBe('todos');
+    expect(vm.$el.querySelector('.new-todo').placeholder).toBe(
+      'What needs to be done?'
     );
   });
 });
