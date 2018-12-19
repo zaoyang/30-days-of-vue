@@ -190,7 +190,7 @@ describe('App', () => {
 });
 ```
 
-In the newly created `beforeEach` function, we’re simulating the behaviour of how a user creates an input event by:
+In the newly created `beforeEach` function, we’re simulating the behavior of how a user creates an input event by:
 
 1. First finding the `input` wrapper with `.find()`.
 2. Then setting the value of the `input` DOM element to ‘New Todo’.
