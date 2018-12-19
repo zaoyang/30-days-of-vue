@@ -4,7 +4,7 @@ Yesterday, we discussed the importance of testing and some of the different type
 
 As mentioned in the last article, we'll be using the [Jest](https://jestjs.io/) testing framework. One of the main advantages behind using Jest is its zero configuration set-up. The [Getting Started](https://jestjs.io/docs/en/getting-started) guide in the Jest documentation shows us that we simply need to install the Jest package, create a `.test.js` or `.spec.js` file, and add a test script to the `package.json` file.
 
-However, if we've selected the Jest suite as a dependancy we want in a Vue CLI scaffolded project - **this set-up would already be prepared for us**. We'll work within the test files of a project created with the Vue CLI that has the Jest testing suite installed.
+However, if we select the Jest suite as a dependancy we want in a Vue CLI scaffolded project - **this set-up would already be prepared for us**. We'll work within the test files of a project created with the Vue CLI that has the Jest testing suite installed.
 
 ## Simplified TodoMVC
 
@@ -92,7 +92,7 @@ With the `App` component appropriately declared in the root Vue instance (in the
 
 ## Writing tests
 
-The Vue CLI introduces a `tests/` directory adjacent to the `src/` directory for a scaffolded project that has either the `Unit Testing` or `E2E Testing` option selected during manual set-up.
+The Vue CLI introduces a `tests/` directory adjacent to the `src/` directory for a scaffolded project that has either the 'Unit Testing' or 'E2E Testing' option selected during manual set-up.
 
 ```shell
 testing-todo-mvc/
@@ -105,7 +105,7 @@ testing-todo-mvc/
   tests/
 ```
 
-The `tests/` directory will contain either the `unit/` or `e2e/` folders depending on testing environment was selected during the Vue CLI set-up stage. In our case, we'll only have a `tests/unit/` folder which would contain an `.eslintrc.js` file and an `example.spec.js` file.
+The `tests/` directory will contain either the `unit/` or `e2e/` folders depending on which testing environment was selected during the Vue CLI set-up stage. In our case, only a `tests/unit/` folder will be created which would contain an `.eslintrc.js` file and an `example.spec.js` file.
 
 ```shell
 testing-todo-mvc/
@@ -126,7 +126,7 @@ module.exports = {
 }
 ```
 
-Specifying `jest: true` in the `env` option of the `.eslintrc.js` file will configure the linter to recognize the set of predefined global variables that exists within the Jest framework.
+Specifying `jest: true` in the `env` option will configure the linter to recognize the set of predefined global variables that exists within the Jest framework.
 
 The Vue CLI creates an `example.spec.js` file that has a sample test prepared for us. We'll remove this file and simply create an `App.spec.js` file which will be the file where we write our tests for the `App` component.
 
@@ -144,9 +144,9 @@ Jest provides a few native methods that we'll be using. Both of the following me
 -   [`describe()`](https://jestjs.io/docs/en/api#describename-fn)
 -   [`it()`](https://jestjs.io/docs/en/api#testname-fn-timeout)
 
-> In Jest, the `it()` function is sometimes aliased as `test()`
+> In Jest, the `it()` function is sometimes aliased to `test()`.
 
-The `describe()` function provides a way for us to group our tests together in logical bundles. Since we're writing a bunch of tests for `App.vue`, we'll use the `describe()` function in our test to indicate we're testing the `App` component.
+The `describe()` function provides a way for us to group our tests together in logical bundles. Since we're writing a bunch of tests for the `App` component, we'll use the `describe()` function in our test to indicate this.
 
 ```javascript
 describe('App', () => {
@@ -154,7 +154,7 @@ describe('App', () => {
 });
 ```
 
-We can add our first test using the `it()` function which is the function we use to set our expectations. Let's set up our tests with our first expectations, one passing and one failing so we can see the difference in output.
+We can add our first test using the `it()` function which is the function we can use to set our expectations. Let's set up our tests with our first expectations, one passing and one failing so we can see the difference in output.
 
 In the same file, let's add two tests:
 
@@ -174,7 +174,7 @@ We'll look at the possible expectations we can set in a moment. First, let's run
 
 ## Executing tests
 
-The Vue CLI package sets up a quality testing environment using Jest (if selected) automatically for us. We can execute all our tests by using the `yarn test:unit` or `npm run test:unit` script.
+The Vue CLI package sets up a quality testing environment using Jest (if selected) automatically for us. We can execute all our tests by using the `test:unit` script declared in the `package.json` file.
 
 ```shell
 npm run test:unit
@@ -210,12 +210,12 @@ npm run test:unit
 
 Jest provides a few global commands in our tests by default (i.e. things you don't need to require). One of those is the `expect()` command. The `expect()` command has a few expectations which we can call on it, including the two we've used already:
 
--   `toBeTruthy()`
--   `toBeFalsy()`
--   `toBe()`
--   `toEqual()`
--   `toBeDefined()`
--   `toBeCalled()`
+-   [`toBeTruthy()`](https://jestjs.io/docs/en/expect#tobetruthy)
+-   [`toBeFalsy()`](https://jestjs.io/docs/en/expect#tobefalsy)
+-   [`toBe()`](https://jestjs.io/docs/en/expect#tobevalue)
+-   [`toEqual()`](https://jestjs.io/docs/en/expect#toequalvalue)
+-   [`toBeDefined()`](https://jestjs.io/docs/en/expect#tobedefined)
+-   [`toHaveBeenCalled()`](https://jestjs.io/docs/en/expect#tohavebeencalled)
 -   etc...
 
 The entire suite of expectations (i.e. `expect()` matchers) is available on the Jest documentation page at: <https://jestjs.io/docs/en/expect>.
