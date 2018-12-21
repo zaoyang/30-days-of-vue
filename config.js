@@ -1,7 +1,7 @@
 module.exports = {
   title: `30 Days of Vue`,
   subtitle: `An introduction to Vue - In 30 bite-size morsels`,
-  heroPhotoUrl: 'todo.jpg',
+  heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: 'todo.jpg',
   publicLessonCount: 7,
   summary: `
