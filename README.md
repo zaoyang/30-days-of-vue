@@ -29,7 +29,7 @@ This repository contains the entire source and content for the article series of
 ## 👀 What's inside?
 
 <!-- prettier-ignore -->
-|  <a href='./day-01'><img src='./day-01/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-01'>What is React?</a><h4> |  <a href='./day-02'><img src='./day-02/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-02'>What is JSX?</a><h4> | <a href='./day-03'><img src='./day-03/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-03'>Our First Components</a><h4>  |   |   |
+|  <a href='./day-01'><img src='./day-01/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-01'>What is Vue?</a><h4> | <a href='./day-02'><img src='./day-02/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-02'>The Vue Instance - Data</a><h4> | <a href='./day-03'><img src='./day-03/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-03'>The Vue Instance - Data Driven Applications</a><h4> | <a href='./day-04'><img src='./day-04/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-04'>Vue Directives</a><h4> | <a href='./day-05'><img src='./day-05/public/article-image.png' width='140px;' /></a><h4 align='center'><a href='./day-05'>List Rendering with v-for</a><h4>  |
 |:-:|:-:|---|---|---|
 |   |   |   |   |   |
 |   |   |   |   |   |
