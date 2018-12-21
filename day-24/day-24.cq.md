@@ -1,4 +1,4 @@
-# Routing with Vue Router
+# Vue Router
 
 With our application scaffold established in the last article, let's see how we can enable routing in our Pokémon app. We’ll use Vue’s official client-side routing library, [__Vue Router__](https://router.vuejs.org/), to achieve this.
 
