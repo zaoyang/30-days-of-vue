@@ -87,9 +87,11 @@ As each __watch__ function runs, we’ll update the other data property by eithe
 
 We’re using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
 
-__TODO - Show watchers-example app instead of image__
-
-![](./public/assets/watchers-example-app.png)
+<iframe src='./src/watchers-example/index.html'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Awesome! Though this works perfectly well, a good question to ask right now would be - do we need __watchers__ to do what we just did?
 
@@ -141,10 +143,12 @@ In our case, we’d use the `get()` function to get the value of  `m` like we’
 
 Our app would now work as expected! When one input changes, the other is updated.
 
-__TODO - Show computed-example app instead of image__
-
-![](./public/assets/watchers-example-app.png)
+<iframe src='./src/computed-example/index.html'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Can we always use __computed__ properties in place of a __watcher__? No. In certain cases, you may find yourself in need of using the specific __watch__ property.  The [Vue documentation](https://vuejs.org/v2/guide/computed.html#Watchers) states that _“[__watchers__ are] most useful when you want to perform asynchronous or expensive operations in response to changing data”_. In most cases, however, __watchers__ tend to be overused where it might be [more appropriate to instead use a __computed__ property](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property).
 
-Great work! Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components!
+Great work today! Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components!

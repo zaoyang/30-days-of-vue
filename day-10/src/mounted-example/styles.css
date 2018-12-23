@@ -19,3 +19,7 @@ header span {
   font-weight: 400;
   padding-right: 5px;
 }
+
+.card-footer-item {
+  color: #3273dc;
+}

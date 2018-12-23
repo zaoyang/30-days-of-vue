@@ -45,11 +45,13 @@ Here’s a code sample that shows some different event listeners with different 
 {lang=javascript,line-numbers=off}
 <<[src/v-on-example/main.js](./src/v-on-example/main.js)
 
-__TODO - Show v-on-example app - not image__
+<iframe src='./src/v-on-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/v-on-example.png)
-
-From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the enter key.
+From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the Enter key.
 
 Finally, event handlers usually have an event object that contains details about the event. In the __v-on__ directive, we’re able to access this original event object by explicitly passing in the `$event` variable:
 
@@ -94,9 +96,11 @@ Here’s an example of using the __v-bind__ directive to bind a data property (n
 
 With the `cityImage` appropriately bound, we’ll be presented with a view of Toronto’s skyline:
 
-__TODO - Show v-bind-example app - not image__
-
-![](./public/assets/v-bind-example.png)
+<iframe src='./src/v-bind-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Conditional rendering with v-if (or v-show)
 
@@ -126,18 +130,20 @@ To see an example of conditional rendering, let’s first add a button to our pr
 {lang=javascript,line-numbers=off}
 <<[src/v-if-example/main.js](./src/v-if-example/main.js)
 
-The `changeCity()` method first checks if the `city` data value is `'Toronto'`, if so - it changes the `city` to `'Lagos'` and the `cityImage` to a hosted image of the Lekki-Ikoyi Link Bridge in Lagos state. If the city information has been already been changed, the `changeCity()` information simply reverts the information back to Toronto.
+The `changeCity()` method first checks if the `city` data value is `'Toronto'`, if so - it changes the `city` to `'Lagos'` and the `cityImage` to a hosted image of the [Lekki-Ikoyi Link Bridge](https://en.wikipedia.org/wiki/Lekki-Ikoyi_Link_Bridge) in Lagos state. If the city information has been already been changed, the `changeCity()` information simply reverts the information back to Toronto.
 
 If we wanted to render some content in _certain conditions_ (e.g. when `city === 'Toronto'`), the __v-if__ or __v-show__ directive would prove useful. Since I (Hassan) live in Toronto, we can change the text content in the template to better reflect my presence. For example, we’ll use two separate `<p>` tags each containing a __v-if__ directive to display the appropriate description text content:
 
 {lang=html,line-numbers=off}
 <<[src/v-if-example/index.html](./src/v-if-example/index.html)
 
-The text content of the first `<p>` tag that says `by Hassan who lives in Toronto` will only render if the `city` property is equal to `Toronto`. If `city` is equal to `Lagos`, the second `<p>` tag will instead only be displayed and say `by Hassan who wishes to visit Lagos`:
+The text content of the first `<p>` tag that says `by Hassan who lives in Toronto` will only render if the `city` property is equal to `'Toronto'`. If `city` is equal to `'Lagos'`, the second `<p>` tag will instead only be displayed and say `by Hassan who wishes to visit Lagos`:
 
-__TODO - Show v-if-example app - not image__
-
-![](./public/assets/v-if-example.png)
+<iframe src='./src/v-if-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 I> Vue also provides the [__v-else__](https://vuejs.org/v2/guide/conditional.html#v-else) directive to describe an else block and the [__v-else-if__](https://vuejs.org/v2/guide/conditional.html#v-else-if) directive to describe an else-if-block.
 
@@ -146,17 +152,19 @@ Instead of the __v-if__ directive, we could also use the __v-show__ directive to
 {lang=html,line-numbers=off}
 <<[src/v-show-example/index.html](./src/v-show-example/index.html)
 
-__TODO - Show v-show-example app - not image__
+<iframe src='./src/v-show-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/v-if-example.png)
-
-Though they achieve a similar outcome, the __v-if__ and __v-show__ directives differ from one another. The __v-if__ directive __does not render the element__ only until the stated condition is `true`. The __v-show__ directive always renders the element _but_ controls the CSS display property depending on whether the stated condition is `true`.
+Though they achieve a similar outcome, the __v-if__ and __v-show__ directives differ from one another. The __v-if__ directive __does not render the element__ only until the stated condition is `true`. The __v-show__ directive, on the other hand, __always renders the element__ _but_ controls the CSS [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property depending on whether the stated condition is `true`.
 
 The __v-if__ directive is usually preferred as long as you don’t need the element to always be present in the DOM __and__ you don’t expect the toggling between displaying/hiding the element to happen very often. If we expect the element to toggle often at runtime - the __v-show__ directive would be more appropriate.
 
 ## Shorthand syntax with v-on and v-bind
 
-Vue provides shorthand syntax only for the commonly used __v-bind__ and __v-on__ directives. The __v-bind__ directive can be shortened with the __:__ symbol:
+Vue provides unique shorthand syntax only for the commonly used __v-bind__ and __v-on__ directives. The __v-bind__ directive can be shortened with the __:__ symbol:
 
 ```html
 <!-- the full syntax -->
@@ -176,6 +184,6 @@ And the __v-on__ directive can be shortened with the __@__ symbol:
 <button @click="methodName"></button>
 ```
 
-The shorthand syntax is entirely optional and achieves the exact same outcome. Throughout the rest of this course, we’ll stick with using the shorthand syntax.
+Though the shorthand syntax is entirely optional and achieves the exact same outcome, we’ll stick with using the shorthand syntax for the rest of the course.
 
 Awesome! We'll stop here for today. In the next article, we’ll spend some time discussing how the __v-for__ directive can be used to help render lists of elements.

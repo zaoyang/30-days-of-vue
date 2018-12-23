@@ -2,8 +2,7 @@ new Vue({
   el: '#app',
   data: {
     greeting: 'Hello World!',
-    user: 'Hassan Djirdeh',
-    city: 'Toronto'
+    alertMessage: ''
   },
   methods: {
     changeGreeting() {
@@ -11,11 +10,11 @@ new Vue({
        'What is up!' :
        'Hello World!';
     },
-    consoleGreeting() {
-      console.log("You're typing something!");
+    alertMessageGreeting() {
+      this.alertMessage = 'You typed something!';
     },
-    consoleEnterGreeting() {
-      console.log("Enter has been released!");
+    alertEnterGreeting() {
+      this.alertMessage = 'You typed something and pressed Enter!';
     },
   }
 });

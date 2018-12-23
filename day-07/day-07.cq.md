@@ -36,13 +36,17 @@ In Firefox, the extension should have access to file based URLs by default.
 
 Let’s use the Vue Devtools on the application we’ve set up in the last article. If we recall, we used the __v-model__ directive to help bind data properties to different inputs in a form:
 
-__TODO - Show v-model-example app from day-04 - not image__
-
-![](../day-06/public/assets/v-model-example-app.png)
+<iframe src='./src/v-model-example/index.html'
+        height="375"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Launching the application, opening the browser Devtools, and locating the Vue tab - we’ll be able use the Vue Devtools to debug our application:
 
 ![](./public/assets/vue-devtools-v-model-app.png)
+
+> To use the Vue Devtools, you may need to open the application in a separate tab/window instead of surveying the app within the iframe. All code samples can be found for each respective article/day at the [Github Repo](https://github.com/fullstackio/30-days-of-vue/) (at [https://github.com/fullstackio/30-days-of-vue](https://github.com/fullstackio/30-days-of-vue/)).
 
 In the "Components" tab, we're able to survey all the components (i.e. instances and child-instances) in our application. Our application only contains a single `<Root>` component which refers to the Vue instance of the entire Vue app. By selecting the `<Root>` component, we’re then able to survey the data properties instantiated in our app:
 
@@ -59,6 +63,6 @@ Here's a GIF displaying just that.
 
 By being able to directly update our application and monitor data changes (and vice-versa), the Vue Devtools is an especially useful tool for debugging Vue apps.
 
-The Vue Devtools also offers a lot more capabilities like being able to track Custom Events, inspect the props (data) being passed from one component to its child and conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we start to investigate the relevant concept in the course.
+The Vue Devtools also offers a lot more capabilities like being able to track Custom Events, inspect props (data) being passed from one component to its child, and conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we investigate the relevant concepts in the course.
 
 Congrats on getting through the first week! In the next coming sections, we’ll be taking a deeper dive into the Vue instance.

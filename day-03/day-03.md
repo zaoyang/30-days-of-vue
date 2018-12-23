@@ -14,9 +14,11 @@ For those who may be coming from a [React](https://reactjs.org/) background, you
 
 The reactive nature of data in Vue help facilitates the possibility of building applications in a _data-driven_ manner. To get a better understanding of this, we’ll take a look at the simple application we built in yesterday’s article.
 
-**TODO - Show app - not image**
-
-![](../day-02/public/assets/simple_data_change.png)
+<iframe src='../day-02/src/simple-data-change-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Let’s assume we wanted to scale the application and introduce capabilities like:
 

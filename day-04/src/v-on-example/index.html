@@ -6,17 +6,17 @@
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p>by {{ user }} who lives in {{ city }}</p>
+      <p>{{alertMessage}}</p>
       <button v-on:click="changeGreeting">
         Change Greeting
       </button> 
       <button v-on:dblclick="changeGreeting">
         Double click to change greeting
       </button>
-      <input v-on:keyup="consoleGreeting"
-             placeholder="Type anything and check the console." />
-      <input v-on:keyup.enter="consoleEnterGreeting" 
-             placeholder="Release the enter key and check the console." />
+      <input v-on:keyup="alertMessageGreeting"
+             placeholder="Type something" />
+      <input v-on:keyup.enter="alertEnterGreeting" 
+             placeholder="Type something and release the Enter key" />
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>

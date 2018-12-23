@@ -18,7 +18,7 @@ The **v-model** directive syntax takes an expression which is the name of the da
 -   Radio Inputs
 -   etc…
 
-Let’s see the **v-model** directive in action. For today's article, we’ll set up a form that contains a series of different inputs:
+Let’s see the **v-model** directive in action. For today's article, we’ll be setting up a form that contains a series of different inputs:
 
 ![](./public/assets/v-model-example-app.png)
 
@@ -115,7 +115,7 @@ We'll now create the template and use the **v-model** directive to bind the appr
 
 In the template, we've introduced a local `styles.css` file like we've done before but we've also included the [Bulma CSS](https://bulma.io/documentation/) framework into our application.
 
-I> [Bulma](https://bulma.io/documentation/) is a CSS framework, much like Twitter’s popular [Bootstrap](http://getbootstrap.com/) framework. It provides us with a grid system and some simple styling. Though we'll be using Bulma from time to time, we don’t need to know Bulma in-depth to go through this article (or the rest of the course).
+I> [Bulma](https://bulma.io/documentation/) is a CSS framework, much like Twitter’s popular [Bootstrap](http://getbootstrap.com/) framework. It provides us with a grid system and some simple styling. Though we'll be using Bulma from time to time, we won’t need to know Bulma in-depth to go through this article or the rest of the course.
 
 Let’s break down what each of the field elements in the template contain.
 
@@ -174,7 +174,11 @@ Finally, since radio inputs usually have custom values specified with them, we�
 
 We can now go ahead and test our application. If we populate our form, click the Submit button, and check the developer console - we’ll be able to see the values of each of the data attributes within our instance.
 
-**TODO - Show v-model-example app**
+<iframe src='./src/v-model-example/index.html'
+        height="375"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Here’s a sample expected response:
 
