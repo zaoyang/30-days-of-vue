@@ -211,4 +211,4 @@ Our app would now work as expected! When one input changes, the other is updated
 
 Can we always use **computed** properties in place of a **watcher**? No. In certain cases, you may find yourself in need of using the specific **watch** property.  The [Vue documentation](https://vuejs.org/v2/guide/computed.html#Watchers) states that _“[__watchers__ are] most useful when you want to perform asynchronous or expensive operations in response to changing data”_. In most cases, however, **watchers** tend to be overused where it might be [more appropriate to instead use a **computed** property](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property).
 
-Great work! Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components!
+Great work today! Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components!

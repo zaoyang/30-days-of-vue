@@ -17,7 +17,7 @@ Vue.component('hello-world', {
 });
 ```
 
-I> We’ve also taken a quick look at alternate template definitions like `inline-template`'s and `x-template`'s but have come to understand that both of these approaches are not recommended to creating the markup of components.
+> We’ve also taken a quick look at alternate template definitions like `inline-template`'s and `x-template`'s but have come to understand that both of these approaches are not recommended to creating the markup of components.
 
 Template strings do a good job for small to medium sized projects. However, as an application grows, having no syntax highlighting and the entire markup of a component kept within back-ticks (or strings) makes the template of components hard to read. In addition, the components we’ve defined thus far don’t allow us to isolate the unique CSS within them. This is where Vue’s [**Single File Components**](https://vuejs.org/v2/guide/single-file-components.html) can be used to help reduce this disorganization.
 

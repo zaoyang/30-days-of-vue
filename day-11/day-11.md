@@ -271,7 +271,7 @@ With the component created, we’ll now be able to render the component in the r
 At this moment, our application would look like the following:
 
 <iframe src='./src/global-components-example/index.html'
-        height="500"
+        height="525"
         scrolling="no"
         style='display: block; margin: 0 auto; width: 100%'>
 </iframe>

@@ -2,7 +2,7 @@
 
 From what we’ve seen in yesterday's article, it’s probably safe to say that creating the markup for Vue components (or instances) is a fairly straightforward process. We’ve seen some alternate template definitions like `inline-templates` and `x-templates`, but as a best practice, it’s best to stick with using an instance template option for simple components/instances.
 
-I> We did mention that there’s another way to have the templates of our components be defined (hint: __Single-File Components__). We’ll be taking a small detour today before diving into SFC’s tomorrow!
+> We did mention that there’s another way to have the templates of our components be defined (hint: __Single-File Components__). We’ll be taking a small detour today before diving into SFC’s tomorrow!
 
 Vue, at build time, takes the templates we create for our instances/components and compiles them to something known as [__`render`__](https://vuejs.org/v2/guide/render-function.html#Basics) functions. It’s at these compiled `render` functions, where Vue builds a virtual representation of nodes that make up the virtual DOM.
 
@@ -208,6 +208,6 @@ With JSX, our `render` function doesn’t look too difficult! It’s important t
 
 If you feel like you haven’t fully grasped the information in this article - __that is totally okay__. Vue recommends us to use standard templates whenever we can since render functions are harder to grasp and implement in an application. As a fun-fact as well, the Vue team has stated that [one of the bigger changes to come in Vue 3.0](https://medium.com/the-vue-point/plans-for-the-next-iteration-of-vue-js-777ffea6fabf#f25a) is the Virtual DOM format used in render functions, _particularly the native JavaScript way of doing so_. When Vue 3.0 does finally arrive, we’ll revamp how the examples in this article is set up but as of now - this article is intended to be an introduction to what `render` functions are. We won’t be discussing or using `render` functions for the rest of the course.
 
-I> We'll be taking a deep dive into many of the cool updates Vue 3.0 will bring in the second last article of the course - __Vue 3.0 and the future of Vue__.
+> We'll be taking a deep dive into many of the cool updates Vue 3.0 will bring in the second last article of the course - __Vue 3.0 and the future of Vue__.
 
 In the application shown with CodeSandbox, you might be wondering why the component files look and are named differently (e.g. `RenderComponent.vue`) and why the entire application structure looks a little more advanced. This is because that application was a Vue app bundled with [__Webpack__](https://webpack.js.org/) with the components being built in __Single-File__ format. It’s safe to say that it’s finally time to dive into what these components are, which we’ll be doing tomorrow!

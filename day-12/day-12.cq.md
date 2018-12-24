@@ -3,7 +3,7 @@
 In yesterday’s article, we created our first component (named `tweet-component`) as part of a mock twitter application. We went as far as having a list of these `tweet-component`‘s be rendered with only static information.
 
 <iframe src='../day-11/src/global-components-example/index.html'
-        height="500"
+        height="525"
         scrolling="no"
         style='display: block; margin: 0 auto; width: 100%'>
 </iframe>
@@ -43,7 +43,7 @@ In `tweet-component`, the `tweet` prop can now be accessed and used like any oth
 Our application will now display information from all the different tweets in our instance data.
 
 <iframe src='./src/props-example/index.html'
-        height="550"
+        height="525"
         scrolling="no"
         style='display: block; margin: 0 auto; width: 100%'>
 </iframe>
@@ -100,7 +100,7 @@ We can use the `Vue.component()` constructor to create the `tweet-content` compo
 Our application UI will remain the same but now be composed of two nested components.
 
 <iframe src='./src/nested-components-example/index.html'
-        height="550"
+        height="525"
         scrolling="no"
         style='display: block; margin: 0 auto; width: 100%'>
 </iframe>
