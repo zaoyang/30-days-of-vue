@@ -2,7 +2,7 @@
 
 In the article before last, we saw how a simple global store allows us to manage application state in a reasonable manner that _mimics_ the Flux pattern. Today, we'll reimplement the same application using the most robust and widely-used, flux-like, state management library in Vue - [**Vuex**](https://github.com/vuejs/vuex).
 
-We'll look to build the same `NumberDisplay` and `NumberSubmit` component relationship that we've done in the articles covering the EventBus and Simple Global Store. As a refresher, we’ll want to build an implementation where an input is entered in a `NumberSubmit` component and that entered number is then shown in the template of a sibling `NumberDisplay` component.
+We'll look to build the same `NumberDisplay` and `NumberSubmit` component relationship that we've done before. As a refresher, we’ll want to build an implementation where an input is entered in a `NumberSubmit` component and that entered number is then shown in the template of a sibling `NumberDisplay` component.
 
 ![](./public/assets/sibling-components-layout.png)
 
@@ -58,7 +58,7 @@ const mutations = {
 
 I> In Flux architectures, mutation functions are often characterized in capital letters to distinguish them from other functions and for tooling/linting purposes.
 
-**Actions** exist to call mutations. actions are also responsible for performing any or all asynchronous calls prior to committing to mutations. Actions have access to a `context` object that provides access to store state (with `context.state`), to store getters (with `context.getters`), and to the commit function (with `context.commit`).
+**Actions** exist to call mutations. Actions are also responsible for performing any or all asynchronous calls prior to committing to mutations. Actions have access to a `context` object that provides access to store state (with `context.state`), to store getters (with `context.getters`), and to the commit function (with `context.commit`).
 
 Here’s an `addNumber()` action that simply directly commits to the `ADD_NUMBER` mutation while passing in the expected payload:
 
@@ -70,7 +70,7 @@ const actions = {
 };
 ```
 
-**Getters** are to a Vuex store what computed properties are to a Vue component. Getters are primarily used to perform some calculation/manipulation to store state before having that information accessible to components.
+**Getters** are to a Vuex store what computed properties are to a Vue component. Getters are primarily used to perform some calculation/manipulation to store state _before_ having that information accessible to components.
 
 Like mutations, getters have access to state as the first argument. Here’s a getter called `getNumbers` that simply returns the `state.numbers` array:
 
@@ -82,7 +82,7 @@ const getters = {
 };
 ```
 
-I> For such a simple implementation like the application we intend to build, a Vuex store may not really be necessary. We don’t really need getters to directly return a state value and our action just simply commits to a mutation without any additional work. The examples above are meant to show the direct difference in implementation between using Vuex or a simple global store to handle application state.
+I> For such a simple implementation like the application we're building, a Vuex store may not _really_ be necessary. We don’t necessarily need getters to directly return a state value and our action just simply commits to a mutation without any additional work. The examples above are meant to show the direct difference in implementation between using Vuex or a simple global store to handle application state.
 
 With all the different store objects prepared, we can declare these objects within the `new Vuex.Store({}) constructor` to create our store instance. This makes our entire `src/store.js` file look like the following:
 
@@ -140,16 +140,16 @@ export default new Vuex.Store({
 When a Vuex store is prepared, it’s only made available to a Vue application by declaring the store object within the Vue instance. We'll import the `store` instance into the `src/main.js` file and pass it into the application wide Vue instance.
 
 ```javascript
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import store from "./store";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
   store,
-}).$mount('#app')
+}).$mount('#app');
 ```
 
 With a well built Vuex store, components often do one of two things. They either:
@@ -157,7 +157,7 @@ With a well built Vuex store, components often do one of two things. They either
 1.  GET state information (by accessing store state or getters) or
 2.  DISPATCH actions
 
-Here’s the `NumberDisplay` component that directly displays the `state.numbers` array from the store by mapping the `getNumbers` store getter on to the components `getNumbers` computed property.
+The `NumberDisplay` component will directly display the value of the `state.numbers` array from the store. It'll display the `state.numbers` value by mapping the `getNumbers` store getter on to the components `getNumbers` computed property.
 
 ```html
 <template>
@@ -178,7 +178,7 @@ export default {
 </script>
 ```
 
-The `NumberSubmit` component will hold the responsibility to allow the user to add numbers to the store `state.numbers` array by mapping an `addNumber` component method to the store action of the same name.
+The `NumberSubmit` component will hold the responsibility to allow the user to add numbers to the store `state.numbers` array. Adding numbers to the store `numbers` array can be done by mapping an `addNumber` component method to the store action of the same name.
 
 ```html
 <template>
@@ -211,19 +211,21 @@ Notice how we’re able to access the application wide store instance with `this
 
 Our application will now work as intended with the help of a Vuex store.
 
-**TODO - Show vuex-store-example app here not img**
+<iframe src='https://thirty-days-of-vue-vuex.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/vuex-store-example-app.png)
-
-We can see that Vuex extends the simple store method by introducing **explicitly defined actions, mutations, and getters**. This is where the initial boilerplate, as well as the main advantage comes in. In addition, another significant advantage to using Vuex is the integration with the Vue Devtools to provide time-travel debugging.
+We can see that Vuex extends the simple store method by introducing **explicitly defined actions, mutations, and getters**. This is where the initial boilerplate, as well as the main advantage comes in. In addition, another significant advantage to using Vuex is the integration with the Vue Devtools to provide **time-travel debugging**.
 
 Here’s a quick gif that shows how the Vue Devtools helps us observe store information as mutations occur, as well as the ability to _time-travel_ the UI to the moment a particular mutation has occurred.
 
 ![](./public/assets/vuex-devtools-time-travel.gif)
 
-The app in the gif above is the [TodoMVC](https://vuejs.org/v2/examples/todomvc.html) example implementation built by the Vue core team.
+> The app in the gif above is the [TodoMVC](https://vuejs.org/v2/examples/todomvc.html) example implementation built by the Vue core team.
 
-Vuex isn’t the only Flux-like library that can be used with Vue. For example, community supported libraries like [redux-vue](https://github.com/nadimtuhin/redux-vue) or [vuejs-redux](https://github.com/titouancreach/vuejs-redux) exist to help bind Vue components with a Redux store. However, since Vuex was tailored to be used _only_ for Vue applications - it’s definitely the easiest to integrate with and use on a Vue application.
+Vuex isn’t the only Flux-like library that can be used with Vue. For example, community supported libraries like [redux-vue](https://github.com/nadimtuhin/redux-vue) or [vuejs-redux](https://github.com/titouancreach/vuejs-redux) exist to help bind Vue components with a Redux store. However, since Vuex was tailored to be used _only_ within the Vue ecosystem - it’s definitely the easiest to integrate with and use on a Vue application.
 
 This now completes the series of articles catered to state management in Vue applications! In summary - Vuex is the most robust and supported method for managing application state but requires some flux-like understanding and comes with additional boilerplate. The simple global store method, on the other hand, is relatively easy to establish however state and possible state changes aren’t explicitly defined.
 

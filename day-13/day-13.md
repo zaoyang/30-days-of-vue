@@ -2,7 +2,7 @@
 
 In the last two articles - we introduced components, seen how they help make our Vue applications more modular and taken a look at how props help pass data from parent to child components.
 
-What if we needed to find a way to communicate information in the opposite direction (i.e. have the child component notify the parent about something)? Let’s see a sample scenario of this with our mock twitter application.
+What if we needed to find a way to communicate information in the opposite direction (i.e. have the child component notify the parent about something)?
 
 At the last stage of building our mock twitter app, we had the root instance render a `tweet-component` which subsequently rendered a `tweet-content` component of its own. Props were used to pass the relevant `tweet` data object from the root instance downwards to `tweet-component` and further down to `tweet-content`.
 
@@ -123,13 +123,15 @@ new Vue({
 
 Awesome! We’ll now be able to add copied tweet elements to the end of the list by clicking the add icon on any tweet element.
 
-**TODO - Show custom-events-example app here not img**
-
-![](./public/assets/twitter-app-add.png)
+<iframe src='./src/custom-events-example/index.html'
+        height="600"
+        id="iframe"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Custom Events & Data
 
-Let’s recap how data was manipulated in the app we just built. The root instance contains the `tweets` array and uses this array to render a list of `tweet-component`'s. For every `tweet-component` rendered, a unique `tweet` object prop is passed in which is then subsequently passed in to a `tweet-content` component. In each of the components, we bind the relevant information from the available `tweet` prop on to the respective templates.
+Let’s recap how data was manipulated in the app we just built. The root instance contains the `tweets` array and uses this array to render a list of `tweet-component`'s. For every `tweet-component` rendered, a unique `tweet` object prop is passed in which is then subsequently passed in to a `tweet-content` component. In each of the components, we bind the relevant information from the available `tweet` prop on to their respective templates.
 
 ![](./public/assets/twitter-app-blueprint-1.png)
 
@@ -139,6 +141,6 @@ When the user clicks the icon to add another tweet element, the `add` event is t
 
 When the root instance event listener is triggered, the `tweet` object is shallow copied and added to the `tweets` array. In the root template, we use the `v-for` directive to render a list of tweet elements from the `tweets` array. As a result, when the `tweets` array is updated - our application is re-rendered to show the newly added element.
 
-The way we've built the application _isn't_ the only way to achieve what we've just done. In fact, this also gets more complicated when we need to think about not only parent-child relationships but sibling-sibling components as well. What we’re starting to discuss here is the basis of application wide data management or in other words **state management**. We’ll be taking a deeper look into different state management processes soon (article #19 to be exact) but in the coming articles, we'll be spending more time discussing Vue components.
+The way we've built our application _isn't_ the only way to achieve what we've just done. In fact, the process of using just **props** and **custom events** to handle data gets more complicated when we need to think about not only parent-child relationships but sibling-sibling components as well. What we’re starting to discuss here is the basis of application wide data management or in other words **state management**. We’ll be taking a deeper look into different state management processes soon (article **#19** to be exact) but in the coming articles, we'll be spending more time discussing Vue components.
 
-The main takeway from this article is that **props are always used to pass data downwards** while **custom events are mainly used to send information upwards**.
+The main takeway from this article is that **props are always used to pass data downwards** while **custom events can be used to send information upwards**.

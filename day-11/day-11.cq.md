@@ -14,7 +14,7 @@ To get a better understanding of components, we’ll go ahead and create one.
 
 ## Simple Twitter App
 
-For today's article, we’ll look to create a mock Twitter application that displays a list of tweets from a data source.
+By the end of tomorrow's article, we’ll look to have created a mock Twitter application that displays a list of tweets from a data source.
 
 ![](./public/assets/final-app.png)
 
@@ -98,6 +98,12 @@ By binding the information of just the first `tweet` object on to the template, 
             </div>
           </article>
         </div>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-small" placeholder="Tweet your reply..." />
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
@@ -152,6 +158,12 @@ Our aim is to show a tweet element for every single `tweet` object available in 
             </div>
           </article>
         </div>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-small" placeholder="Tweet your reply..." />
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
@@ -184,27 +196,29 @@ The `Vue.component()` constructor registers a component _globally_ in an applica
 
 Though there are a few different ways to declare the template of a component, the standard way of doing so is using the __template__ option which expects a string value.
 
-I> We haven’t found the need to use the __template__ option in our root instance since we were able to use the root-level option, __el__, to declare the view our instance will depend upon.
+I> We haven’t found the need to use the __template__ option in our root instance since we were able to use the root-level option, [__el__](https://vuejs.org/v2/api/#vm-el), to declare the view our instance will depend upon.
 
-To get things started, we’ll create __tweet-component__ with hard-coded data. We’ll specify the template of the component to simply be the markup associated with `<div class="tweet">...</div>`. We'll create this component right before the instantiation of our root instance.
+To get things started, we’ll create a __tweet-component__ with hard-coded data. We’ll specify the template of the component to simply be the markup associated with `<div class="tweet">...</div>`. We'll create this component right before the instantiation of our root instance.
 
-{lang=javascript,line-numbers=off,crop-start-line=28,crop-end-line=60}
+{lang=javascript,line-numbers=off,crop-start-line=28,crop-end-line=66}
 <<[src/global-components-example/main.js](./src/global-components-example/main.js)
 
 We’ve declared the template of the component within backticks (i.e. [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)) to be able to neatly arrange the markup in multi-line format.
 
-I> Template literals are an unsupported feature for older browsers like IE11.
+I> Template literals are an [unsupported feature for older browsers like IE11](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Browser_compatibility).
 
 With the component created, we’ll now be able to render the component in the root template. We’ll want the component to be rendered for every tweet in the `tweets` array. Since we want to render a _list_ of __tweet-component__'s, we'll declare the __v-for__ directive where the component is being rendered. Removing the old template code and rendering a list of __tweet-component__'s would have our root template be updated to the following:
 
 {lang=html,line-numbers=off}
 <<[src/global-components-example/index.html](./src/global-components-example/index.html)
 
-At this moment, our application would now look like the following:
+At this moment, our application would look like the following:
 
-__TODO - Show global-components-example app here not img__
-
-![](./public/assets/global-components-app.png)
+<iframe src='./src/global-components-example/index.html'
+        height="500"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 I> Notice how the root template is a lot easier to read now? This is in part due to using components to encapsulate relevant content within themselves. This is a very simple application, but for larger apps - the importance of well structured and named components can’t be stressed enough.
 

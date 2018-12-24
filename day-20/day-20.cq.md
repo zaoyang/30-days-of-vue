@@ -40,9 +40,11 @@ The `NumberSubmit` component has an `addNumber()` method that calls the `store.a
 
 The store method receives the payload and directly mutates the `store.numbers` array. Thanks to Vue’s reactivity, whenever the `numbers` array in store state gets changed, the relevant DOM that depends on this value (`<template>` of `NumberDisplay`) _automatically updates_. This is because the `NumberDisplay` `storeState` data value is equivalent to the `store.state` object. When `store.state` changes, `NumberDisplay` `storeState` changes, and the template of `NumberDisplay` therefore re-renders.
 
-__TODO - Show simple-global-store-example app here not img__
-
-![](./public/assets/simple-global-store-app.png)
+<iframe src='https://thirty-days-of-vue-global-store.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 When we say components interact with one another here, we’re using the term ‘interact’ loosely. `NumberDisplay` and `NumberSubmit` aren’t going to do anything directly to each other but instead invoke changes to one another _through_ the store.
 

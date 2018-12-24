@@ -80,9 +80,13 @@ export default {
 
 The `ParentComponent` passes the `numbers` array as props of the same name down to `ChildComponent`. `ChildComponent` simply binds the value of `numbers` on to its template with the help of the Mustache syntax.
 
-**TODO - Show props-example app here not img**
+In the application UI, we'll simply be presented with the value of the `numbers` array.
 
-![](./public/assets/props-example-app.png)
+<iframe src='https://thirty-days-of-vue-props.surge.sh/'
+        height="150"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Awesome! Regardless of how large our application gets, using props to pass data downwards often remains somewhat the same.
 
@@ -157,9 +161,11 @@ The `ChildComponent` has an input that captures a `number` value and a button, t
 
 If we type a number in the input and click the 'Add new number' button, the number will be added to the `numbers` array that’s being displayed.
 
-**TODO - Show custom-events-example app here not img**
-
-![](./public/assets/custom-events-example-app.png)
+<iframe src='https://thirty-days-of-vue-custom-events.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Sibling-Sibling Component Communication
 
@@ -265,9 +271,11 @@ We’re attaching the EventBus listener, `EventBus.$on`, on the `created()` life
 
 With the EventBus, we're be able to now facilitate some form of communication between the two sibling components - `NumberDisplay` and `NumberSubmit`.
 
-**TODO - Show event-bus-example app here not img**
-
-![](./public/assets/event-bus-example-app.png)
+<iframe src='https://thirty-days-of-vue-eventbus.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 This answers the question we had in mind - An EventBus can be used to facilitate communication between sibling components.
 

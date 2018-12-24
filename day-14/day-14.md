@@ -112,9 +112,6 @@ let counterTwo = {
     <button class="button is-primary" @click="counter++">
       You clicked me {{counter}} times
     </button>
-    <button class="button is-primary" @click="counter++">
-      You clicked me {{counter}} times
-    </button>
   `,
   data() {
     return {
@@ -172,9 +169,11 @@ new Vue({
 </html>
 ```
 
-**TODO - Show components-data-example app here not img**
-
-![](./public/assets/components-unique-data-example.png)
+<iframe src='./src/components-data-example/index.html'
+        height="115"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Single Root Template
 
@@ -195,6 +194,6 @@ The Vue console will emit a warning referencing the incorrect template and stati
 Component template should contain exactly one root element...
 ```
 
-The restriction to having the template of a component be wrapped within a single root element is due to the [technical restriction of Vue's diff algorithm](https://github.com/vuejs/vue/issues/7088#issuecomment-348252040) (i.e. algorithm on how changes are patched and implemented on the actual DOM). If you're interested in reading more about this, here's an [interesting issue that was opened](https://github.com/vuejs/vue/issues/7088), in Nov 2017, on the Vue core library that discussed the reason behind having a single root element in a component template.
+This restriction is due to the [technical constraints of Vue's diff algorithm](https://github.com/vuejs/vue/issues/7088#issuecomment-348252040) (i.e. algorithm on how changes are patched and implemented on the actual DOM). If you're interested in reading more about this, here's an [interesting issue that was opened](https://github.com/vuejs/vue/issues/7088), in Nov 2017, on the Vue core library that discussed this constraint.
 
 Today's article was a brief discussion on some nice-to-knows when it comes to working with Vue components. In tomorrow’s article, we’ll look at some of the different ways we’re able to declare the template of a component. Good job getting through week two and see you tomorrow!

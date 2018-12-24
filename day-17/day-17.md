@@ -31,7 +31,7 @@ A single-file component is composed of three parts:
 -   The **`<script>`** section which contains all the JS logic within that component.
 -   The **`<style>`** section which contains all the component styles.
 
-Here’s an example of a single-File component given the name of `HelloWorld`:
+Here’s an example of a single-file component given the name of `HelloWorld`:
 
 ```html
 <template>

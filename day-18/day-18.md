@@ -1,6 +1,6 @@
 # Vue CLI
 
-Yesterday - we talked about single-file components, the advantages they bring, and how we’re only able to use them with build tools like Webpack. Today, we’ll talk about how we can rapidly scaffold a brand new Webpack bundled Vue application with the [**Vue CLI**](https://cli.vuejs.org/guide/) (i.e. the Vue Command Line interface).
+Yesterday - we talked about single-file components, the advantages they provide, and how we’re only able to use them with build tools like Webpack. Today, we’ll talk about how we can rapidly scaffold a brand new Webpack bundled Vue application with the [**Vue CLI**](https://cli.vuejs.org/guide/) (i.e. the Vue Command Line interface).
 
 ## The Vue CLI
 
@@ -24,11 +24,11 @@ When the vue create command is run; we’re provided with a prompt allowing us t
 
 ![](./public/assets/vue-cli-create.png)
 
-We’ll select the default preset for this article and confirm the selection through a few remaining prompts. After the prompts have been answered, the Vue CLI will then begin to install all the necessary dependencies and create the project.
+We’ll select the default preset for this article. Once the selection is made, the Vue CLI will then begin to install all the necessary dependencies and create the project.
 
 ![](./public/assets/vue-cli-installing.png)
 
-Once complete, we’re provided with a new project directory that has a scaffold similar to this:
+When complete, we’re provided with a new project directory that has a scaffold similar to this:
 
 ```shell
 default_project/
@@ -70,7 +70,7 @@ npm run serve
 
 ![](./public/assets/vue-cli-serve.png)
 
-With the Webpack server running, we’re able to view our app at <http://localhost:8080/!>
+With the Webpack server running, we’re then able to view our app at <http://localhost:8080/!>
 
 ![](./public/assets/vue-cli-live.png)
 
@@ -82,7 +82,7 @@ The Vue CLI scaffolded project is [hot-module reloaded](https://webpack.js.org/c
 
 How awesome is that! And when it comes to configuration, we’re able to continue configuring the build tools of our app as much as we want with no issues. **There is no concept of ejecting**.
 
-Here’s a quick video version of what we’ve just discussed above (the instantiation and running of a brand new Vue application with the default Vue CLI scaffold settings).
+Here’s a quick video of what we’ve just discussed above (the instantiation and running of a brand new Vue application with the default Vue CLI scaffold settings).
 
 [![](./public/assets/vue-cli-setup-video.png)](https://vimeo.com/306929031)
 
@@ -100,7 +100,7 @@ npm run build
 
 As of Vue CLI 3.x, the Vue core team have built a full-blown graphical user interface for us to be able to create a `vue-cli` scaffolded project, install external plugins, and survey the details of said project _all within a graphical UI_.
 
-We’re able to launch the Vue CLI UI with the following command:
+Anywhere in our terminal, we’re able to launch the Vue CLI UI with the following command:
 
 ```shell
 vue ui
@@ -110,7 +110,7 @@ This launches the Vue CLI UI where we’re presented with a series of different 
 
 ![](./public/assets/vue-cli-ui-initial.png)
 
-We're able to see the list of projects imported to the UI in the `Projects` tab and create a brand new Vue CLI project with the `Create` tab. In our case, we’re interested in importing the project we’ve already created (`default_project`).
+We're able to see the list of projects imported to the UI in the `Projects` tab and create a brand new Vue CLI project with the `Create` tab. In our case, we’re interested in importing the project we’ve already created - `default_project`.
 
 At the bottom of the screen, we’re presented with the status bar indicating which working directory the UI is currently referring to.
 

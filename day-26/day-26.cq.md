@@ -35,9 +35,10 @@ The `<style>` tag has a `src` referenced from a `styles.css` file located within
 
 With the `App` component appropriately declared in the root Vue instance (in the `src/main.js` file), our application will allow us to add and remove todo items from a list of todos.
 
-__TODO - Show simple-todo-mvc app here not img__
-
-![](./public/assets/simple-todo-mvc-app.png)
+<iframe src='https://thirty-days-of-vue-todo-mvc.surge.sh/'
+        height="300"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Writing tests
 
@@ -94,7 +95,7 @@ The `describe()` function provides a way for us to group our tests together in l
 
 ```javascript
 describe('App', () => {
-
+  // where we'll group our tests for App
 });
 ```
 

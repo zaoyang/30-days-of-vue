@@ -6,11 +6,15 @@ html, body {
 
 #app {
   height: 100%;
+  padding: 10px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: min-content;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
 }
 
 #app .button {

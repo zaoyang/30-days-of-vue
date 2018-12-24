@@ -55,6 +55,12 @@ Vue.component('tweet-component', {
           </div>
         </article>
       </div>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-small" placeholder="Tweet your reply..." />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </div>
     </div>
   `
 });

@@ -18,9 +18,11 @@ The `template` of the `single-line-template` component is kept within standard s
 {lang=javascript,line-numbers=off}
 <<[src/standard-strings-template/main.js](./src/standard-strings-template/main.js)
 
-__TODO - Show standard-strings-template app here not img__
-
-![](./public/assets/standard-strings-template.png)
+<iframe src='./src/standard-strings-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
 
@@ -60,9 +62,11 @@ As of this moment, the `inline-temp` component has no template and nothing will 
 {lang=html,line-numbers=off,crop-start-line=10,crop-end-line=14}
 <<[src/inline-template/index.html](./src/inline-template/index.html)
 
-__TODO - Show inline-template app here not img__
-
-![](./public/assets/inline-template.png)
+<iframe src='./src/inline-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, __should not be used__. 
 
@@ -86,9 +90,11 @@ To specify the template of the `x-temp` component, we can write a _separate_ `<s
 {lang=html,line-numbers=off,crop-start-line=9,crop-end-line=19}
 <<[src/x-template/index.html](./src/x-template/index.html)
 
-__TODO - Show x-template app here not img__
-
-![](./public/assets/x-template.png)
+<iframe src='./src/x-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Though x-templates may seem to be a pretty neat feature, there are significant downsides to having the template of a component _completely separate_ from the actual component definition. For this reason, the [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#X-Templates) states that x-templates __should be avoided in most cases__.
 
@@ -96,7 +102,7 @@ Though x-templates may seem to be a pretty neat feature, there are significant d
 
 From what we've gathered in this article, template strings are a more viable approach than using inline templates or x-templates. Though template strings work fairly well, there are some shortcomings that get more noticeable as our components start to become more complicated.
 
-The first and probably more obvious shortcoming is that the `template` property of a component expects the markup of a component to be kept within a string. For simple templates, this works fine but as components become larger; __having no syntax highlighting and the entire markup of a component kept within back-ticks (or strings) makes the template of components hard to read__.
+The first and probably more obvious shortcoming is that the `template` property of a component expects the markup of a component to be kept within a string. For simple templates, this works fine but as components become larger; having __no syntax highlighting__ and the __entire markup of a component kept within back-ticks (or strings)__ makes the template of components __hard to read__.
 
 The components we’ve created so far have done a good job in isolating markup (HTML) and logic (JS). Wouldn’t it also be nice if we could isolate the CSS a component contains to be within the component itself?
 
