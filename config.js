@@ -1,9 +1,10 @@
 module.exports = {
   title: `30 Days of Vue`,
-  subtitle: `An introduction to Vue - In 30 bite-size morsels`,
+  subtitle: `An introduction to Vue in 30 bite-size morsels`,
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: 'todo.jpg',
   publicLessonCount: 7,
+  lessonPrefix: 'day-',
   summary: `
 Interested in learning Vue but having trouble getting started?
 
