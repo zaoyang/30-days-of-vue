@@ -1,3 +1,4 @@
+const dedent = require('dedent');
 module.exports = {
   title: `30 Days of Vue`,
   subtitle: `An introduction to Vue in 30 bite-size morsels`,
@@ -5,7 +6,7 @@ module.exports = {
   paperBookPhotoUrl: 'todo.jpg',
   publicLessonCount: 7,
   lessonPrefix: 'day-',
-  summary: `
+  summary: dedent`
     Interested in learning Vue but having trouble getting started?
 
     We'll teach you how it all works - _for free_

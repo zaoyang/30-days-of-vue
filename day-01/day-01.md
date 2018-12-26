@@ -5,16 +5,16 @@ series: 30-days-of-vue
 title: What is Vue?
 description: >-
   Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
-publishedOn: '1/1/19'
+publishedOn: '2019-01-01'
 ---
 
 # What is Vue?
 
-Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**,  and even **Testing**.
+Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
 
-Each day in our 30-day adventure will build upon the previous day's materials which will give us a good introduction to various terms, concepts, and underpinnings of the Vue framework. 
+Each day in our 30-day adventure will build upon the previous day's materials which will give us a good introduction to various terms, concepts, and underpinnings of the Vue framework.
 
-This series is mainly targeted to readers that have no prior Vue knowledge and have a little or some experience with JavaScript. Though this course has been prepared for you to cover the material linearly from article-to-article, you are more than welcome to hop around in the course if you feel you’ve already grasped certain concepts. 
+This series is mainly targeted to readers that have no prior Vue knowledge and have a little or some experience with JavaScript. Though this course has been prepared for you to cover the material linearly from article-to-article, you are more than welcome to hop around in the course if you feel you’ve already grasped certain concepts.
 
 With all that said, let’s get started. We’ll start at the very beginning by discussing what Vue is.
 
@@ -40,10 +40,10 @@ Vue is understood to be **approachable** since as long as you know standard HTML
 
 The Vue framework is recognized to be **versatile** since the Vue library itself fits neatly within an ecosystem of tools that make up the entire Vue framework. These tools are the:
 
--   The [vue-cli](https://cli.vuejs.org/) (i.e. Vue Command Line Interface) which allows for rapid prototyping and set-up of Vue-Webpack applications.
--   [vue-router](https://router.vuejs.org/) which helps us introduce client side routing into our application with relative ease.
--   [vuex](https://vuex.vuejs.org/guide/), the Elm-inspired Flux-like library that helps facilitate how data is managed in an application.
--   [vue-test-utils](https://vue-test-utils.vuejs.org/), the testing utility library that introduces various helpers and function to make testing Vue components a lot easier.
+- The [vue-cli](https://cli.vuejs.org/) (i.e. Vue Command Line Interface) which allows for rapid prototyping and set-up of Vue-Webpack applications.
+- [vue-router](https://router.vuejs.org/) which helps us introduce client side routing into our application with relative ease.
+- [vuex](https://vuex.vuejs.org/guide/), the Elm-inspired Flux-like library that helps facilitate how data is managed in an application.
+- [vue-test-utils](https://vue-test-utils.vuejs.org/), the testing utility library that introduces various helpers and function to make testing Vue components a lot easier.
 
 Each of the above tools was created and is currently maintained by the Vue core team. This makes integrating and using them in Vue applications a relatively seamless experience. We’ll be discussing each of these libraries at various points throughout this series.
 
@@ -100,9 +100,7 @@ To have the `greeting` data value be presented in the template, we’ll first ne
 ```html
 <html>
   <body>
-    <div id="app">
-      <!--  where our Vue template code will live -->
-    </div>
+    <div id="app"><!--  where our Vue template code will live --></div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
   </body>
@@ -114,9 +112,7 @@ We’ll now be able to display the value of the greeting property in our Vue ins
 ```html
 <html>
   <body>
-    <div id="app">
-      <h2>{{ greeting }}</h2>
-    </div>
+    <div id="app"><h2>{{ greeting }}</h2></div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
   </body>
