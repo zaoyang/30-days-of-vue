@@ -22,7 +22,7 @@ The __v-for__ directive is used to render a list of items based on a data source
 
 ![](./public/assets/v-for-syntax.png)
 
-Let’s see a very simple example of this in practice. Assume we have template currently displaying a list of static numbers in ascending order:
+Let’s see a very simple example of this in practice. Assume we have a template currently displaying a list of static numbers in ascending order:
 
 ```html
 <html>
@@ -46,25 +46,31 @@ Let’s see a very simple example of this in practice. Assume we have template c
 </html>
 ```
 
-![](./public/assets/numbers-list.png)
+<iframe src='./src/static-list-example/index.html'
+        height="275"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 If we had the list of numbers available to us in a collection (e.g. an array) in our Vue instance:
 
 {lang=javascript,line-numbers=off}
 <<[src/v-for-example/main.js](./src/v-for-example/main.js)
 
-We could avoid repeating the `<li>` element in the template and instead have the __v-for__ directive to do the work for us. Since `numbers` is the array we’ll be iterating over, `number` would be an appropriate alias to use. We’ll add the __v-for__ directive on the element we want repeated - the `<li>` element:
+We could avoid repeating the `<li>` element in the template and instead have the __v-for__ directive do the work for us. Since `numbers` is the array we’ll be iterating over, `number` would be an appropriate alias to use. We’ll add the __v-for__ directive on the element we want repeated - the `<li>` element:
 
 {lang=html,line-numbers=off}
 <<[src/v-for-example/index.html](./src/v-for-example/index.html)
 
 We’re using the Mustache syntax to bind the `number` alias on to the text content of the repeated element since we’re interested in only displaying the number values from the array.
 
-At this moment, the __v-for__ directive does the work for us to display the list of static numbers from the `numbers` data array:
+At this moment, the __v-for__ directive would display the list of static numbers from the `numbers` data array:
 
-__TODO - Show v-for-example app - not image__
-
-![](./public/assets/numbers-list.png)
+<iframe src='./src/v-for-example/index.html'
+        height="275"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 In addition to helping make the template be more [D.R.Y](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), the __v-for__ directive is helpful since our application is now entirely dynamic. Regardless of how the `numbers` array changes over time, our set up will always render all the numbers in the collection in the same markup we expect.
 
@@ -72,7 +78,7 @@ In addition to helping make the template be more [D.R.Y](https://en.wikipedia.or
 
 It’s common practice to specify a [__key__](https://vuejs.org/v2/guide/list.html#key) attribute for every iterated element within a rendered __v-for__ list. This is because Vue uses the __key__ attribute to create __unique bindings for each node’s identity__.
 
-Let’s explain this some more - if there were any dynamic UI changes to our list (e.g. numbers list gets randomly reshuffled), Vue will opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our __v-for__ list depends on DOM state and/or child component state, this can cause some unintended behavior.
+If there were any dynamic UI changes to our list (e.g. numbers list gets randomly reshuffled), Vue will (by default) opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our __v-for__ list depends on DOM state and/or child component state, this can cause some unintended behavior.
 
 Let’s see an example of this. Instead of rendering just the `number` content within each element, let’s render both the `number` value and an `input` element for each number in the `numbers` array.
 
@@ -113,9 +119,11 @@ I> [Lodash](https://lodash.com/) is a JavaScript utility library that provides a
 
 If we save our changes, refresh the app, and click the shuffle button a few times; we’ll notice the numbers in the list get randomly assorted with each click.
 
-__TODO - Show v-for-no-key-example app - not image__
-
-![](./public/assets/numbers-list-no-key-shuffle.png)
+<iframe src='./src/v-for-no-key-example/index.html'
+        height="515"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 However, if we type some information in the input of each list element _then_ click shuffle; we’ll notice something peculiar happening:
 
@@ -130,20 +138,22 @@ To avoid this; we’ll have to assign a __key__ to every rendered element in the
 {lang=javascript,line-numbers=off}
 <<[src/v-for-with-key-example/main.js](./src/v-for-with-key-example/main.js)
 
-In the template, we’ll now reference `number.value` as the text content that would be rendered and we’ll use the __v-bind__ directive to bind `number.id` as the key attribute for the __v-for__ directive:
+In the template, we’ll now reference `number.value` as the text content that would be rendered and we’ll use the __v-bind__ directive to bind `number.id` as the __key__ attribute for the __v-for__ directive:
 
 {lang=html,line-numbers=off}
 <<[src/v-for-with-key-example/index.html](./src/v-for-with-key-example/index.html)
 
-Vue will now recognize each list element’s identity; and thus _reorder_ the elements when we intend on shuffling the list. Give it a try here - type in some of the inputs and click shuffle a few times.
+Vue will now recognize each list element’s identity; and thus _reorder_ the elements when we intend on shuffling the list. Give it a try here - type some information in a few input fields and click shuffle a few times.
 
-__TODO - Show v-for-with-key-example app - not image__
-
-![](./public/assets/numbers-list-with-key-shuffle.png)
+<iframe src='./src/v-for-with-key-example/index.html'
+        height="515"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Should the __key__ attribute always be used? __It’s recommended__. The [Vue docs](https://vuejs.org/v2/guide/list.html#key) specify that the __key__ attribute should only be omitted if:
 
 - We intentionally want the default manner of patching elements in place for performance reasons.
-- The DOM content is simple enough.
+- Or the DOM content is simple enough.
 
 Great work today! Tomorrow we’ll be taking a look at Vue's __v-model__ directive.

@@ -46,7 +46,7 @@ describe('App', () => {
 
 I> __Shallow? Mount?__
 I> 
-I> The main advantages behind shallow rendering is the enforcement of testing the component in isolation and being a faster approach overall. Since `App` doesn’t render any children components of its own - normal mounting with the `mount()` function from Vue Test Utils will achieve a similar result here.
+I> The advantages behind shallow rendering is the enforcement of testing the component in isolation and it being a faster approach overall. Since `App` doesn’t render any children components of its own - normal mounting with the `mount()` function from Vue Test Utils will achieve a similar result here.
 
 To render our component, we can use the `shallowMount()` method and store the result in a variable. Then, we'll query the rendered component for different HTML elements that are rendered inside its virtual DOM.
 

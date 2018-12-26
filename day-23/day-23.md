@@ -2,7 +2,7 @@
 
 Most, if not all the large-scale applications we tend to create will usually have multiple views (i.e. pages in different URL routes). For instance, an application might have a login view where a user can log in or a search results page that shows a user a list of their search results. These are two _different_ views with two _different_ page structures.
 
-In today's and tomorrow's article, we'll discuss and build an application that has multiple views with the help of the [Vue Router](https://github.com/vuejs/vue-router) library. The app we'll build will be an adaptation of an application first built as part of the [Let’s Build a Custom Vue Router](https://css-tricks.com/build-a-custom-vue-router/) article originally posted on CSS-Tricks.
+In today's and tomorrow's article, we'll discuss and build an application that has multiple views with the help of the [Vue Router](https://github.com/vuejs/vue-router) library. The app we'll build will be an adaptation of an application first built as part of the [Let’s Build a Custom Vue Router](https://css-tricks.com/build-a-custom-vue-router/) article originally posted on [CSS-Tricks](https://css-tricks.com/).
 
 ## Routing
 
@@ -19,7 +19,7 @@ Client-side routing is where the term **single-page application** (or SPA for sh
 
 ## Case Study: Pokémon
 
-All the apps we’ve seen in the past few articles have been limited to a single view. By the end of tomorrow’s article, we’ll look to have constructed a simple Pokémon app that displays details of a particular Pokémon based on the URL route.
+All the apps we’ve built in this course have all been limited to a single view. By the end of tomorrow’s article, we’ll look to have constructed a simple Pokémon routing app that displays details of a particular Pokémon based on the URL route.
 
 ![](./public/assets/pokemon-routing-app.png)
 
@@ -31,7 +31,7 @@ Footer links will exist at the bottom of the application to direct the user to e
 
 We _could_ build this application without the need of routes and instead use a simple parent-child component hierarchy that uses **props** to dictate the information that should be displayed. You can see this in the Codepen example here: [Pokémon App - Props](https://codepen.io/itslit/pen/yvymJL).
 
-Though the Pokémon App - Props version works, it misses a substantial feature that’s expected from most web applications - _responding to browser navigation events_. We’d want our Pokémon app to be accessible and to show different details for different pathnames: `/charizard`, `/blastoise`, and `/venusaur`.  This would allow users to refresh different pages and keep their location in the app, bookmark the URLs to come back to later, and potentially share the URL with others.
+Though the props version of the Pokémon app works, it misses a substantial feature that’s expected from most web applications - _responding to browser navigation events_. We’d want our Pokémon app to be accessible and to show different details for different pathnames: `/charizard`, `/blastoise`, and `/venusaur`.  This would allow users to refresh different pages and keep their location in the app, bookmark the URLs to come back to later, and potentially share the URL with others.
 
 To save us some time for the next article and not concern ourselves with how the views in our app are to be semantically arranged; assume we are to begin with three separate component files with each file representing the markup and static information of a single Pokémon:
 
@@ -45,7 +45,7 @@ App.vue
 main.js
 ```
 
-Each component will be a simple presentational component that has almost the exact same markup to every other Pokémon component. The only difference would be the static Pokémon information shown in the components. As an example, here’s how the `CharizardCard.vue` file will be set up:
+Each Pokémon component will be a simple presentational component that has almost the exact same markup to every other Pokémon component. The only difference would be the static Pokémon information shown in the components. As an example, here’s how the `CharizardCard.vue` file will be set up:
 
 ```html
 <template>
@@ -82,7 +82,7 @@ export default {
 </script>
 ```
 
-The uppermost parent `App` component will declare the `CharizardCard` component in its `components` property and render it as `<PokemonCard />` within its template.
+The uppermost parent `App` component will currently only declare the `CharizardCard` component in its `components` property and render it as `<PokemonCard />` within its template.
 
 ```html
 <template>
@@ -104,7 +104,7 @@ export default {
 };
 </script>
 
-<style lang="css" src="../styles.css">
+<style lang="css" src="./styles.css">
 /* Styles from stylesheet */
 </style>
 ```
@@ -113,8 +113,10 @@ All styles will be come from either the [Bulma CSS framework](https://bulma.io/d
 
 The starting point of our application will only have the `CharizardCard` component be rendered regardless of what URL route we're in.
 
-**TODO - Show pokemon-routing app here not img**
+<iframe src='https://thirty-days-of-vue-pokemon-app-start.surge.sh/'
+        height="900"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/pokemon-routing-starting-point.png)
-
-We’ve covered a simple introduction to routing and talked about the application starting point we’ll use for our Vue Router example. We’ll begin tomorrow by integrating and using the components Vue Router provides to enable client-side routing in our Pokémon app!
+We’ve covered a simple introduction to routing and talked about the application starting point we’ll use for our **Vue Router** example. We’ll begin tomorrow by integrating and using the components **Vue Router** provides to enable client-side routing in our Pokémon app!

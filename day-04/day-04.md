@@ -46,17 +46,17 @@ Here’s a code sample that shows some different event listeners with different 
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p>by {{ user }} who lives in {{ city }}</p>
+      <p>{{alertMessage}}</p>
       <button v-on:click="changeGreeting">
         Change Greeting
       </button> 
       <button v-on:dblclick="changeGreeting">
         Double click to change greeting
       </button>
-      <input v-on:keyup="consoleGreeting"
-             placeholder="Type anything and check the console." />
-      <input v-on:keyup.enter="consoleEnterGreeting" 
-             placeholder="Release the enter key and check the console." />
+      <input v-on:keyup="alertMessageGreeting"
+             placeholder="Type something" />
+      <input v-on:keyup.enter="alertEnterGreeting" 
+             placeholder="Type something and release the enter key" />
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
@@ -71,8 +71,7 @@ new Vue({
   el: '#app',
   data: {
     greeting: 'Hello World!',
-    user: 'Hassan Djirdeh',
-    city: 'Toronto'
+    alertMessage: ''
   },
   methods: {
     changeGreeting() {
@@ -80,21 +79,23 @@ new Vue({
        'What is up!' :
        'Hello World!';
     },
-    consoleGreeting() {
-      console.log("You're typing something!");
+    alertMessageGreeting() {
+      this.alertMessage = 'You typed something!';
     },
-    consoleEnterGreeting() {
-      console.log("Enter has been released!");
+    alertEnterGreeting() {
+      this.alertMessage = 'You typed something and pressed Enter!';
     },
   }
 });
 ```
 
-**TODO - Show v-on-example app - not image**
+<iframe src='./src/v-on-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/v-on-example.png)
-
-From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the enter key.
+From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the Enter key.
 
 Finally, event handlers usually have an event object that contains details about the event. In the **v-on** directive, we’re able to access this original event object by explicitly passing in the `$event` variable:
 
@@ -163,9 +164,11 @@ new Vue({
 
 With the `cityImage` appropriately bound, we’ll be presented with a view of Toronto’s skyline:
 
-**TODO - Show v-bind-example app - not image**
-
-![](./public/assets/v-bind-example.png)
+<iframe src='./src/v-bind-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Conditional rendering with v-if (or v-show)
 
@@ -217,7 +220,7 @@ new Vue({
 });
 ```
 
-The `changeCity()` method first checks if the `city` data value is `'Toronto'`, if so - it changes the `city` to `'Lagos'` and the `cityImage` to a hosted image of the Lekki-Ikoyi Link Bridge in Lagos state. If the city information has been already been changed, the `changeCity()` information simply reverts the information back to Toronto.
+The `changeCity()` method first checks if the `city` data value is `'Toronto'`, if so - it changes the `city` to `'Lagos'` and the `cityImage` to a hosted image of the [Lekki-Ikoyi Link Bridge](https://en.wikipedia.org/wiki/Lekki-Ikoyi_Link_Bridge) in Lagos state. If the city information has been already been changed, the `changeCity()` information simply reverts the information back to Toronto.
 
 If we wanted to render some content in _certain conditions_ (e.g. when `city === 'Toronto'`), the **v-if** or **v-show** directive would prove useful. Since I (Hassan) live in Toronto, we can change the text content in the template to better reflect my presence. For example, we’ll use two separate `<p>` tags each containing a **v-if** directive to display the appropriate description text content:
 
@@ -241,11 +244,13 @@ If we wanted to render some content in _certain conditions_ (e.g. when `city ===
 </html>
 ```
 
-The text content of the first `<p>` tag that says `by Hassan who lives in Toronto` will only render if the `city` property is equal to `Toronto`. If `city` is equal to `Lagos`, the second `<p>` tag will instead only be displayed and say `by Hassan who wishes to visit Lagos`:
+The text content of the first `<p>` tag that says `by Hassan who lives in Toronto` will only render if the `city` property is equal to `'Toronto'`. If `city` is equal to `'Lagos'`, the second `<p>` tag will instead only be displayed and say `by Hassan who wishes to visit Lagos`:
 
-**TODO - Show v-if-example app - not image**
-
-![](./public/assets/v-if-example.png)
+<iframe src='./src/v-if-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 I> Vue also provides the [**v-else**](https://vuejs.org/v2/guide/conditional.html#v-else) directive to describe an else block and the [**v-else-if**](https://vuejs.org/v2/guide/conditional.html#v-else-if) directive to describe an else-if-block.
 
@@ -271,17 +276,19 @@ Instead of the **v-if** directive, we could also use the **v-show** directive to
 </html>
 ```
 
-**TODO - Show v-show-example app - not image**
+<iframe src='./src/v-show-example/index.html'
+        height="325"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/v-if-example.png)
-
-Though they achieve a similar outcome, the **v-if** and **v-show** directives differ from one another. The **v-if** directive **does not render the element** only until the stated condition is `true`. The **v-show** directive always renders the element _but_ controls the CSS display property depending on whether the stated condition is `true`.
+Though they achieve a similar outcome, the **v-if** and **v-show** directives differ from one another. The **v-if** directive **does not render the element** only until the stated condition is `true`. The **v-show** directive, on the other hand, **always renders the element** _but_ controls the CSS [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property depending on whether the stated condition is `true`.
 
 The **v-if** directive is usually preferred as long as you don’t need the element to always be present in the DOM **and** you don’t expect the toggling between displaying/hiding the element to happen very often. If we expect the element to toggle often at runtime - the **v-show** directive would be more appropriate.
 
 ## Shorthand syntax with v-on and v-bind
 
-Vue provides shorthand syntax only for the commonly used **v-bind** and **v-on** directives. The **v-bind** directive can be shortened with the **:** symbol:
+Vue provides unique shorthand syntax only for the commonly used **v-bind** and **v-on** directives. The **v-bind** directive can be shortened with the **:** symbol:
 
 ```html
 <!-- the full syntax -->
@@ -301,6 +308,6 @@ And the **v-on** directive can be shortened with the **@** symbol:
 <button @click="methodName"></button>
 ```
 
-The shorthand syntax is entirely optional and achieves the exact same outcome. Throughout the rest of this course, we’ll stick with using the shorthand syntax.
+Though the shorthand syntax is entirely optional and achieves the exact same outcome, we’ll stick with using the shorthand syntax for the rest of the course.
 
 Awesome! We'll stop here for today. In the next article, we’ll spend some time discussing how the **v-for** directive can be used to help render lists of elements.

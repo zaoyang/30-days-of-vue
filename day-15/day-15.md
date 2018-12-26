@@ -8,7 +8,7 @@ For all the components we’ve seen so far, we’ve used either standard strings
 
 The `template` option of a component expects a string, so we’re able to define the entire markup of a component within standard strings.
 
-Here's an example of a template from the root instance rendering and passing a `message` prop to a `single-line-template` component.
+Here's an example of the root instance template rendering a `single-line-template` component while passing in a `message` prop.
 
 ```html
     <div id="app">
@@ -35,11 +35,13 @@ new Vue({
 });
 ```
 
-**TODO - Show standard-strings-template app here not img**
+<iframe src='./src/standard-strings-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/standard-strings-template.png)
-
-Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in a single line which can make it hard to read the markup of a component. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
+Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
 
 ```javascript
 let multiLineTemplate = {
@@ -82,15 +84,17 @@ As of this moment, the `inline-temp` component has no template and nothing will 
       </inline-temp>
 ```
 
-**TODO - Show inline-template app here not img**
-
-![](./public/assets/inline-template.png)
+<iframe src='./src/inline-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, **should not be used**. 
 
 ### X Templates
 
-With x-templates, we’re able to use `<script>` tags to define pockets of markup that represent the templates of components. To recreate the same example above with x-templates, we'll instantiate a `xTemp` component object with the template property given a value of `#x-template-component`. We'll have the component registered in the root instance as well.
+With x-templates, we’re able to use `<script>` tags to define pockets of markup that represent the templates of components. To recreate the same example above with x-templates, we'll instantiate a `xTemp` component object with the template property given a value of `#x-template-component`. We can have the component registered in the root instance as well.
 
 ```javascript
 let xTemp = {
@@ -117,11 +121,11 @@ In the root template, we can first render the `x-temp` component and pass in the
 </div>
 ```
 
-To specify the template of the `x-temp` component, we can write a separate `<script></script>` tag in our root markup that has a type property of `text/x-template` and an id of `x-template-component` (which is the value of the `template` option in the `xTemp` component object). The template of the component will be the inner contents of this script tag.
+To specify the template of the `x-temp` component, we can write a _separate_ `<script></script>` tag in the root markup that has `type=text/x-template` and `id=x-template-component`. The `x-template-component` id is the value of the `template` option in the `xTemp` component object. The template of the component will then be the inner contents of this script tag.
 
 ```html
     <div id="app">
-      <x-template :message="message"></x-template>
+      <x-temp :message="message"></x-temp>
 
       <script type="text/x-template" id="x-template-component">
         <div class="card">
@@ -133,17 +137,19 @@ To specify the template of the `x-temp` component, we can write a separate `<scr
     </div>
 ```
 
-**TODO - Show x-template app here not img**
+<iframe src='./src/x-template/index.html'
+        height="75"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
-![](./public/assets/x-template.png)
-
-Though x-templates may seem to be a pretty neat feature, there are significant downsides to having the template of a component completely separate from the actual component definition. For this reason, the [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#X-Templates) states that x-templates **should be avoided in most cases**.
+Though x-templates may seem to be a pretty neat feature, there are significant downsides to having the template of a component _completely separate_ from the actual component definition. For this reason, the [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#X-Templates) states that x-templates **should be avoided in most cases**.
 
 ### Shortcomings and render functions
 
-From what we've gathered in this article, template strings are a more viable approach than using inline templates or x-templates. Though template strings work fairly well, there are some shortcomings that get more noticeable as our components start to become more and more complicated.
+From what we've gathered in this article, template strings are a more viable approach than using inline templates or x-templates. Though template strings work fairly well, there are some shortcomings that get more noticeable as our components start to become more complicated.
 
-The first and probably more obvious shortcoming is that the `template` property of a component expects the markup of a component to be kept within a string. For simple templates, this works fine but as components become larger; **having no syntax highlighting and the entire markup of a component kept within back-ticks (or strings) makes the template of components hard to read**.
+The first and probably more obvious shortcoming is that the `template` property of a component expects the markup of a component to be kept within a string. For simple templates, this works fine but as components become larger; having **no syntax highlighting** and the **entire markup of a component kept within back-ticks (or strings)** makes the template of components **hard to read**.
 
 The components we’ve created so far have done a good job in isolating markup (HTML) and logic (JS). Wouldn’t it also be nice if we could isolate the CSS a component contains to be within the component itself?
 

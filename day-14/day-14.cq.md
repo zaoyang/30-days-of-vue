@@ -1,4 +1,4 @@
-# Vue Components - Local Registration, Data, and Single Root Template
+# Vue Components - Local Registration, Data, and Single Root Templates
 
 In the last couple of articles, we've been introduced to how Vue components help make our Vue applications more modular, taken a look at how props help pass data from parent to child components, and discussed how custom events can be used to facilitate communication from child components upwards to parent instances.
 
@@ -101,9 +101,11 @@ By having data in components be functions that return objects, each component is
 {lang=html,line-numbers=off}
 <<[src/components-data-example/index.html](./src/components-data-example/index.html)
 
-__TODO - Show components-data-example app here not img__
-
-![](./public/assets/components-unique-data-example.png)
+<iframe src='./src/components-data-example/index.html'
+        height="115"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Single Root Template
 

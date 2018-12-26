@@ -25,6 +25,10 @@ p, button {
   margin: 2px 0;
 }
 
+button {
+  font-size: 13px;
+}
+
 input {
   padding: 5px;
 }

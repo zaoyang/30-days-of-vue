@@ -49,9 +49,11 @@ In the template, we’ll bind the `message` directly and also bind the `message`
 
 With the help of the styling given to us by [Bulma](https://bulma.io/documentation/), our simple app will look like the following:
 
-**TODO - Show inline-example app instead of image**
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/inline-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 There’s nothing inherently wrong with specifying functionality change, like the above, inline. However, **methods** are often times more appropriate to use when the intended changes get harder to decipher.
 
@@ -101,9 +103,11 @@ The method is given a name of `reverseString` and expects a payload. We can decl
 
 Our UI would behave just the way it had before by displaying the message greeting and the reversed version right below it:
 
-**TODO - Show methods-example app instead of image**
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/methods-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Functionality wise - the above two examples achieve the same thing. Methods might be seen to be more appropriate since it keeps the template cleaner and easier to understand.
 
@@ -157,9 +161,11 @@ In the template, we can render the value of the `reverseMessage` computed proper
 
 With this, our app will behave as desired:
 
-**TODO - Show computed-example app instead of image**
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/computed-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 This begs the question, what difference is there to using a **computed** property or have a **method** instead return a value?
 

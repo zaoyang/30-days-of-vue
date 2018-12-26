@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   background: #f3f5f6;
 }
@@ -12,11 +11,11 @@ body {
   justify-content: center;
 }
 
-h2 {
+ul {
+  list-style: none;
   margin-top: 0;
 }
 
-p {
-  margin-top: 0;
-  font-size: 18px;
+li {
+  font-size: 20px;
 }

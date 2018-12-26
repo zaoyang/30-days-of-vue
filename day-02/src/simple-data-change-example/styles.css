@@ -1,5 +1,5 @@
-html, body {
-  height: 100%;
+html,
+body {
   background: #f3f5f6;
 }
 
@@ -9,6 +9,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 h2 {
@@ -18,17 +19,4 @@ h2 {
 p {
   margin-top: 0;
   font-size: 18px;
-}
-
-button, input {
-  margin: 5px 0;
-}
-
-button {
-  font-size: 13px;
-}
-
-input {
-  min-width: 260px;
-  padding: 5px;
 }

@@ -4,7 +4,7 @@ Today, we'll be taking a look at Vue’s official testing library called [**Vue 
 
 Yesterday, we constructed our tests through simple assertions that involved either mounting the component constructor or invoking the component data function. Although this worked well, testing can become a bit cumbersome when more complicated functionality needs to be tested. **Vue Test Utils**  is a testing utility library created and maintained by the Vue core team that offers a nicer, higher-level API for dealing with Vue components under test.
 
-In the last article, we were testing against the `App` component which rendered a simple todo list.
+In the last article, we were testing against an `App` component which rendered a simple todo list.
 
 ![](./public/assets/simple-todo-mvc-app.png)
 
@@ -67,9 +67,9 @@ describe('App', () => {
 
 I> **Shallow? Mount?**
 I> 
-I> The main advantages behind shallow rendering is the enforcement of testing the component in isolation and being a faster approach overall. Since `App` doesn’t render any children components of its own - normal mounting with the `mount()` function from Vue Test Utils will achieve a similar result here.
+I> The advantages behind shallow rendering is the enforcement of testing the component in isolation and it being a faster approach overall. Since `App` doesn’t render any children components of its own - normal mounting with the `mount()` function from Vue Test Utils will achieve a similar result here.
 
-To render our component, we can use the `shallowMount()` method and store the result in a variable. Then, we'll query the rendered component for different HTML elements that are rendered inside its virtual dom.
+To render our component, we can use the `shallowMount()` method and store the result in a variable. Then, we'll query the rendered component for different HTML elements that are rendered inside its virtual DOM.
 
 Our first test will be comprised of three lines:
 
@@ -94,7 +94,7 @@ describe('App', () => {
 
 We’re using the test utility wrapper [`find()`](https://vue-test-utils.vuejs.org/api/wrapper/find.html) method to return a wrapper of the HTML elements we’re looking for. For the header title, we’re then simply able to use the wrapper [`text()`](https://vue-test-utils.vuejs.org/api/wrapper/#text) method to return the text content of the title element. For the input field, since a placeholder method doesn’t exist in Vue Test Utils, we retrieve the `element` from `wrapper.find('new-todo')` from which we can get the placeholder.
 
-Our second test would be fairly simple as well. With Vue Test Utils, we’re able to access the properties of a instance with [`wrapper.vm`](https://vue-test-utils.vuejs.org/api/wrapper/#properties). With `wrapper.vm` available to us, we can directly access the component todos and newTodo data properties to create our assertions:
+Our second test would be fairly simple as well. With Vue Test Utils, we’re able to access the properties of an instance with [`wrapper.vm`](https://vue-test-utils.vuejs.org/api/wrapper/#properties). With `wrapper.vm` available to us, we can directly access the component `todos` and `newTodo` data properties to create our assertions:
 
 ```javascript
 import App from '@/App';
@@ -131,7 +131,7 @@ Let's continue writing assertions. We’ll declare a few more assumptions that w
 
 -   When the user populates the text input field, it should update the `newTodo` data property.
 -   When the user populates the text input field and releases the Enter key, it should add the entered `todo` item to the `todos` array.
--   When the user populates the text input field, releases the Enter key, then clicks the remove icon of the entered item, it removes the todo item from the `todos` array.
+-   When the user populates the text input field, releases the Enter key, then clicks the remove icon of the entered item, it removes this todo item from the `todos` array.
 
 We'll structure the rest of our test suite first by writing out our `describe` and `it` blocks. We'll fill out the specs with assertions after. Since we’ll need the shallow mounted wrapper for every test, we can initialize the mounting process in the Jest [`beforeEach()`](https://jestjs.io/docs/en/setup-teardown#repeating-setup-for-many-tests) function which would run before every unit test. With all that said, our test suite will now be structured as the following:
 
@@ -211,7 +211,7 @@ describe('App', () => {
 });
 ```
 
-In the newly created `beforeEach` function, we’re simulating the behaviour of how a user creates an input event by:
+In the newly created `beforeEach` function, we’re simulating the behavior of how a user creates an input event by:
 
 1.  First finding the `input` wrapper with `.find()`.
 2.  Then setting the value of the `input` DOM element to ‘New Todo’.
@@ -349,12 +349,12 @@ Before we close out for today, we’ll talk briefly about the interface of a Vue
 
 When we’ve shallow mounted the `App` component, or used the `find()` method to locate an element, the returned values aren’t the component or element itself but instead a `Wrapper` object. This `Wrapper` object (i.e. instance) contains the mounted component (or element) and the accompanying methods to help test the component/element. The `Wrapper` has a bunch of functions we can use to make our assertions easier and more maintainable:
 
--   [`wrapper.html()`](https://vue-test-utils.vuejs.org/api/wrapper/#html): returns HTML of the rendered instance.
--   [`wrapper.find()`](https://vue-test-utils.vuejs.org/api/wrapper/find.html): returns a `Wrapper` instance of the found node.
+-   [`wrapper.html()`](https://vue-test-utils.vuejs.org/api/wrapper/#html): returns the HTML of the rendered instance.
+-   [`wrapper.find()`](https://vue-test-utils.vuejs.org/api/wrapper/find.html): returns the `Wrapper` instance of the found node.
 -   [`wrapper.trigger()`](https://vue-test-utils.vuejs.org/api/wrapper/#trigger-eventtype-options): triggers an event on the `Wrapper` node.
--   [`wrapper.setData()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setdata-data): sets the data on a `Wrapper`.
+-   [`wrapper.setData()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setdata-data): sets the data on the `Wrapper` instance.
 -   [`wrapper.setProps()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setprops-props): sets the props the `Wrapper` would receive.
--   [`wrapper.setMethods()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setmethods-methods): sets the methods on a `Wrapper`.
+-   [`wrapper.setMethods()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setmethods-methods): sets the methods on the `Wrapper` instance.
 -   etc…
 
 Be sure to check out the [Vue Test Utils documentation](https://vue-test-utils.vuejs.org/) to see all the different functions and helper methods we can apply on a `Wrapper` instance.

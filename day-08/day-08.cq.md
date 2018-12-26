@@ -20,9 +20,11 @@ In the template, we’ll bind the `message` directly and also bind the `message`
 
 With the help of the styling given to us by [Bulma](https://bulma.io/documentation/), our simple app will look like the following:
 
-__TODO - Show inline-example app instead of image__
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/inline-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 There’s nothing inherently wrong with specifying functionality change, like the above, inline. However, __methods__ are often times more appropriate to use when the intended changes get harder to decipher.
 
@@ -38,9 +40,11 @@ The method is given a name of `reverseString` and expects a payload. We can decl
 
 Our UI would behave just the way it had before by displaying the message greeting and the reversed version right below it:
 
-__TODO - Show methods-example app instead of image__
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/methods-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Functionality wise - the above two examples achieve the same thing. Methods might be seen to be more appropriate since it keeps the template cleaner and easier to understand.
 
@@ -60,9 +64,11 @@ In the template, we can render the value of the `reverseMessage` computed proper
 
 With this, our app will behave as desired:
 
-__TODO - Show computed-example app instead of image__
-
-![](./public/assets/reversed-message-inline.png)
+<iframe src='./src/computed-example/index.html'
+        height="120"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 This begs the question, what difference is there to using a __computed__ property or have a __method__ instead return a value?
 
@@ -129,7 +135,7 @@ By running the application and opening our browser console, we’ll see the `con
 
 The first time the `reverseMessage` property is computed, its value is cached. With every other call to render the value of `reverseMessage`, the `message` property hasn’t changed, so the cached result is simply returned without running the __computed__ function again.
 
-If we repeated a similar example but instead called __methods__ multiple times in the template, the `console.log()` message will be run every single time the method is declared:
+If we repeat a similar example but instead call __methods__ multiple times in the template, the `console.log()` message will be run every single time the method is declared:
 
 ![](./public/assets/multiple-methods.png)
 

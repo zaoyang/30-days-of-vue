@@ -2,7 +2,7 @@
 
 Yesterday, we gathered an understanding of how a global EventBus can use its events interface to have isolated components communicate with one another. Though an EventBus is easy to setup - the significant disadvantage behind using one is the difficulty in being able to track data changes appropriately.
 
-Today we’ll be looking at how a Simple Global Store can be used to handle state management in a more robust manner.
+Today we’ll be looking at how a **Simple Global Store** can be used to handle state management in a more robust manner.
 
 ## Simple Global Store
 
@@ -20,7 +20,9 @@ export const store = {
 };
 ```
 
-The `numbers` array in our store will be the array that needs to be either displayed or manipulated from more than one component. When it comes to changing this `numbers` array - we can look to keep our store centralized by adding all the methods (i.e. mutations) that can be done on the store state _in the store itself_. To mimic the interaction we had in the last article, we’ll introduce an `addNumber` method to the store that accepts a payload and directly updates the `state.numbers` value.
+The `numbers` array in our store will be the array that needs to be either displayed or manipulated from more than one component. When it comes to changing this `numbers` array - we can look to keep our store centralized by adding all the methods (i.e. mutations) that can be done on the store state _in the store itself_.
+
+To mimic the interaction we had in the last article, we’ll introduce an `addNumber` method to the store that accepts a payload and directly updates the `state.numbers` value with that payload.
 
 ```javascript
 export const store = {
@@ -56,7 +58,7 @@ export default {
 </script>
 ```
 
-The `NumberSubmit` will allow the user to add a new number to our store `numbers` data array:
+A `NumberSubmit` component will allow the user to add a new number to our store `numbers` data array:
 
 ```html
 <template>
@@ -91,9 +93,11 @@ The `NumberSubmit` component has an `addNumber()` method that calls the `store.a
 
 The store method receives the payload and directly mutates the `store.numbers` array. Thanks to Vue’s reactivity, whenever the `numbers` array in store state gets changed, the relevant DOM that depends on this value (`<template>` of `NumberDisplay`) _automatically updates_. This is because the `NumberDisplay` `storeState` data value is equivalent to the `store.state` object. When `store.state` changes, `NumberDisplay` `storeState` changes, and the template of `NumberDisplay` therefore re-renders.
 
-**TODO - Show simple-global-store-example app here not img**
-
-![](./public/assets/simple-global-store-app.png)
+<iframe src='https://thirty-days-of-vue-global-store.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 When we say components interact with one another here, we’re using the term ‘interact’ loosely. `NumberDisplay` and `NumberSubmit` aren’t going to do anything directly to each other but instead invoke changes to one another _through_ the store.
 
@@ -101,7 +105,7 @@ When we say components interact with one another here, we’re using the term �
 
 Awesome! Everything works as intended and setting up a simple store wasn’t actually that difficult.
 
-Though we won’t be adding anything else to our store, an important note to keep in mind is that we should attempt to keep all application state and potential state mutations _within the store_. For example, let’s assume we wanted to introduce a few more potential store methods (like `removeLastNumber()` or `reverseNumbers()`) that we expect some components to call):
+Though we won’t be adding anything else to our store, an important note to keep in mind is that we should always attempt to keep all application state and potential state mutations _within the store_. For example, let’s assume we wanted to introduce a few more potential store methods (like `removeLastNumber()` or `reverseNumbers()`) that we expect some components to call:
 
 ```javascript
 store = {

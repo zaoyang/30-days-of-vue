@@ -58,7 +58,7 @@ We’ll use the **v-model** directive to bind the `km` and `m` data properties t
 </html>
 ```
 
-To achieve the desired outcome of having one input field be updated in response to the change in the other - we can use the watch property. To watch the change in the KM input field, we’ll declare the watch property and watch the km data value in our instance:
+To achieve the desired outcome of having one input field be updated in response to the change in the other - we can use the **watch** property. To watch the change in the KM input field, we’ll declare the **watch** property to watch the `km` data value in our instance:
 
 ```javascript
 new Vue({
@@ -75,7 +75,7 @@ new Vue({
 });
 ```
 
-Since we also want the KM input field to be updated in response to changes in the M input field, we’ll also declare a watcher on the `m` data value:
+Since we also want the KM input field to be updated in response to changes in the M input field, we’ll also declare a **watcher** on the `m` data value:
 
 ```javascript
 new Vue({
@@ -109,7 +109,7 @@ watch: {
 
 For our application - we don’t need access to the old values, and the new values would be equal to the properties being watched. As a result, we won’t have the need to use any of these parameters.
 
-As each watch function runs, we’ll update the other data property by either multiplying or dividing the watched property by 1000:
+As each **watch** function runs, we’ll update the other data property by either multiplying or dividing the watched property by 1000:
 
 ```javascript
 new Vue({
@@ -131,9 +131,11 @@ new Vue({
 
 We’re using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
 
-**TODO - Show watchers-example app instead of image**
-
-![](./public/assets/watchers-example-app.png)
+<iframe src='./src/watchers-example/index.html'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Awesome! Though this works perfectly well, a good question to ask right now would be - do we need **watchers** to do what we just did?
 
@@ -201,10 +203,12 @@ new Vue({
 
 Our app would now work as expected! When one input changes, the other is updated.
 
-**TODO - Show computed-example app instead of image**
-
-![](./public/assets/watchers-example-app.png)
+<iframe src='./src/computed-example/index.html'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Can we always use **computed** properties in place of a **watcher**? No. In certain cases, you may find yourself in need of using the specific **watch** property.  The [Vue documentation](https://vuejs.org/v2/guide/computed.html#Watchers) states that _“[__watchers__ are] most useful when you want to perform asynchronous or expensive operations in response to changing data”_. In most cases, however, **watchers** tend to be overused where it might be [more appropriate to instead use a **computed** property](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property).
 
-Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components! See you tomorrow!
+Great work today! Tomorrow, we’ll be taking a look at the different lifecycle hooks a Vue instance contains before finally discussing Vue Components!

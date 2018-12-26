@@ -36,11 +36,15 @@ We've introduced `user` and `city` data properties that have values of `'Hassan 
 </html>
 ```
 
-In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
+> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
 
 With the data being bound to the template, we're now able to see the values of these different data properties.
 
-![](./public/assets/simple_binding.png)
+<iframe src='./src/simple-binding-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 In Vue, information within the `data` property of an instance is known to be [reactive](https://vuejs.org/v2/guide/reactivity.html). This means that if we manage to modify or change the data values of a Vue instance, Vue will _recognize_ this change and re-render the template to show the _updated_ data values.
 
@@ -138,8 +142,10 @@ When we now click the button, the `changeGreeting()` method is called which chan
 
 Give it a try! Click the 'Change Greeting' button multiple times to witness the greeting text change back and forth.
 
-**TODO - Show app - not image**
-
-![](./public/assets/simple_data_change.png)
+<iframe src='./src/simple-data-change-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 We’ll stop here for now and spend a little time tomorrow discussing how the things we’ve learned today shape the way we build data-driven applications in Vue.

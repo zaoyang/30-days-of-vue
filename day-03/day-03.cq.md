@@ -14,9 +14,11 @@ For those who may be coming from a [React](https://reactjs.org/) background, you
 
 The reactive nature of data in Vue help facilitates the possibility of building applications in a _data-driven_ manner. To get a better understanding of this, we’ll take a look at the simple application we built in yesterday’s article.
 
-__TODO - Show app - not image__
-
-![](../day-02/public/assets/simple_data_change.png)
+<iframe src='../day-02/src/simple-data-change-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Let’s assume we wanted to scale the application and introduce capabilities like:
 
@@ -31,7 +33,7 @@ The Mustache Syntax and certain directives (which we’ll start to see in the ne
 
 I> If you've used [React](https://reactjs.org), [Angular](https://angular.io/), or other modern-day front end frameworks/libraries; you might be used to a similar pattern on how modifying data/state _drives the changes in an application UI_.
 
-In contrast, let’s aim to reproduce the functionality of the application in the last article (i.e. toggling the greeting message with the click of a button) with the use of only standard (i.e. vanilla) JavaScript. Though there are a few ways to achieve this we might come up with something like this:
+In contrast, let’s aim to reproduce the functionality of the application in the last article (i.e. toggling the greeting message with the click of a button) with the use of only standard (i.e. vanilla) JavaScript. Though there are a few ways to achieve this, we might come up with something like this:
 
 ### HTML
 

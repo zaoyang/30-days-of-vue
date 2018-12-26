@@ -128,9 +128,11 @@ Notice how we’re able to access the application wide store instance with `this
 
 Our application will now work as intended with the help of a Vuex store.
 
-__TODO - Show vuex-store-example app here not img__
-
-![](./public/assets/vuex-store-example-app.png)
+<iframe src='https://thirty-days-of-vue-vuex.surge.sh/'
+        height="215"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 We can see that Vuex extends the simple store method by introducing __explicitly defined actions, mutations, and getters__. This is where the initial boilerplate, as well as the main advantage comes in. In addition, another significant advantage to using Vuex is the integration with the Vue Devtools to provide __time-travel debugging__.
 

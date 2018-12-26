@@ -36,11 +36,15 @@ We've introduced `user` and `city` data properties that have values of `'Hassan 
 </html>
 ```
 
-In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
+> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling to our application.
 
 With the data being bound to the template, we're now able to see the values of these different data properties.
 
-![](./public/assets/simple_binding.png)
+<iframe src='./src/simple-binding-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 In Vue, information within the `data` property of an instance is known to be [reactive](https://vuejs.org/v2/guide/reactivity.html). This means that if we manage to modify or change the data values of a Vue instance, Vue will _recognize_ this change and re-render the template to show the _updated_ data values.
 
@@ -89,7 +93,7 @@ I> Instead of using __methods__, we could also write our intended functionality 
 In our example, we’ll create a `changeGreeting()` method that toggles the value of the `greeting` data property:
 
 {lang=javascript,line-numbers=off}
-<<[src/main.js](./src/main.js)
+<<[src/simple-data-change-example/main.js](./src/simple-data-change-example/main.js)
 
 We’re using a simple [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to toggle the value of the `greeting` property from `'Hello World!'` to `'What is up!'` and vice versa.
 
@@ -102,14 +106,16 @@ I> A Vue directive is essentially a special type of command that can be added to
 The __v-on__ directive is one of the many native Vue directives available to us in the template. To be able to listen to the button click event and run the instance `changeGreeting()` method, we’ll attach the __v-on__ directive to a click listener on the button element.
 
 {lang=html,line-numbers=off}
-<<[src/index.html](./src/index.html)
+<<[src/simple-data-change-example/index.html](./src/simple-data-change-example/index.html)
 
 When we now click the button, the `changeGreeting()` method is called which changes the value of the `greeting` data property. When the `greeting` data property changes, the template is automatically re-rendered to show the change.
 
 Give it a try! Click the 'Change Greeting' button multiple times to witness the greeting text change back and forth.
 
-__TODO - Show app - not image__
-
-![](./public/assets/simple_data_change.png)
+<iframe src='./src/simple-data-change-example/index.html'
+        height="250"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 We’ll stop here for now and spend a little time tomorrow discussing how the things we’ve learned today shape the way we build data-driven applications in Vue.

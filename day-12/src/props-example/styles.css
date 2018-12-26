@@ -38,6 +38,8 @@ html, body {
 
 #app .level-item {
   padding-left: 10px;
+  justify-content: flex-start;
+  display: inline;
   color: #00d1b2;
 }
 

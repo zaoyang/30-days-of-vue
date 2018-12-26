@@ -2,9 +2,11 @@
 
 In yesterday’s article, we created our first component (named `tweet-component`) as part of a mock twitter application. We went as far as having a list of these `tweet-component`‘s be rendered with only static information.
 
-**TODO - Show global-components-example app from day-11 here not img**
-
-![](../day-11/public/assets/global-components-app.png)
+<iframe src='../day-11/src/global-components-example/index.html'
+        height="525"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 Our aim today is to have each `tweet-component` render unique tweet data from the `tweets` data array kept in the root instance. We’ll achieve this with the help of [**props**](https://vuejs.org/v2/guide/components-props.html).
 
@@ -86,9 +88,11 @@ Vue.component('tweet-component', {
 
 Our application will now display information from all the different tweets in our instance data.
 
-**TODO - Show props-example app here not img**
-
-![](./public/assets/props-example-app.png)
+<iframe src='./src/props-example/index.html'
+        height="525"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 ## Prop Validation
 
@@ -187,9 +191,11 @@ Vue.component('tweet-component', {
 
 Our application UI will remain the same but now be composed of two nested components.
 
-**TODO - Show nested-components-example app here not img**
-
-![](./public/assets/props-example-app.png)
+<iframe src='./src/nested-components-example/index.html'
+        height="525"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 The Vue Devtools is incredibly useful in helping debug our application and inspect what data is being passed from one component to another. By launching the Vue Devtools, we’ll be able to see all the components in our application and the props available within each component.
 

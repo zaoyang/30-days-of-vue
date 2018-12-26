@@ -56,6 +56,8 @@ The path of `*` is how we, in Vue Router, can show a certain fallback component 
 We can now look to create our application wide router instance using the `new VueRouter({})` constructor. At the very minimum, the constructor expects the `routes` array that maps components to their respective pathnames:
 
 ```javascript
+import Vue from "vue";
+import VueRouter from "vue-router";
 // ...
 
 const routes = [
@@ -72,6 +74,8 @@ Vue Router’s default mode is _hash_. Hash mode URLs always contain a hash symb
 Since our application is a dead simple client-side app and we don’t want the hash in our URLs, we can get rid of it. To remove hashes in our URLs, we’ll specify the `history` mode property in our router instantiation:
 
 ```javascript
+import Vue from "vue";
+import VueRouter from "vue-router";
 // ...
 
 const routes = [
@@ -128,9 +132,11 @@ Using the `<router-link>` component requires passing a `to` prop that specifies 
 
 And there we have it! If we save all the work we’ve done, we now have a fully functional client-side application built with Vue and Vue Router.
 
-__TODO - Show pokemon-routing app here not img__
-
-![](./public/assets/pokemon-routing-app.png)
+<iframe src='https://pokemon-routing.surge.sh/'
+        height="900"
+        scrolling="no"
+        style='display: block; margin: 0 auto; width: 100%'>
+</iframe>
 
 I> If you’d like to re-absorb the subject of client-side routing in Vue - you can watch a talk I’ve given on this subject [here](https://www.youtube.com/watch?v=YFnimUl8Qjo)!
 

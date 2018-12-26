@@ -12,7 +12,7 @@ There must be a better way...
 
 When we talk about testing, we're talking about the process of _automating_ the process of setting up and measuring our assumptions against assertions of functionality about our application.
 
-**The importance of testing in development can’t be stressed enough**. Testing can help reveal bugs before they appear, instill confidence in your web application, and make it easy to onboard new developers on an existing codebase.
+**The importance of testing in development can’t be stressed enough**. Testing can help reveal bugs before they appear, instill confidence in our web applications, and make it easy to onboard new developers on an existing codebase.
 
 When we talk about front-end testing in the context of Vue, we're referring to the process of making assertions about what our Vue app renders and how it responds to user interaction.
 
@@ -40,6 +40,6 @@ Numerous testing tools/suites exist within the JavaScript ecosystem. Here are so
 -   [Chai](https://www.chaijs.com/): A testing assertion library that provides interfaces for us to create assertions for our tests (`should`..., `expect`..., `assert`...).
 -   [Jest](https://jestjs.io/): A JavaScript testing framework that comes with an assertion library, mocking support, snapshot testing, and more with minimal to no configuration/set-up.
 
-We'll use the Jest testing framework since it comes with its own assertion library that provides readable a testing language and assertions. Finally, we'll use Vue’s official unit testing library, called **Vue Test Utils**, which would provide some really useful testing utility functions that make writing our assertions a breeze.
+We'll use the Jest testing framework since it comes with its own assertion library that provides a readable testing language and assertions. Finally, we'll use Vue’s official unit testing library, called **Vue Test Utils**, which would provide some really useful testing utility functions that make writing our assertions a breeze.
 
-Tomorrow, we'll get our application set up with the testing in place so that we can start testing our application and be confident it works as we expect. See you tomorrow!
+Tomorrow, we'll get an application set up with the testing in place so that we can start testing the application and be confident it works as we expect. See you tomorrow!
