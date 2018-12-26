@@ -1,3 +1,13 @@
+---
+page_id: 30-days-of-vue/day-1
+permalink: 30-days-of-vue/day-1
+series: 30-days-of-vue
+title: What is Vue?
+description: >-
+  Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
+publishedOn: '1/1/19'
+---
+
 # What is Vue?
 
 Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**,  and even **Testing**.
