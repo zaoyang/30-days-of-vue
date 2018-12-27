@@ -37,4 +37,5 @@ module.exports = {
   closingCtaH1: 'Get started now',
   closingCtaCopy: `Join us on our 30-day journey in Vue. Join thousands of other professional Vue developers and learn one of the most powerful web application development frameworks available today.`,
   closingCtaButton: 'Download 30 Days of Vue PDF (FREE)',
+  publishedOn: '2019-01-01',
 };

@@ -1,3 +1,12 @@
+---
+permalink: 30-days-of-vue/day-2
+series: 30-days-of-vue
+title: The Vue Instance - Data
+description: >-
+  In the first article, we had a brief look at what Vue is and how we’re able to instantiate a Vue application with the Vue instance. In this article, we’ll be taking a deeper look at the Vue instance and how it drives the ability to create data-driven applications.
+publishedOn: '2019-01-01'
+---
+
 # The Vue Instance - Data
 
 In the first article, we had a brief look at what Vue is and how we’re able to instantiate a Vue application with the Vue instance. In this article, we’ll be taking a deeper look at the Vue instance and how it drives the ability to create data-driven applications.
@@ -12,8 +21,8 @@ new Vue({
   data: {
     greeting: 'Hello World!',
     user: 'Hassan Djirdeh',
-    city: 'Toronto'
-  }
+    city: 'Toronto',
+  },
 });
 ```
 
@@ -78,17 +87,17 @@ new Vue({
   data: {
     greeting: 'Hello World!',
     user: 'Hassan Djirdeh',
-    city: 'Toronto'
+    city: 'Toronto',
   },
   methods: {
     // instance methods
-  }
+  },
 });
 ```
 
-The __methods__ property of a Vue instance allows us to define methods bound to that instance that behave like normal JavaScript functions (i.e. are evaluated only when called). In these methods, we’re able to directly change data values kept in our instance.
+The **methods** property of a Vue instance allows us to define methods bound to that instance that behave like normal JavaScript functions (i.e. are evaluated only when called). In these methods, we’re able to directly change data values kept in our instance.
 
-I> Instead of using __methods__, we could also write our intended functionality change _inline_ in the template. We'll be discussing more of this in article __#8 - Methods & Computed Properties__.
+I> Instead of using **methods**, we could also write our intended functionality change _inline_ in the template. We'll be discussing more of this in article **#8 - Methods & Computed Properties**.
 
 In our example, we’ll create a `changeGreeting()` method that toggles the value of the `greeting` data property:
 
@@ -101,9 +110,9 @@ Notice how we’re referencing the value of the `greeting` property with `this.g
 
 With our method prepared, we’ll need to call the method from our template when the user clicks the 'Change Greeting' button. To handle this interaction, we’ll use Vue’s [v-on directive](https://vuejs.org/v2/guide/events.html).
 
-I> A Vue directive is essentially a special type of command that can be added to HTML content. We'll be discussing, in more detail, Vue's most commonly used native directives in articles __#4__, __#5__, and __#6__.
+I> A Vue directive is essentially a special type of command that can be added to HTML content. We'll be discussing, in more detail, Vue's most commonly used native directives in articles **#4**, **#5**, and **#6**.
 
-The __v-on__ directive is one of the many native Vue directives available to us in the template. To be able to listen to the button click event and run the instance `changeGreeting()` method, we’ll attach the __v-on__ directive to a click listener on the button element.
+The **v-on** directive is one of the many native Vue directives available to us in the template. To be able to listen to the button click event and run the instance `changeGreeting()` method, we’ll attach the **v-on** directive to a click listener on the button element.
 
 {lang=html,line-numbers=off}
 <<[src/simple-data-change-example/index.html](./src/simple-data-change-example/index.html)
