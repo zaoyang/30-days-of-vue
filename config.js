@@ -1,9 +1,10 @@
 const dedent = require('dedent');
 module.exports = {
   title: `30 Days of Vue`,
-  subtitle: `An introduction to Vue in 30 bite-size morsels`,
+  subtitle: `A free introduction to Vue in 30 bite-size morsels`,
+  heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
-  paperBookPhotoUrl: 'todo.jpg',
+  paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
   publicLessonCount: 7,
   lessonPrefix: 'day-',
   summary: dedent`
@@ -38,4 +39,5 @@ module.exports = {
   closingCtaCopy: `Join us on our 30-day journey in Vue. Join thousands of other professional Vue developers and learn one of the most powerful web application development frameworks available today.`,
   closingCtaButton: 'Download 30 Days of Vue PDF (FREE)',
   publishedOn: '2019-01-01',
+  lessonLanguage: 'Day',
 };
