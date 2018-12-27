@@ -1,6 +1,6 @@
 # Better testing with Vue Test Utils
 
-Today, we'll be taking a look at Vue’s official testing library called [__Vue Test Utils__](https://vue-test-utils.vuejs.org/) that makes testing fun and relatively easy.
+> Today, we'll look at Vue’s official testing library called [__Vue Test Utils__](https://vue-test-utils.vuejs.org/) that makes testing fun and relatively easy.
 
 Yesterday, we constructed our tests through simple assertions that involved either mounting the component constructor or invoking the component data function. Although this worked well, testing can become a bit cumbersome when more complicated functionality needs to be tested. __Vue Test Utils__  is a testing utility library created and maintained by the Vue core team that offers a nicer, higher-level API for dealing with Vue components under test.
 

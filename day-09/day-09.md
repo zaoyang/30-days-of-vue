@@ -1,6 +1,6 @@
 # Watchers
 
-Yesterday, we discussed how **methods** and **computed** properties work within a Vue instance. Today, we’ll briefly discuss another instance property called **watchers** (or sometimes known as the **watch** property).
+> Yesterday, we discussed how **methods** and **computed** properties work within a Vue instance. Today, we’ll briefly discuss another instance property called **watchers** (or sometimes known as the **watch** property).
 
 ## Watchers
 

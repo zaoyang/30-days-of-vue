@@ -1,6 +1,6 @@
 # Implementing Tests
 
-Yesterday, we discussed the importance of testing and some of the different types of unit testing libraries/suites that exist. Today, we'll begin to see unit testing in action.
+> Yesterday, we discussed the importance of testing and some of the different types of unit testing libraries/suites that exist. Today, we'll begin to see unit testing in action.
 
 As mentioned in the last article, we'll be using the [Jest](https://jestjs.io/) testing framework. One of the main advantages behind using Jest is its zero configuration set-up. The [Getting Started](https://jestjs.io/docs/en/getting-started) guide in the Jest documentation shows us that we simply need to install the Jest package, create a `.test.js` or `.spec.js` file, and add a test script to the `package.json` file.
 

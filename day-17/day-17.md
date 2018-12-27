@@ -1,5 +1,7 @@
 # Single File Components
 
+> Today, we'll discuss one of Vue's most useful features in helping build large scale Vue applications - **Single File Components**.
+
 We've made it through 16 days already! Pat yourself on the back... but not for too long... there is still a lot more.
 
 From what we've seen in the past few articles, we now have a good picture of how the `Vue.component({})` constructor can be used to define global components and how we’re able to instead locally register components in the `components` property of a parent instance.

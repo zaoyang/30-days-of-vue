@@ -1,6 +1,6 @@
 # Introduction to Flux
 
-Handling data inside large client-side applications is a complex task. Today we're looking at a one method of handling complex data proposed by Facebook called the __Flux Architecture__.
+> Handling data inside large client-side applications is a complex task. Today we're looking at a one method of handling complex data proposed by Facebook called the __Flux Architecture__.
 
 As our applications get bigger and more complex, we'll need a better data handling approach. With more data, we'll have more to keep track of.
 

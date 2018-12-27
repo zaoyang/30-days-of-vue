@@ -1,5 +1,7 @@
 # Methods and Computed Properties
 
+> Today, we'll take a look at the __computed property__ of a Vue instance and see how it differs from using a standard instance __method__.
+
 Phew! We made it to week two (relatively unscathed)! Through this point, we've talked through some of the basic features of the Vue instance (data reactivity), template binding (Mustache syntax/directives), and the Vue Devtools.
 
 In this article, we're going to look at two specific properties of the Vue instance - __Methods__ and __Computed Properties__.

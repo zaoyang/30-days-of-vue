@@ -1,6 +1,6 @@
 # The Vue Instance - Data Driven Applications
 
-In yesterday’s article, we’ve come to understand how data behaves reactively in Vue. Today, we’re going to spend a little more time discussing this behavior since it plays an especially important role in how we build applications in Vue.
+> In yesterday’s article, we’ve come to understand how data behaves reactively in Vue. Today, we’re going to spend a little more time discussing this behavior since it plays an especially important role in how we build applications in Vue.
 
 ## Reactive Data
 

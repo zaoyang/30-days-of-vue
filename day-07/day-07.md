@@ -1,10 +1,10 @@
 # Vue Devtools
 
-Today’s article is going to be a concise discussion in how the [Vue Devtools](https://github.com/vuejs/vue-devtools) can help debug our Vue applications.
+> Today’s article is going to introduce the **Vue Devtools** - a browser extension tool built to help debug Vue applications.
 
 ## Vue Devtools
 
-The Vue Devtools is a development tool built and maintained by the Vue core team. It can be installed through one of the following formats:
+The [Vue Devtools](https://github.com/vuejs/vue-devtools) is a development tool built and maintained by the Vue core team. It can be installed through one of the following formats:
 
 -   [Chrome Extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 -   [Firefox Addon](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
@@ -63,6 +63,6 @@ Here's a GIF displaying just that.
 
 By being able to directly update our application and monitor data changes (and vice-versa), the Vue Devtools is an especially useful tool for debugging Vue apps.
 
-The Vue Devtools also offers a lot more capabilities like being able to track Custom Events, inspect props (data) being passed from one component to its child, and have the ability to conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we start to investigate the relevant concept in the course.
+The Vue Devtools also offers a lot more capabilities like being able to track Custom Events, inspect props (data) being passed from one component to its child, and conduct time travel debugging in a Vuex integrated app. We’ll be discussing these features when we investigate the relevant concepts in the course.
 
 Congrats on getting through the first week! In the next coming sections, we’ll be taking a deeper dive into the Vue instance.

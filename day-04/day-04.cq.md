@@ -1,8 +1,8 @@
 # Vue Directives
 
-The last article was a little heavy on discussion. In this article, we’ll dive into more code examples by addressing some important native __directives__.
+> The last article was a little heavy on discussion. In today's article, we’ll dive into more code examples by addressing some important native Vue __directives__.
 
-A __Vue directive__ is essentially a special type of command that can be added to HTML content and often appears as a prefixed HTML attribute. We’ll first revisit the __v-on__ directive since we’ve used it in one of the earlier articles.
+A Vue directive is essentially a special type of command that can be added to HTML content and often appears as a prefixed HTML attribute. We’ll first revisit the __v-on__ directive since we’ve already used it in one of the earlier articles.
 
 ## Event Handling with v-on
 

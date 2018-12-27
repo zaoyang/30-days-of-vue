@@ -1,5 +1,7 @@
 # Render Functions and JSX
 
+> We took a look at the different types of component templates in yesterday's article. Today, we'll look to use a __render__ function to create the markup of a component entirely with JavaScript.
+
 From what we’ve seen in yesterday's article, it’s probably safe to say that creating the markup for Vue components (or instances) is a fairly straightforward process. We’ve seen some alternate template definitions like `inline-templates` and `x-templates`, but as a best practice, it’s best to stick with using an instance template option for simple components/instances.
 
 > We did mention that there’s another way to have the templates of our components be defined (hint: __Single-File Components__). We’ll be taking a small detour today before diving into SFC’s tomorrow!

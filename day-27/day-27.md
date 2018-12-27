@@ -1,5 +1,7 @@
 # Testing the App
 
+> Today, we'll start creating unit tests by looking at a few features of our application, thinking about where the edge cases are and what we assume will happen with the component.
+
 Yesterday, we discussed the simplified [TodoMVC](http://todomvc.com/) app that we hope to test and established the test file where we’ll be running our tests. Today, we’ll start by looking at two features of our application and think about how we’ll create suitable test assertions for them.
 
 ![](./public/assets/simple-todo-mvc-app.png)

@@ -1,8 +1,8 @@
 # Simple Global Store
 
-Yesterday, we gathered an understanding of how a global EventBus can use its events interface to have isolated components communicate with one another. Though an EventBus is easy to setup - the significant disadvantage behind using one is the difficulty in being able to track data changes appropriately.
+> Yesterday, we gathered an understanding of how a global EventBus can use its events interface to have isolated components communicate with one another. Today, we’ll see how a __Simple Global Store__ can be a more useful approach to handling state management.
 
-Today we’ll be looking at how a __Simple Global Store__ can be used to handle state management in a more robust manner.
+Though an EventBus is easy to set up - the significant disadvantage behind using one is the difficulty in being able to track data changes appropriately. In today's article, we’ll be looking at how a __Simple Global Store__ can be used to handle state management in a more robust manner.
 
 ## Simple Global Store
 

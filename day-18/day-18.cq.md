@@ -1,5 +1,7 @@
 # Vue CLI
 
+> Today, we're going to discuss Vue's official development tool in helping build and scaffold Webpack bundled Vue applications rapidly.
+
 Yesterday - we talked about single-file components, the advantages they provide, and how we’re only able to use them with build tools like Webpack. Today, we’ll talk about how we can rapidly scaffold a brand new Webpack bundled Vue application with the [__Vue CLI__](https://cli.vuejs.org/guide/) (i.e. the Vue Command Line interface).
 
 ## The Vue CLI

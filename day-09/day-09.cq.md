@@ -1,6 +1,6 @@
 # Watchers
 
-Yesterday, we discussed how __methods__ and __computed__ properties work within a Vue instance. Today, we’ll briefly discuss another instance property called __watchers__ (or sometimes known as the __watch__ property).
+> Yesterday, we discussed how __methods__ and __computed__ properties work within a Vue instance. Today, we’ll briefly discuss another instance property called __watchers__ (or sometimes known as the __watch__ property).
 
 ## Watchers
 

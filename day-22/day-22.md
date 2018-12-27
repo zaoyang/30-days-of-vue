@@ -1,5 +1,7 @@
 # Vuex
 
+> With the knowledge of the Flux pattern and Vuex, let's integrate Vuex onto a Vue application to build on top of the things we've learned using a simple global store.
+
 In the article before last, we saw how a simple global store allows us to manage application state in a reasonable manner that _mimics_ the Flux pattern. Today, we'll reimplement the same application using the most robust and widely-used, flux-like, state management library in Vue - [**Vuex**](https://github.com/vuejs/vuex).
 
 We'll look to build the same `NumberDisplay` and `NumberSubmit` component relationship that we've done before. As a refresher, we’ll want to build an implementation where an input is entered in a `NumberSubmit` component and that entered number is then shown in the template of a sibling `NumberDisplay` component.

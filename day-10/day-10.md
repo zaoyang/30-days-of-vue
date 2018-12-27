@@ -1,6 +1,6 @@
 # Lifecycle Hooks
 
-Today, we're going to talk a bit about how an instance _lives_ in an application. That is, we'll talk about the Vue instance’s _lifecycle_.
+> Today, we're going to talk a bit about how an instance _lives_ in an application. That is, we'll talk about the Vue instance’s _lifecycle_.
 
 In a Vue instance, Vue gives us some hooks where we can insert our own functionality at different times in the instance’s lifecycle. In order to _hook into_ the lifecycle, we'll need to define functions on an instance which Vue calls at the appropriate time for each hook. An example of such a lifecycle hook is the **`created()`** hook.
 

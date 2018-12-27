@@ -1,4 +1,6 @@
-# Vue Components - Local Registration, Data, and Single Root Template
+# Vue Components - Local Registration, Data, and Single Root Templates
+
+> Today, we'll cover some interesting points that govern the use of Vue components such as the ability to locally register components, the requirement to having the component `data` property always be a function, and the restriction to using a single root template.
 
 In the last couple of articles, we've been introduced to how Vue components help make our Vue applications more modular, taken a look at how props help pass data from parent to child components, and discussed how custom events can be used to facilitate communication from child components upwards to parent instances.
 
@@ -192,6 +194,19 @@ The Vue console will emit a warning referencing the incorrect template and stati
 
 ```shell
 Component template should contain exactly one root element...
+```
+
+Instead, we are expected to wrap our component templates in a single root element. For example, we can have the elements shown in the example above be kept within a single parent `<div>` element:
+
+```javascript
+const localComponent = {
+  template: `
+    <div>
+      <p>Hello World!</p>
+      <button>Click Here!</button>
+    </div>
+  `
+}
 ```
 
 This restriction is due to the [technical constraints of Vue's diff algorithm](https://github.com/vuejs/vue/issues/7088#issuecomment-348252040) (i.e. algorithm on how changes are patched and implemented on the actual DOM). If you're interested in reading more about this, here's an [interesting issue that was opened](https://github.com/vuejs/vue/issues/7088), in Nov 2017, on the Vue core library that discussed this constraint.

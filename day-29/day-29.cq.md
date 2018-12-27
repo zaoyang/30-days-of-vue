@@ -1,5 +1,7 @@
 # Vue 3.0 and the future of Vue
 
+> In today's article, we'll take a brief look at some of the cool features Vue 3.0 is expected to bring when it arrives.
+
 Everything we’ve discussed within this course covers the latest current release of Vue, often labeled as [version 2.x](https://github.com/vuejs/vue/releases).
 
 In [Sept. 2016](https://medium.com/the-vue-point/vue-2-0-is-here-ef1f26acf4b8), the Vue framework was rewritten and released as version 2.0. Vue 2.0 introduced new concepts such as a lightweight virtual DOM implementation, render functions, and server-side rendering capabilities. In addition, version 2.0 was rewritten to provide significant performance improvements over version 1.x.

@@ -1,10 +1,10 @@
 # Form Handling with v-model
 
-In yesterday’s article, we discussed the **v-for** directive and its role in helping display lists of elements. Today, we’ll spend a little time taking a look at the [**v-model**](https://vuejs.org/v2/guide/forms.html) directive.
+> In yesterday’s article, we discussed the **v-for** directive and its role in helping display lists of elements. Today, we’ll spend a little time taking a look at the **v-model** directive and its ability to create two-way data binding.
 
 ## v-model
 
-The **v-model** directive creates two-way data binding between form inputs and text area elements. In other words, **v-model** directly binds user input with a Vue object’s data model that as one changes, the other automatically gets updated.
+The [**v-model**](https://vuejs.org/v2/guide/forms.html) directive creates two-way data binding between form inputs and text area elements. In other words, **v-model** directly binds user input with a Vue object’s data model that as one changes, the other automatically gets updated.
 
 The **v-model** directive syntax takes an expression which is the name of the data property that the input is bound to:
 

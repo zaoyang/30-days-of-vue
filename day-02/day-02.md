@@ -1,6 +1,6 @@
 # The Vue Instance - Data
 
-In the first article, we had a brief look at what Vue is and how we’re able to instantiate a Vue application with the Vue instance. In this article, we’ll be taking a deeper look at the Vue instance and how it drives the ability to create data-driven applications.
+> Now that we know how to instantiate a Vue application with the Vue instance, let's take a deeper look into how the data property of a Vue instance helps enable reactivity.
 
 ## The Vue Instance
 
@@ -12,8 +12,8 @@ new Vue({
   data: {
     greeting: 'Hello World!',
     user: 'Hassan Djirdeh',
-    city: 'Toronto'
-  }
+    city: 'Toronto',
+  },
 });
 ```
 
@@ -36,7 +36,7 @@ We've introduced `user` and `city` data properties that have values of `'Hassan 
 </html>
 ```
 
-> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
+> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling to our application.
 
 With the data being bound to the template, we're now able to see the values of these different data properties.
 
@@ -78,11 +78,11 @@ new Vue({
   data: {
     greeting: 'Hello World!',
     user: 'Hassan Djirdeh',
-    city: 'Toronto'
+    city: 'Toronto',
   },
   methods: {
     // instance methods
-  }
+  },
 });
 ```
 

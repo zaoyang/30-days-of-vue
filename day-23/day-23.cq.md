@@ -1,6 +1,8 @@
 # Introduction to Routing
 
-Most, if not all the large-scale applications we tend to create will usually have multiple views (i.e. pages in different URL routes). For instance, an application might have a login view where a user can log in or a search results page that shows a user a list of their search results. These are two _different_ views with two _different_ page structures.
+> The majority of large-scale applications we tend to create will usually have multiple views be kept in different routes. Today, we'll discuss client-side routing and set up the starting point of the routing application we'll build.
+
+Most large-scale applications we use today tend to have multiple views be separated and kept in different URL routes. For instance, an application might have a login view where a user can log in or a search results page that shows a user a list of their search results. These are two _different_ views with two _different_ page structures.
 
 In today's and tomorrow's article, we'll discuss and build an application that has multiple views with the help of the [Vue Router](https://github.com/vuejs/vue-router) library. The app we'll build will be an adaptation of an application first built as part of the [Let’s Build a Custom Vue Router](https://css-tricks.com/build-a-custom-vue-router/) article originally posted on [CSS-Tricks](https://css-tricks.com/).
 

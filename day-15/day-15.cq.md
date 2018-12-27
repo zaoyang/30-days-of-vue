@@ -1,5 +1,7 @@
 # Vue Components - Template Definitions
 
+> Today, we'll be taking a look at some of the different ways we can declare the template/markup of a component.
+
 For all the components we’ve seen so far, we’ve used either standard strings or template literals to define the component template. In this article, we'll summarize why we use either strings or template literals before investigating some other ways of defining the template of a component.
 
 ## Component Templates

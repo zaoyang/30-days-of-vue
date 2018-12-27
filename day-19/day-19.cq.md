@@ -1,5 +1,7 @@
 # Custom Events and the EventBus
 
+> Today's session will be the first of a series of articles discussing different methods to managing application wide data. We'll begin by reintroducing __props__ and __custom events__ before taking a look at how a global __EventBus__ can facilitate application wide communication.
+
 Handling data inside a client-side application often begins as a simple process but can end up becoming a seemingly complex task. Today, we’ll begin a three-part series on the different ways we can think about managing application wide data. This three-part series was originally published as the single article - [Managing State in Vue.js](https://medium.com/fullstackio/managing-state-in-vue-js-23a0352b1c87).
 
 We'll begin today's article by reintroducing how __props__ and __custom events__ allow us to communicate information between parent and child components.

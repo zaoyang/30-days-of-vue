@@ -1,5 +1,7 @@
 # Vue Components - Props
 
+> Today, we'll discuss how **props** can help us pass data from parent components down to child components.
+
 In yesterday’s article, we created our first component (named `tweet-component`) as part of a mock twitter application. We went as far as having a list of these `tweet-component`‘s be rendered with only static information.
 
 <iframe src='../day-11/src/global-components-example/index.html'

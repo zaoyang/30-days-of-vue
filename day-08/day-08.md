@@ -1,5 +1,7 @@
 # Methods and Computed Properties
 
+> Today, we'll take a look at the **computed property** of a Vue instance and see how it differs from using a standard instance **method**.
+
 Phew! We made it to week two (relatively unscathed)! Through this point, we've talked through some of the basic features of the Vue instance (data reactivity), template binding (Mustache syntax/directives), and the Vue Devtools.
 
 In this article, we're going to look at two specific properties of the Vue instance - **Methods** and **Computed Properties**.
@@ -232,7 +234,7 @@ By running the application and opening our browser console, we’ll see the `con
 
 The first time the `reverseMessage` property is computed, its value is cached. With every other call to render the value of `reverseMessage`, the `message` property hasn’t changed, so the cached result is simply returned without running the **computed** function again.
 
-If we repeated a similar example but instead called **methods** multiple times in the template, the `console.log()` message will be run every single time the method is declared:
+If we repeat a similar example but instead call **methods** multiple times in the template, the `console.log()` message will be run every single time the method is declared:
 
 ![](./public/assets/multiple-methods.png)
 

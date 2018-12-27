@@ -1,6 +1,6 @@
 # Introduction to Testing
 
-Test suites are an upfront investment that pay dividends over the lifetime of a system. Today we'll introduce the topic of testing and discuss the different types of tests we can write.
+> Test suites are an upfront investment that pay dividends over the lifetime of a system. Today, we'll introduce the topic of testing and discuss the different types of tests we can write.
 
 Okay, close your eyes for a second... wait, don't... it's hard to read with your eyes closed, but imagine for a moment your application is getting close to your first deployment.
 

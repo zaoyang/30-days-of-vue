@@ -1,5 +1,7 @@
 # Vue Components - Global Components
 
+> In today's session, we'll be building our first global Vue component.
+
 In the last week and a half, we’ve covered a large number of properties and features within a Vue instance. We’ve discussed an instance’s reactivity, its directives, methods, computed properties, watchers, and lifecycle hooks. For those who might have used other newer front end libraries/frameworks, you may have noticed we haven’t discussed a vital piece of modern UI development - __components__.
 
 ## Components

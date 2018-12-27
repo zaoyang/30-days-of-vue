@@ -1,5 +1,7 @@
 # Vue Components - Custom Events
 
+> Yesterday, we saw how __props__ can be used to pass data downwards from parent to child. Today, we'll see how __custom events__ can facilitate communication in the opposite direction - from child to parent.
+
 In the last two articles - we introduced components, seen how they help make our Vue applications more modular and taken a look at how props help pass data from parent to child components.
 
 What if we needed to find a way to communicate information in the opposite direction (i.e. have the child component notify the parent about something)?

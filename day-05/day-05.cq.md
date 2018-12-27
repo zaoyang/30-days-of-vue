@@ -1,5 +1,7 @@
 # List Rendering with v-for
 
+> Today we're going to work through how the __v-for__ directive can be used to dynamically render a list of elements based on a data source.
+
 Today's article is a summarized and simpler version of the article __List Rendering and Vue's v-for directive__, which was originally posted on [CSS-Tricks](https://css-tricks.com/list-rendering-and-vues-v-for-directive/) and the [freeCodeCamp](https://medium.freecodecamp.org/an-introduction-to-dynamic-list-rendering-in-vue-js-a70eea3e321) blogs.
 
 ## List Rendering

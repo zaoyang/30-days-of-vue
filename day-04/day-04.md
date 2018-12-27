@@ -1,8 +1,8 @@
 # Vue Directives
 
-The last article was a little heavy on discussion. In this article, we’ll dive into more code examples by addressing some important native **directives**.
+> The last article was a little heavy on discussion. In today's article, we’ll dive into more code examples by addressing some important native Vue **directives**.
 
-A **Vue directive** is essentially a special type of command that can be added to HTML content and often appears as a prefixed HTML attribute. We’ll first revisit the **v-on** directive since we’ve used it in one of the earlier articles.
+A Vue directive is essentially a special type of command that can be added to HTML content and often appears as a prefixed HTML attribute. We’ll first revisit the **v-on** directive since we’ve already used it in one of the earlier articles.
 
 ## Event Handling with v-on
 
@@ -56,7 +56,7 @@ Here’s a code sample that shows some different event listeners with different 
       <input v-on:keyup="alertMessageGreeting"
              placeholder="Type something" />
       <input v-on:keyup.enter="alertEnterGreeting" 
-             placeholder="Type something and release the enter key" />
+             placeholder="Type something and release the Enter key" />
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>

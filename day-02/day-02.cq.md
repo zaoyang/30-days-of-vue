@@ -1,15 +1,6 @@
----
-permalink: 30-days-of-vue/day-2
-series: 30-days-of-vue
-title: The Vue Instance - Data
-description: >-
-  In the first article, we had a brief look at what Vue is and how we’re able to instantiate a Vue application with the Vue instance. In this article, we’ll be taking a deeper look at the Vue instance and how it drives the ability to create data-driven applications.
-publishedOn: '2019-01-01'
----
-
 # The Vue Instance - Data
 
-In the first article, we had a brief look at what Vue is and how we’re able to instantiate a Vue application with the Vue instance. In this article, we’ll be taking a deeper look at the Vue instance and how it drives the ability to create data-driven applications.
+> Now that we know how to instantiate a Vue application with the Vue instance, let's take a deeper look into how the data property of a Vue instance helps enable reactivity.
 
 ## The Vue Instance
 
