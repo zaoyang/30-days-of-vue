@@ -34,10 +34,15 @@ module.exports = {
   ],
   faqImageUrl: 'todo.jpg',
   faqCta: 'Enroll in this free course',
-  courseAuthor: 'Hassan',
+  authorSlugs: ['djirdehh'],
   closingCtaH1: 'Get started now',
   closingCtaCopy: `Join us on our 30-day journey in Vue. Join thousands of other professional Vue developers and learn one of the most powerful web application development frameworks available today.`,
   closingCtaButton: 'Download 30 Days of Vue PDF (FREE)',
   publishedOn: '2019-01-01',
   lessonLanguage: 'Day',
+  ctaFormAction:
+    'https://fd338.infusionsoft.com/app/form/process/a6e7d4fdf2891b50a87effa8540f834d',
+  ctaFormXid: 'a6e7d4fdf2891b50a87effa8540f834d',
+  ctaFormName: '30 Days of Vue Form Submitted',
+  ctaInfVersion: '1.59.0.51',
 };
