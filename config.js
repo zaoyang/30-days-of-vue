@@ -3,6 +3,7 @@ module.exports = {
   title: `30 Days of Vue`,
   permalink: '/30-days-of-vue',
   subtitle: `A free introduction to Vue in 30 bite-size morsels`,
+  gitRepoHttpUrl: 'https://gitlab.com/fullstackio/thirty-days-of-vue',
   heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
@@ -15,6 +16,11 @@ module.exports = {
 
     Over the next 30 days, we'll walk through everything you need to know to work with Vue. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
   `,
+  whatIsThis: dedent`
+  This post is part of the series [**30 Days of Vue**](/30-days-of-vue).
+
+  In this series, we're starting from the very basics and walk through everything you need to know to get started with Vue. If you've ever wanted to learn Vue, this is the place to start!
+    `,
   pdfLength: '310+',
   faq: [
     {
