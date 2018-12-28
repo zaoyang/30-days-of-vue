@@ -5,7 +5,7 @@
   30 Days of Vue
 </h1>
 <p align="center">
-<img src="./images/readme/30-days-of-vue-book-cover.png"/>
+<img src="./images/30-days-of-vue-hardcover.jpg"/>
 </p>
 <h2 align="center">
   ✨ An Introduction to Vue - <b>in 30 Bite-Size Morsels</b> ✨
