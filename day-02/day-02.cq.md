@@ -1,3 +1,7 @@
+---
+coverImageBackgroundPosition: '50% 87%;'
+---
+
 # The Vue Instance - Data
 
 > Now that we know how to instantiate a Vue application with the Vue instance, let's take a deeper look into how the data property of a Vue instance helps enable reactivity.
