@@ -1,6 +1,7 @@
 const dedent = require('dedent');
 module.exports = {
   title: `30 Days of Vue`,
+  permalink: '/30-days-of-vue',
   subtitle: `A free introduction to Vue in 30 bite-size morsels`,
   heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
