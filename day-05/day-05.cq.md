@@ -50,8 +50,7 @@ Let’s see a very simple example of this in practice. Assume we have a template
 
 <iframe src='./src/static-list-example/index.html'
         height="275"
-        scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+        scrolling="no">
 </iframe>
 
 If we had the list of numbers available to us in a collection (e.g. an array) in our Vue instance:
