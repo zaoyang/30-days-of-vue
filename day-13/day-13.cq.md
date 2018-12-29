@@ -103,7 +103,7 @@ Awesome! We’ll now be able to add copied tweet elements to the end of the list
 <iframe src='./src/custom-events-example/index.html'
         height="600"
         id="iframe"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 ## Custom Events & Data

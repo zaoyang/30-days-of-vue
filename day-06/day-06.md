@@ -177,7 +177,7 @@ We can now go ahead and test our application. If we populate our form, click the
 <iframe src='./src/v-model-example/index.html'
         height="375"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Here’s a sample expected response:

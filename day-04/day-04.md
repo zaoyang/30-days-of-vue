@@ -92,7 +92,7 @@ new Vue({
 <iframe src='./src/v-on-example/index.html'
         height="250"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the Enter key.
@@ -167,7 +167,7 @@ With the `cityImage` appropriately bound, we’ll be presented with a view of To
 <iframe src='./src/v-bind-example/index.html'
         height="325"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 ## Conditional rendering with v-if (or v-show)
@@ -249,7 +249,7 @@ The text content of the first `<p>` tag that says `by Hassan who lives in Toront
 <iframe src='./src/v-if-example/index.html'
         height="325"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 I> Vue also provides the [**v-else**](https://vuejs.org/v2/guide/conditional.html#v-else) directive to describe an else block and the [**v-else-if**](https://vuejs.org/v2/guide/conditional.html#v-else-if) directive to describe an else-if-block.
@@ -279,7 +279,7 @@ Instead of the **v-if** directive, we could also use the **v-show** directive to
 <iframe src='./src/v-show-example/index.html'
         height="325"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Though they achieve a similar outcome, the **v-if** and **v-show** directives differ from one another. The **v-if** directive **does not render the element** only until the stated condition is `true`. The **v-show** directive, on the other hand, **always renders the element** _but_ controls the CSS [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property depending on whether the stated condition is `true`.

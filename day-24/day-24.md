@@ -179,7 +179,7 @@ And there we have it! If we save all the work we’ve done, we now have a fully 
 <iframe src='https://pokemon-routing.surge.sh/'
         height="900"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 I> If you’d like to re-absorb the subject of client-side routing in Vue - you can watch a talk I’ve given on this subject [here](https://www.youtube.com/watch?v=YFnimUl8Qjo)!

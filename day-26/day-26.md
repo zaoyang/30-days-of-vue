@@ -88,7 +88,7 @@ With the `App` component appropriately declared in the root Vue instance (in the
 
 <iframe src='https://thirty-days-of-vue-todo-mvc.surge.sh/'
         height="300"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 ## Writing tests

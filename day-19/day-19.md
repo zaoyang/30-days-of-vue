@@ -87,7 +87,7 @@ In the application UI, we'll simply be presented with the value of the `numbers`
 <iframe src='https://thirty-days-of-vue-props.surge.sh/'
         height="150"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Awesome! Regardless of how large our application gets, using props to pass data downwards often remains somewhat the same.
@@ -166,7 +166,7 @@ If we type a number in the input and click the 'Add new number' button, the numb
 <iframe src='https://thirty-days-of-vue-custom-events.surge.sh/'
         height="215"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 ## Sibling-Sibling Component Communication
@@ -276,7 +276,7 @@ With the EventBus, we're be able to now facilitate some form of communication be
 <iframe src='https://thirty-days-of-vue-eventbus.surge.sh/'
         height="215"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 This answers the question we had in mind - An EventBus can be used to facilitate communication between sibling components.

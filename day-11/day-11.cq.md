@@ -219,7 +219,7 @@ At this moment, our application would look like the following:
 <iframe src='./src/global-components-example/index.html'
         height="525"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 I> Notice how the root template is a lot easier to read now? This is in part due to using components to encapsulate relevant content within themselves. This is a very simple application, but for larger apps - the importance of well structured and named components can’t be stressed enough.

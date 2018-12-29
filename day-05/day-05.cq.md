@@ -70,7 +70,7 @@ At this moment, the __v-for__ directive would display the list of static numbers
 <iframe src='./src/v-for-example/index.html'
         height="275"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 In addition to helping make the template be more [D.R.Y](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), the __v-for__ directive is helpful since our application is now entirely dynamic. Regardless of how the `numbers` array changes over time, our set up will always render all the numbers in the collection in the same markup we expect.
@@ -123,7 +123,7 @@ If we save our changes, refresh the app, and click the shuffle button a few time
 <iframe src='./src/v-for-no-key-example/index.html'
         height="515"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 However, if we type some information in the input of each list element _then_ click shuffle; we’ll notice something peculiar happening:
@@ -149,7 +149,7 @@ Vue will now recognize each list element’s identity; and thus _reorder_ the el
 <iframe src='./src/v-for-with-key-example/index.html'
         height="515"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Should the __key__ attribute always be used? __It’s recommended__. The [Vue docs](https://vuejs.org/v2/guide/list.html#key) specify that the __key__ attribute should only be omitted if:
