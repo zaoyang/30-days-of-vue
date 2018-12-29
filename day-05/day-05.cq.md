@@ -10,7 +10,7 @@ List rendering is one of the most commonly used practices in front-end web devel
 
 Take a website like [Twitter](https://twitter.com) for example. When logged in and in the main index route, we’re presented with a view similar to this:
 
-![](./public/assets/twitter-lists.png)
+![Twitter uses lists of elements everywhere. Here we have a list of trends, a list of tweets, and a list of potential followers](./public/assets/twitter-lists.png)
 
 On the homepage, we’ve become accustomed to seeing a list of trends, a list of tweets, a list of potential followers, etc. The content displayed in these lists depends on a multitude of factors—our Twitter history, who we follow, our likes, etc. As a result, it's probably safe to say all this data is dynamic.
 
