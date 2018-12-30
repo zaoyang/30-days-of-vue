@@ -5,7 +5,7 @@
   30 Days of Vue
 </h1>
 <p align="center">
-<img src="./images/30-days-of-vue-hardcover.jpg"/>
+  <img src="./images/30-days-of-vue-hardcover.jpg"/>
 </p>
 <h2 align="center">
   ✨ An Introduction to Vue - <b>in 30 Bite-Size Morsels</b> ✨
@@ -14,9 +14,9 @@
   Written by the authors of <a href="https://fullstack.io/vue">Fullstack Vue</a></a>
 </p>
 <p align="center">
-<a href="https://app.monstercampaigns.com/c/opsh28ygz42xhvtlq4vd/">
-  <img src="./images/readme/download-button.png" width="484" height="83" />
-</a>
+  <a href="https://app.monstercampaigns.com/c/opsh28ygz42xhvtlq4vd/">
+    <img src="./images/readme/download-button.png" width="484" height="83" />
+  </a>
 </p>
 <hr />
 

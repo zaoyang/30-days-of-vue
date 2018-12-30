@@ -2,9 +2,9 @@
 
 > We've made it! Day 30. Congrats! Now you have enough information to create Vue applications with the __Vue CLI__, integrated with data with __Vuex__, client-side routed with __Vue Router__, and even tested with the __Vue Test Utils__ library.
 
-<p align="center"> 
-![](./public/assets/carpe-diem.png)
-Photo by the talented [@ianjamesstauffer](https://www.instagram.com/ianjamesstauffer/)
+<p align="center">
+  <img src="./public/assets/carpe-diem.png" />
+  <span>Photo by the talented <a href="https://www.instagram.com/ianjamesstauffer/" target="_blank">@ianjamesstauffer</a></span>
 </p>
 
 We've covered a lot of material in the past 30 days. Some of the high-level topics we discussed are:
@@ -58,8 +58,8 @@ and...
 
 ### Fullstack Vue
 
-<p align="center"> 
-![](./public/assets/fullstack-vue-cover.png)
+<p align="center">
+  <img src="./public/assets/fullstack-vue-cover.png" />
 </p>
 
 Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover __in-depth__ the topics we briefly introduced in this 30 days, we go into plenty of other content, including (but not limited to):
