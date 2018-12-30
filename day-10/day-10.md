@@ -147,7 +147,7 @@ The user would now recognize that the app is “loading” if the data hasn’t 
 <iframe src='./src/created-example/index.html'
         height="250"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 We should also always have an appropriate error case in our request to notify the user that something’s wrong when our call ever fails. We won’t be doing that here, but it might be a good exercise for you to try!

@@ -1,3 +1,7 @@
+---
+coverImageBackgroundPosition: '50% 87%;'
+---
+
 # The Vue Instance - Data
 
 > Now that we know how to instantiate a Vue application with the Vue instance, let's take a deeper look into how the data property of a Vue instance helps enable reactivity.
@@ -43,7 +47,7 @@ With the data being bound to the template, we're now able to see the values of t
 <iframe src='./src/simple-binding-example/index.html'
         height="250"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 In Vue, information within the `data` property of an instance is known to be [reactive](https://vuejs.org/v2/guide/reactivity.html). This means that if we manage to modify or change the data values of a Vue instance, Vue will _recognize_ this change and re-render the template to show the _updated_ data values.
@@ -115,7 +119,7 @@ Give it a try! Click the 'Change Greeting' button multiple times to witness the 
 <iframe src='./src/simple-data-change-example/index.html'
         height="250"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 We’ll stop here for now and spend a little time tomorrow discussing how the things we’ve learned today shape the way we build data-driven applications in Vue.

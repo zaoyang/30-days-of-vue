@@ -39,7 +39,7 @@ Let’s use the Vue Devtools on the application we’ve set up in the last artic
 <iframe src='./src/v-model-example/index.html'
         height="375"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Launching the application, opening the browser Devtools, and locating the Vue tab - we’ll be able use the Vue Devtools to debug our application:

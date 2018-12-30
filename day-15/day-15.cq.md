@@ -23,7 +23,7 @@ The `template` of the `single-line-template` component is kept within standard s
 <iframe src='./src/standard-strings-template/index.html'
         height="75"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
@@ -67,7 +67,7 @@ As of this moment, the `inline-temp` component has no template and nothing will 
 <iframe src='./src/inline-template/index.html'
         height="75"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, __should not be used__. 
@@ -95,7 +95,7 @@ To specify the template of the `x-temp` component, we can write a _separate_ `<s
 <iframe src='./src/x-template/index.html'
         height="75"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Though x-templates may seem to be a pretty neat feature, there are significant downsides to having the template of a component _completely separate_ from the actual component definition. For this reason, the [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#X-Templates) states that x-templates __should be avoided in most cases__.

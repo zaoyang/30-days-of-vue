@@ -113,6 +113,6 @@ We’ll now be able to display the value of the greeting property in our Vue ins
 
 The `greeting` data property in the template is now directly bound to the value in our instance. When our app loads, we’ll be presented with Hello World!
 
-<iframe src='./src/index.html' style='display: block; margin: 0 auto; width: 100%'></iframe>
+<iframe src='./src/index.html'  ></iframe>
 
 That was easy, wasn’t it? In the next article, we'll take a deeper look at the `data` property of a Vue instance and how it enables the _reactivity_ of our Vue applications.

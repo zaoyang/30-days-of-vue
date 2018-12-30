@@ -10,7 +10,7 @@ List rendering is one of the most commonly used practices in front-end web devel
 
 Take a website like [Twitter](https://twitter.com) for example. When logged in and in the main index route, we’re presented with a view similar to this:
 
-![](./public/assets/twitter-lists.png)
+![Twitter uses lists of elements everywhere. Here we have a list of trends, a list of tweets, and a list of potential followers](./public/assets/twitter-lists.png)
 
 On the homepage, we’ve become accustomed to seeing a list of trends, a list of tweets, a list of potential followers, etc. The content displayed in these lists depends on a multitude of factors—our Twitter history, who we follow, our likes, etc. As a result, it's probably safe to say all this data is dynamic.
 
@@ -50,8 +50,7 @@ Let’s see a very simple example of this in practice. Assume we have a template
 
 <iframe src='./src/static-list-example/index.html'
         height="275"
-        scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+        scrolling="no">
 </iframe>
 
 If we had the list of numbers available to us in a collection (e.g. an array) in our Vue instance:
@@ -71,7 +70,7 @@ At this moment, the __v-for__ directive would display the list of static numbers
 <iframe src='./src/v-for-example/index.html'
         height="275"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 In addition to helping make the template be more [D.R.Y](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), the __v-for__ directive is helpful since our application is now entirely dynamic. Regardless of how the `numbers` array changes over time, our set up will always render all the numbers in the collection in the same markup we expect.
@@ -124,7 +123,7 @@ If we save our changes, refresh the app, and click the shuffle button a few time
 <iframe src='./src/v-for-no-key-example/index.html'
         height="515"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 However, if we type some information in the input of each list element _then_ click shuffle; we’ll notice something peculiar happening:
@@ -150,7 +149,7 @@ Vue will now recognize each list element’s identity; and thus _reorder_ the el
 <iframe src='./src/v-for-with-key-example/index.html'
         height="515"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Should the __key__ attribute always be used? __It’s recommended__. The [Vue docs](https://vuejs.org/v2/guide/list.html#key) specify that the __key__ attribute should only be omitted if:

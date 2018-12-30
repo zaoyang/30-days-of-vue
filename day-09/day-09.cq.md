@@ -90,7 +90,7 @@ We’re using the [ternary operator](https://developer.mozilla.org/en-US/docs/We
 <iframe src='./src/watchers-example/index.html'
         height="215"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Awesome! Though this works perfectly well, a good question to ask right now would be - do we need __watchers__ to do what we just did?
@@ -146,7 +146,7 @@ Our app would now work as expected! When one input changes, the other is updated
 <iframe src='./src/computed-example/index.html'
         height="215"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Can we always use __computed__ properties in place of a __watcher__? No. In certain cases, you may find yourself in need of using the specific __watch__ property.  The [Vue documentation](https://vuejs.org/v2/guide/computed.html#Watchers) states that _“[__watchers__ are] most useful when you want to perform asynchronous or expensive operations in response to changing data”_. In most cases, however, __watchers__ tend to be overused where it might be [more appropriate to instead use a __computed__ property](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property).

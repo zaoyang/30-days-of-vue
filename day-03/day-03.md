@@ -17,7 +17,7 @@ The reactive nature of data in Vue help facilitates the possibility of building 
 <iframe src='../day-02/src/simple-data-change-example/index.html'
         height="250"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Let’s assume we wanted to scale the application and introduce capabilities like:

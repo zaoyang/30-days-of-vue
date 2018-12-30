@@ -64,7 +64,7 @@ The starting point of our application will only have the `CharizardCard` compone
 <iframe src='https://thirty-days-of-vue-pokemon-app-start.surge.sh/'
         height="900"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 We’ve covered a simple introduction to routing and talked about the application starting point we’ll use for our __Vue Router__ example. We’ll begin tomorrow by integrating and using the components __Vue Router__ provides to enable client-side routing in our Pokémon app!

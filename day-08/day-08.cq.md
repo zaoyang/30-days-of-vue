@@ -25,7 +25,7 @@ With the help of the styling given to us by [Bulma](https://bulma.io/documentati
 <iframe src='./src/inline-example/index.html'
         height="120"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 There’s nothing inherently wrong with specifying functionality change, like the above, inline. However, __methods__ are often times more appropriate to use when the intended changes get harder to decipher.
@@ -45,7 +45,7 @@ Our UI would behave just the way it had before by displaying the message greetin
 <iframe src='./src/methods-example/index.html'
         height="120"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 Functionality wise - the above two examples achieve the same thing. Methods might be seen to be more appropriate since it keeps the template cleaner and easier to understand.
@@ -69,7 +69,7 @@ With this, our app will behave as desired:
 <iframe src='./src/computed-example/index.html'
         height="120"
         scrolling="no"
-        style='display: block; margin: 0 auto; width: 100%'>
+         >
 </iframe>
 
 This begs the question, what difference is there to using a __computed__ property or have a __method__ instead return a value?
