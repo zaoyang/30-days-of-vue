@@ -3,7 +3,8 @@ module.exports = {
   title: `30 Days of Vue`,
   permalink: '/30-days-of-vue',
   subtitle: `A free introduction to Vue in 30 bite-size morsels`,
-  gitRepoHttpUrl: 'https://gitlab.com/fullstackio/thirty-days-of-vue',
+  gitRepoHttpUrl:
+    'https://gitlab.com/fullstackio/thirty-days-of-vue/blob/master',
   heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
