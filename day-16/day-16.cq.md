@@ -136,7 +136,6 @@ let renderComponent = {
 
 Thankfully, the child `header` element is to contain no child elements of its own and instead simply display the value of the `message` prop. To have the `header` element display the `message` prop as its child content we’ll declare `this.message` in the third argument of the nested `createElement` function. `this.message` will reference the message property available in the component as props:
 
-
 ```javascript
 let renderComponent = {
   render(createElement) {

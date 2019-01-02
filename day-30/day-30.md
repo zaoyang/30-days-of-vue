@@ -2,9 +2,9 @@
 
 > We've made it! Day 30. Congrats! Now you have enough information to create Vue applications with the **Vue CLI**, integrated with data with **Vuex**, client-side routed with **Vue Router**, and even tested with the **Vue Test Utils** library.
 
-<p align="center"> 
-![](./public/assets/carpe-diem.png)
-Photo by the talented [@ianjamesstauffer](https://www.instagram.com/ianjamesstauffer/)
+<p align="center">
+  <img src="./public/assets/carpe-diem.png" />
+  <span>Photo by the talented <a href="https://www.instagram.com/ianjamesstauffer/" target="_blank">@ianjamesstauffer</a></span>
 </p>
 
 We've covered a lot of material in the past 30 days. Some of the high-level topics we discussed are:
@@ -26,7 +26,7 @@ Although we covered a lot of topics in our first 30 days, there is so much more!
 
 Link: <https://vuejs.org/v2/guide/>
 
-The Vue core documentation have a reputation for being one of the best-written technical documentations out there… and for very good reason! Translated in seven languages, the Vue docs explains all the nifty details in a simple and clean manner.
+The Vue core documentation has a reputation for being one of the best-written technical documentations out there… and for very good reason! Translated in seven languages, the Vue docs explains all the nifty details in a simple and clean manner.
 
 ### The Vue Style Guide
 
@@ -58,8 +58,8 @@ and...
 
 ### Fullstack Vue
 
-<p align="center"> 
-![](./public/assets/fullstack-vue-cover.png)
+<p align="center">
+  <img src="./public/assets/fullstack-vue-cover.png" />
 </p>
 
 Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover **in-depth** the topics we briefly introduced in this 30 days, we go into plenty of other content, including (but not limited to):
@@ -72,6 +72,6 @@ Did you happen to enjoy this course and are interested in going deeper with Vue,
 -   For the full package - access to a series of videos, almost 2hrs in length, to _set up_, _build_, and _deploy_ an **entire Vue.js application** from scratch - [check out the app here](http://simplecoincap.com/)!
 -   And much much more.
 
-All the above are all done within the context of building **much larger applications** as well. Check out the book page at [www.fullstack.io/vue](https://www.fullstack.io/vue) for more details.
+All the above are all done within the context of building **much larger applications** as well. Check out the book page at [www.fullstack.io/vue](https://www.fullstack.io/vue) for all the juicy details.
 
-With that said, congrats on making it to day 30! We look forward to see what you accomplish with Vue 🎉.
+With that said, congrats on making it to day 30! We look forward to seeing what you accomplish with Vue 🎉.
