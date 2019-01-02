@@ -9,8 +9,10 @@ module.exports = {
   heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
+  paperBookPhotoUrlPng: './images/30-days-of-vue-hardcover.png',
   publicLessonCount: 7,
   previewPercent: 60,
+  brandAccentColor1: '#40b882',
   lessonPrefix: 'day-',
   summary: dedent`
     Interested in learning Vue but having trouble getting started?
@@ -64,4 +66,9 @@ module.exports = {
   ctaFormXid: 'a6e7d4fdf2891b50a87effa8540f834d',
   ctaFormName: '30 Days of Vue Form Submitted',
   ctaInfVersion: '1.59.0.51',
+  modalCtaHeader: 'Learn Vue (from the very beginning) in 30 days',
+  modalCtaBody: dedent`
+  Enter your name and email address below, then click the **"Send my free PDF"** button to get started
+  `,
+  modalCtaButton: 'SEND MY FREE PDF',
 };
