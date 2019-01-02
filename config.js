@@ -1,6 +1,7 @@
 const dedent = require('dedent');
 module.exports = {
   title: `30 Days of Vue`,
+  topic: 'Vue',
   permalink: '/30-days-of-vue',
   subtitle: `A free introduction to Vue in 30 bite-size morsels`,
   gitRepoHttpUrl:
@@ -9,6 +10,7 @@ module.exports = {
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
   publicLessonCount: 7,
+  previewPercent: 60,
   lessonPrefix: 'day-',
   summary: dedent`
     Interested in learning Vue but having trouble getting started?
