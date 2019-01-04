@@ -62,10 +62,10 @@ module.exports = {
   publishedOn: '2019-01-01',
   lessonLanguage: 'Day',
   ctaFormAction:
-    'https://fd338.infusionsoft.com/app/form/process/a6e7d4fdf2891b50a87effa8540f834d',
-  ctaFormXid: 'a6e7d4fdf2891b50a87effa8540f834d',
-  ctaFormName: '30 Days of Vue Form Submitted',
-  ctaInfVersion: '1.59.0.51',
+    'https://fd338.infusionsoft.com/app/form/process/8c1ddc4f62b89862cde6aa74850295b0',
+  ctaFormXid: '8c1ddc4f62b89862cde6aa74850295b0',
+  ctaFormName: 'Web Form submitted',
+  ctaInfVersion: '1.70.0.77019',
   modalCtaHeader: 'Learn Vue (from the very beginning) in 30 days',
   modalCtaBody: dedent`
   Enter your name and email address below, then click the **"Send my free PDF"** button to get started
