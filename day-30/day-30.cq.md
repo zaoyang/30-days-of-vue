@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="./public/assets/carpe-diem.png" />
-  <span>Photo by the talented <a href="https://www.instagram.com/ianjamesstauffer/" target="_blank">@ianjamesstauffer</a></span>
 </p>
 
 We've covered a lot of material in the past 30 days. Some of the high-level topics we discussed are:
@@ -62,16 +61,6 @@ and...
   <img src="./public/assets/fullstack-vue-cover.png" />
 </p>
 
-Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover __in-depth__ the topics we briefly introduced in this 30 days, we go into plenty of other content, including (but not limited to):
+Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover __in-depth__ the topics we briefly introduced in this 30 days, we go into plenty of other content as well.
 
-- Proven patterns to building large-scale Vue apps from scratch.
-- Integrating Vuex to a server-persisted app.
-- Advanced routing with dynamic route matching, navigation guards, and authenticated routes.
-- An in-depth review of unit testing which involve testing components in a Vue Router and Vuex integrated setting.
-- Forms forms forms! We cover form validations, from basic form inputs through validating and integrating with Vuex.
-- For the full package - access to a series of videos, almost 2hrs in length, to _set up_, _build_, and _deploy_ an __entire Vue.js application__ from scratch - [check out the app here](http://simplecoincap.com/)!
-- And much much more.
-
-All the above are all done within the context of building __much larger applications__ as well. Check out the book page at [www.fullstack.io/vue](https://www.fullstack.io/vue) for all the juicy details.
-
-With that said, congrats on making it to day 30! We look forward to seeing what you accomplish with Vue 🎉.
+With that said, congrats on making it to day 30. We look forward to seeing what you accomplish with Vue! If you feel like you've learned certain things that you'd like others to know, share it by blogging and/or tweeting about it!
