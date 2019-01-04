@@ -10,7 +10,7 @@ module.exports = {
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
   paperBookPhotoUrlPng: './images/30-days-of-vue-hardcover.png',
-  publicLessonCount: 7,
+  publicLessonCount: 15,
   previewPercent: 60,
   brandAccentColor1: '#40b882',
   lessonPrefix: 'day-',
