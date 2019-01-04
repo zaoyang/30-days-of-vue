@@ -26,7 +26,7 @@ module.exports = {
 
   In this series, we're starting from the very basics and walk through everything you need to know to get started with Vue. If you've ever wanted to learn Vue, this is the place to start!
     `,
-  pdfLength: '310+',
+  pdfLength: '358+',
   faq: [
     {
       q: 'What is this?',
