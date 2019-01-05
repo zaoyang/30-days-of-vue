@@ -8,7 +8,7 @@
   An Introduction to Vue - in 30 Bite-Size Morsels. Written by the authors of <a href="https://fullstack.io/vue">Fullstack Vue</a></a>
 </p>
 <p align="center">
-  <a href="https://app.monstercampaigns.com/c/opsh28ygz42xhvtlq4vd/">
+  <a href="https://fullstack.io/30-days-of-vue">
     <img src="./images/download-button.png" width="484" height="83" />
   </a>
 </p>

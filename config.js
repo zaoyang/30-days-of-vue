@@ -5,7 +5,7 @@ module.exports = {
   permalink: '/30-days-of-vue',
   subtitle: `A free introduction to Vue in 30 bite-size morsels`,
   gitRepoHttpUrl:
-    'https://gitlab.com/fullstackio/thirty-days-of-vue/blob/master',
+    'https://github.com/fullstackio/30-days-of-vue/blob/master',
   heroLogoUrl: './images/vue-logo.png',
   heroPhotoUrl: './images/cover-image-sebastian-unrau-47679-unsplash.jpg',
   paperBookPhotoUrl: './images/30-days-of-vue-hardcover.jpg',
@@ -26,7 +26,7 @@ module.exports = {
 
   In this series, we're starting from the very basics and walk through everything you need to know to get started with Vue. If you've ever wanted to learn Vue, this is the place to start!
     `,
-  pdfLength: '358+',
+  pdfLength: '330+',
   faq: [
     {
       q: 'What is this?',
@@ -36,7 +36,7 @@ module.exports = {
     {
       q: 'What if I get stuck?',
       a:
-        "Just [send us an email](us@fullstack.io) and we'll be happy to help you get unstuck.",
+        "Just [send us an email](vue@fullstack.io) and we'll be happy to help you get unstuck.",
     },
     {
       q: 'Who wrote this?',
