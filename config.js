@@ -17,7 +17,7 @@ module.exports = {
   summary: dedent`
     Interested in learning Vue but having trouble getting started?
 
-    We'll teach you how it all works - _for free_
+    We'll teach you how it all works - _for free_.
 
     Over the next 30 days, we'll walk through everything you need to know to work with Vue. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
   `,
@@ -36,30 +36,30 @@ module.exports = {
     {
       q: 'What if I get stuck?',
       a:
-        "Just [send us an email](us@fullstack.io) and we'll be happy to help you get unstuck",
+        "Just [send us an email](us@fullstack.io) and we'll be happy to help you get unstuck.",
     },
     {
       q: 'Who wrote this?',
       a:
-        "We're the authors of the [Fullstack Vue Book](https://fullstack.io/vue)",
+        "We're the authors of the [Fullstack Vue Book](https://fullstack.io/vue).",
     },
   ],
   faqImageUrl: 'todo.jpg',
   faqCta: 'Enroll in this free course',
 
   afterword: dedent`
-  The entire source code for this tutorial series can be found in [the GitHub repo](https://gitlab.com/fullstackio/thirty-days-of-vue/), which includes all the styles and code samples.
+  The entire source code for this tutorial series can be found in [the GitHub repo](https://github.com/fullstackio/30-days-of-vue), which includes all the styles and code samples.
 
   If at any point you feel stuck, have further questions, feel free to reach out to us by:
 
-  * Commenting on this post at the end of the article
-  * Tweet at us at [@fullstackio](https://twitter.com/fullstackio)
+  * Creating an issue at the [Github repo](https://github.com/fullstackio/30-days-of-vue).
+  * Tweeting at us at [@fullstackio](https://twitter.com/fullstackio).
 `,
   authorSlugs: ['djirdehh'],
   closingCtaH1: 'Get started now',
   closingCtaCopy: `Join us on our 30-day journey in Vue. Join thousands of other professional Vue developers and learn one of the most powerful web application development frameworks available today.`,
   closingCtaButton: 'Download 30 Days of Vue PDF (FREE)',
-  publishedOn: '2019-01-01',
+  publishedOn: '2019-01-07',
   lessonLanguage: 'Day',
   ctaFormAction:
     'https://fd338.infusionsoft.com/app/form/process/8c1ddc4f62b89862cde6aa74850295b0',
