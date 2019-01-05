@@ -19,7 +19,17 @@ We've covered a lot of material in the past 30 days. Some of the high-level topi
 
 ## There is so much more!
 
-Although we covered a lot of topics in our first 30 days, there is so much more! How do we know? We wrote a [book](https://www.fullstack.io/vue/)! But before we talk about that… here are some resources we’ve found really useful in our journey working with Vue.
+Although we covered a lot of topics in our first 30 days, there is so much more! How do we know? We wrote a [book](https://www.fullstack.io/vue/)!
+
+### Fullstack Vue
+
+<p align="center">
+  <img src="./public/assets/fullstack-vue-cover.png" />
+</p>
+
+Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover **in-depth** the topics we briefly introduced in this 30 days, we go into plenty of other content as well.
+
+We list some of the topics Fullstack Vue covers, in more detail, in the series conclusion. Here are other resources within the Vue ecosystem that we’ve also found really useful in our journey working with Vue.
 
 ### The Vue Core Documentation
 
@@ -52,15 +62,5 @@ I> Gregg and Adam also co-produce the [official Vue.js News and Podcast](https:/
 Link: <https://vue-land.js.org/>
 
 The Vue Discord channel is a fantastic hang-out spot consisting of some of the core team members, contributors, and other developers. Have a question or want to stay up to date with announcements? Hang out at Vue Land!
-
-and...
-
-### Fullstack Vue
-
-<p align="center">
-  <img src="./public/assets/fullstack-vue-cover.png" />
-</p>
-
-Did you happen to enjoy this course and are interested in going deeper with Vue, with us? Check out [Fullstack Vue](https://www.fullstack.io/vue)! Not only do we cover **in-depth** the topics we briefly introduced in this 30 days, we go into plenty of other content as well.
 
 With that said, congrats on making it to day 30. We look forward to seeing what you accomplish with Vue! If you feel like you've learned certain things that you'd like others to know, share it by blogging and/or tweeting about it!
