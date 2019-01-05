@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="./images/30-days-of-vue-hardcover.jpg"/>
+  <img src="./images/30-days-of-vue-hardcover@2x_v2.png"/>
 </p>
-<p align="center">
+<h3 align="center">
   ✨ 30 Days of Vue ✨
-</p>
+</h3>
 <p align="center">
   An Introduction to Vue - in 30 Bite-Size Morsels. Written by the authors of <a href="https://fullstack.io/vue">Fullstack Vue</a></a>
 </p>
@@ -12,7 +12,6 @@
     <img src="./images/download-button.png" width="484" height="83" />
   </a>
 </p>
-<hr />
 
 # 🚀 Introduction
 
