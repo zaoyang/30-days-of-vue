@@ -14,7 +14,7 @@ new Vue({
       this.alertMessage = 'You typed something!';
     },
     alertEnterGreeting() {
-      this.alertMessage = 'You typed something and pressed Enter!';
+      this.alertMessage = 'You typed and pressed Enter!';
     },
   }
 });

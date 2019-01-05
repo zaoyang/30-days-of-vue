@@ -1,6 +1,6 @@
 # The Vue Instance - Data Driven Applications
 
-In yesterday’s article, we’ve come to understand how data behaves reactively in Vue. Today, we’re going to spend a little more time discussing this behavior since it plays an especially important role in how we build applications in Vue.
+> In yesterday’s article, we’ve come to understand how data behaves reactively in Vue. Today, we’re going to spend a little more time discussing this behavior since it plays an especially important role in how we build applications in Vue.
 
 ## Reactive Data
 
@@ -33,7 +33,7 @@ The Mustache Syntax and certain directives (which we’ll start to see in the ne
 
 I> If you've used [React](https://reactjs.org), [Angular](https://angular.io/), or other modern-day front end frameworks/libraries; you might be used to a similar pattern on how modifying data/state _drives the changes in an application UI_.
 
-In contrast, let’s aim to reproduce the functionality of the application in the last article (i.e. toggling the greeting message with the click of a button) with the use of only standard (i.e. vanilla) JavaScript. Though there are a few ways to achieve this we might come up with something like this:
+In contrast, let’s aim to reproduce the functionality of the application in the last article (i.e. toggling the greeting message with the click of a button) with the use of only standard (i.e. vanilla) JavaScript. Though there are a few ways to achieve this, we might come up with something like this:
 
 ### HTML
 
@@ -47,7 +47,9 @@ In contrast, let’s aim to reproduce the functionality of the application in th
     <div id="app">
       <h2>Hello World!</h2>
       <p>by Hassan Djirdeh who lives in Toronto</p>
-      <button onclick="changeGreeting()">Change Greeting</button>
+      <button onclick="changeGreeting()">
+        Change Greeting
+      </button>
     </div>
     <script src="./main.js"></script>
   </body>
@@ -93,7 +95,8 @@ new Vue({
   },
   methods: {
     addGreeting() {
-      this.greeting = 'Hello World!'; // greeting is not initialized :(
+      // greeting is not initialized :(
+      this.greeting = 'Hello World!';
     }
   }
 });
@@ -102,22 +105,23 @@ new Vue({
 In the example above, Vue would emit a console warning along the lines of:
 
 ```shell
-Property or method "greeting" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property...
+Property ... "greeting" is not defined on the instance...
 ```
 
-We’re expected to initialize all the properties we intend to use.
+We’re expected to initialize all the properties we intend to use upfront.
 
 ```javascript
 new Vue({
   el: '#app',
   data: {
-    greeting: '', // greeting is initialized with an empty string
+    greeting: '', // greeting is initialized
     user: 'Hassan Djirdeh',
     city: 'Toronto'
   },
   methods: {
     addGreeting() {
-      this.greeting = 'Hello World!'; // greeting can now be updated!
+      // greeting can now be updated!
+      this.greeting = 'Hello World!';
     }
   }
 });

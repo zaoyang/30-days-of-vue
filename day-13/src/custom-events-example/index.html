@@ -10,9 +10,9 @@
   <body>
     <div id="app">
       <tweet-component v-for="tweet in tweets"
-                      :key="tweet.id"
-                      :tweet="tweet"
-                      @add="addTweetMessage($event)">
+        :key="tweet.id"
+        :tweet="tweet"
+        @add="addTweetMessage($event)">
       </tweet-component>
     </div>
     <script src="https://unpkg.com/vue"></script>

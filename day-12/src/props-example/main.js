@@ -3,7 +3,7 @@ const tweets = [
     id: 1,
     name: 'James',
     handle: '@jokerjames',
-    img: 'https://semantic-ui.com/images/avatar2/large/matthew.png',
+    img: './images/james.png',
     tweet: "If you don't succeed, dust yourself off and try again.",
     likes: 10,
   },
@@ -11,7 +11,7 @@ const tweets = [
     id: 2,
     name: 'Fatima',
     handle: '@fantasticfatima',
-    img: 'https://semantic-ui.com/images/avatar2/large/molly.png',
+    img: './images/fatima.png',
     tweet: 'Better late than never but never late is better.',
     likes: 12,
   },
@@ -19,14 +19,14 @@ const tweets = [
     id: 3,
     name: 'Xin',
     handle: '@xeroxin',
-    img: 'https://semantic-ui.com/images/avatar2/large/elyse.png',
+    img: './images/xin.png',
     tweet: 'Beauty in the struggle, ugliness in the success.',
     likes: 18,
   }
 ];
 
 Vue.component('tweet-component', {
-  template: `
+  template: `   
     <div class="tweet">
       <div class="box">
         <article class="media">
@@ -44,25 +44,29 @@ Vue.component('tweet-component', {
                 {{tweet.tweet}}
               </p>
             </div>
-              <div class="level-left">
-                <a class="level-item">
-                  <span class="icon is-small">
-                    <i class="fas fa-heart"></i>
-                  </span>
-                  <span class="likes">{{tweet.likes}}</span>
-                </a>
-              </div>
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span class="likes">
+                  {{tweet.likes}}
+                </span>
+              </a>
+            </div>
           </div>
         </article>
       </div>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-small" placeholder="Tweet your reply..." />
+      <div class="control has-icons-left">
+        <input class="input is-small"
+          placeholder="Tweet your reply..." />
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
       </div>
-    </div>`,
-    props: ['tweet']
+    </div>
+  `,
+  props: ['tweet']
 });
 
 new Vue({

@@ -40,7 +40,7 @@ We'll now create the template and use the __v-model__ directive to bind the appr
 {lang=html,line-numbers=off}
 <<[src/v-model-example/index.html](./src/v-model-example/index.html)
 
-In the template, we've introduced a local `styles.css` file like we've done before but we've also included the [Bulma CSS](https://bulma.io/documentation/) framework into our application.
+In the template, we've introduced a local `styles.css` file like we've done before but we've also included the [Bulma CSS](https://bulma.io/documentation/) framework into our application from a CDN.
 
 I> [Bulma](https://bulma.io/documentation/) is a CSS framework, much like Twitter’s popular [Bootstrap](http://getbootstrap.com/) framework. It provides us with a grid system and some simple styling. Though we'll be using Bulma from time to time, we won’t need to know Bulma in-depth to go through this article or the rest of the course.
 
@@ -53,17 +53,17 @@ For every keystroke made in the 'Name' text input field, the __v-model__ directi
 
 For every option selected in the 'Subject' dropdown, __v-model__ will bind the value of the option selected to the `subject` data property. We’ve set a value of an empty string (which is also the initial value of the `subject` property) to the first disabled option as to have it selected when the application first renders.
 
-{lang=html,line-numbers=off,crop-start-line=18,crop-end-line=29}
+{lang=html,line-numbers=off,crop-start-line=18,crop-end-line=31}
 <<[src/v-model-example/index.html](./src/v-model-example/index.html)
 
 Checkbox inputs naturally have a boolean value which dictates whether the checkbox is checked or unchecked. Our `termsAndConditions` property is initialized with `false` and bound directly to the checkbox input.
 
-{lang=html,line-numbers=off,crop-start-line=31,crop-end-line=36}
+{lang=html,line-numbers=off,crop-start-line=33,crop-end-line=39}
 <<[src/v-model-example/index.html](./src/v-model-example/index.html)
 
 Finally, since radio inputs usually have custom values specified with them, we’ve set the expected values for each radio input alongside the __v-model__ directive.
 
-{lang=html,line-numbers=off,crop-start-line=38,crop-end-line=45}
+{lang=html,line-numbers=off,crop-start-line=41,crop-end-line=54}
 <<[src/v-model-example/index.html](./src/v-model-example/index.html)
 
 We can now go ahead and test our application. If we populate our form, click the Submit button, and check the developer console - we’ll be able to see the values of each of the data attributes within our instance.
@@ -84,7 +84,7 @@ Oftentimes we would probably find ourselves using the __v-model__ directive in t
 
 ## Two-way data binding
 
-Though the v-model directive creates _two-way_ data binding, we haven’t really been able to see this in the application we've built in this article. We could witness this by creating functionality that changes the values of the `data` properties being used in the form and verifying that our template updates (i.e. re-renders) to show the new values.
+Though the v-model directive creates _two-way_ data binding, we haven’t really been able to see the two-way binding in the application we've built in this article. We could witness this by creating functionality that changes the values of the `data` properties being used in the form and verifying that our template updates (i.e. re-renders) to show the new values.
 
 A simpler way we can witness __v-model__'s two-way data binding is by using the [Vue Devtools](https://github.com/vuejs/vue-devtools) - a browser dev tools extension built and maintained by the Vue core team. Vue Devtools provides incredibly useful capabilities in debugging Vue applications and we’re going to spend the next article discussing it!
 

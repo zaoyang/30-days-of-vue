@@ -39,8 +39,51 @@ Vue.component('tweet-component', {
 
 In `tweet-component`, the `tweet` prop can now be accessed and used like any other data property. We’ll bind information from the `tweet` prop on to the template of the component instead of statically rendering information.
 
-{lang=javascript,line-numbers=off,crop-start-line=28,crop-end-line=66}
-<<[src/props-example/main.js](./src/props-example/main.js)
+```javascript
+Vue.component('tweet-component', {
+  template: `   
+    <div class="tweet">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img :src="tweet.img">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>{{tweet.name}}</strong>
+                <small>{{tweet.handle}}</small>
+                <br>
+                {{tweet.tweet}}
+              </p>
+            </div>
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span class="likes">
+                  {{tweet.likes}}
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="control has-icons-left">
+        <input class="input is-small"
+          placeholder="Tweet your reply..." />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </div>
+    </div>
+  `,
+  props: ['tweet']
+});
+```
 
 Our application will now display information from all the different tweets in our instance data.
 
@@ -96,7 +139,7 @@ We can use the `Vue.component()` constructor to create the `tweet-content` compo
 
 `tweet-component` will now be able to render the `tweet-content` component and pass in the `tweet` data object as __props__:
 
-{lang=javascript,line-numbers=off,crop-start-line=52,crop-end-line=74}
+{lang=javascript,line-numbers=off,crop-start-line=52,crop-end-line=75}
 <<[src/nested-components-example/main.js](./src/nested-components-example/main.js)
 
 Our application UI will remain the same but now be composed of two nested components.

@@ -52,7 +52,8 @@ Vue.component('tweet-content', {
       </div>
       <div class="level-left">
         // ...
-        <a class="level-item" @click="$emit('add', tweet)"">
+        <a class="level-item"
+          @click="$emit('add', tweet)">
           <span class="icon is-small">
             <i class="fas fa-plus"></i>
           </span>
@@ -76,7 +77,7 @@ Vue.component('tweet-component', {
         <article class="media">
           // ...
           <tweet-content :tweet="tweet"
-                          @add="$emit('add', $event)">
+            @add="$emit('add', $event)">
           </tweet-content>
         </article>
       </div>
@@ -92,9 +93,9 @@ In the root template, we can now create the final listener. We’ll specify the 
 
 ```html
       <tweet-component v-for="tweet in tweets"
-                      :key="tweet.id"
-                      :tweet="tweet"
-                      @add="addTweetMessage($event)">
+        :key="tweet.id"
+        :tweet="tweet"
+        @add="addTweetMessage($event)">
       </tweet-component>
 ```
 
@@ -109,12 +110,13 @@ new Vue({
   methods: {
     addTweetMessage(tweet) {
       let newTweet = {};
-      let lastTweetObjectID = this.tweets[this.tweets.length - 1].id;
-      
+      let lastTweetObjectID =
+        this.tweets[this.tweets.length - 1].id;
+
       // shallow copy tweet object
       newTweet = Object.assign({}, tweet);
       
-      // set new tweet id to be one greater than last tweet object
+      // set tweet id to be one greater than last tweet
       newTweet.id = lastTweetObjectID + 1; 
  
       this.tweets.push(newTweet);

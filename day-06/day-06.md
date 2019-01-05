@@ -39,7 +39,10 @@ new Vue({
     submit() {
       console.log('name', this.name);
       console.log('subject', this.subject);
-      console.log('termsAndConditions', this.termsAndConditions);
+      console.log(
+        'termsAndConditions',
+        this.termsAndConditions
+      );
       console.log('yesOrNo', this.yesOrNo);
     }
   }
@@ -59,7 +62,7 @@ We'll now create the template and use the **v-model** directive to bind the appr
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css">
   </head>
 
   <body>
@@ -67,16 +70,18 @@ We'll now create the template and use the **v-model** directive to bind the appr
       <div class="field">
         <label class="label">Name</label>
         <input v-model="name"
-              class="input"
-              type="text"
-              placeholder="Text input" />
+          class="input"
+          type="text"
+          placeholder="Text input" />
       </div>
 
       <div class="field">
         <label class="label">Subject</label>
         <div class="select">
           <select v-model="subject">
-            <option disabled value="">Select dropdown</option>
+            <option disabled value="">
+              Select dropdown
+            </option>
             <option>Engineering</option>
             <option>Computer Science</option>
             <option>Biology</option>
@@ -87,17 +92,24 @@ We'll now create the template and use the **v-model** directive to bind the appr
 
       <div class="field">
         <label class="checkbox">
-          <input v-model="termsAndConditions" type="checkbox" />
+          <input v-model="termsAndConditions"
+            type="checkbox" />
           I agree to the terms and conditions
         </label>
       </div>
 
       <div class="field">
         <label class="radio">
-          <input type="radio" value="Yes" v-model="yesOrNo" /> Yes
+          <input v-model="yesOrNo"
+            type="radio"
+            value="Yes" />
+          Yes
         </label>
         <label class="radio"> 
-          <input type="radio" value="No" v-model="yesOrNo" /> No
+          <input v-model="yesOrNo"
+            type="radio"
+            value="No" />
+          No
         </label>
       </div>
 
@@ -113,7 +125,7 @@ We'll now create the template and use the **v-model** directive to bind the appr
 </html>
 ```
 
-In the template, we've introduced a local `styles.css` file like we've done before but we've also included the [Bulma CSS](https://bulma.io/documentation/) framework into our application.
+In the template, we've introduced a local `styles.css` file like we've done before but we've also included the [Bulma CSS](https://bulma.io/documentation/) framework into our application from a CDN.
 
 I> [Bulma](https://bulma.io/documentation/) is a CSS framework, much like Twitter’s popular [Bootstrap](http://getbootstrap.com/) framework. It provides us with a grid system and some simple styling. Though we'll be using Bulma from time to time, we won’t need to know Bulma in-depth to go through this article or the rest of the course.
 
@@ -125,9 +137,9 @@ For every keystroke made in the 'Name' text input field, the **v-model** directi
       <div class="field">
         <label class="label">Name</label>
         <input v-model="name"
-              class="input"
-              type="text"
-              placeholder="Text input" />
+          class="input"
+          type="text"
+          placeholder="Text input" />
       </div>
 ```
 
@@ -138,7 +150,9 @@ For every option selected in the 'Subject' dropdown, **v-model** will bind the v
         <label class="label">Subject</label>
         <div class="select">
           <select v-model="subject">
-            <option disabled value="">Select dropdown</option>
+            <option disabled value="">
+              Select dropdown
+            </option>
             <option>Engineering</option>
             <option>Computer Science</option>
             <option>Biology</option>
@@ -153,7 +167,8 @@ Checkbox inputs naturally have a boolean value which dictates whether the checkb
 ```html
       <div class="field">
         <label class="checkbox">
-          <input v-model="termsAndConditions" type="checkbox" />
+          <input v-model="termsAndConditions"
+            type="checkbox" />
           I agree to the terms and conditions
         </label>
       </div>
@@ -164,10 +179,16 @@ Finally, since radio inputs usually have custom values specified with them, we�
 ```html
       <div class="field">
         <label class="radio">
-          <input type="radio" value="Yes" v-model="yesOrNo" /> Yes
+          <input v-model="yesOrNo"
+            type="radio"
+            value="Yes" />
+          Yes
         </label>
         <label class="radio"> 
-          <input type="radio" value="No" v-model="yesOrNo" /> No
+          <input v-model="yesOrNo"
+            type="radio"
+            value="No" />
+          No
         </label>
       </div>
 ```
@@ -190,7 +211,7 @@ Oftentimes we would probably find ourselves using the **v-model** directive in t
 
 ## Two-way data binding
 
-Though the v-model directive creates _two-way_ data binding, we haven’t really been able to see this in the application we've built in this article. We could witness this by creating functionality that changes the values of the `data` properties being used in the form and verifying that our template updates (i.e. re-renders) to show the new values.
+Though the v-model directive creates _two-way_ data binding, we haven’t really been able to see the two-way binding in the application we've built in this article. We could witness this by creating functionality that changes the values of the `data` properties being used in the form and verifying that our template updates (i.e. re-renders) to show the new values.
 
 A simpler way we can witness **v-model**'s two-way data binding is by using the [Vue Devtools](https://github.com/vuejs/vue-devtools) - a browser dev tools extension built and maintained by the Vue core team. Vue Devtools provides incredibly useful capabilities in debugging Vue applications and we’re going to spend the next article discussing it!
 

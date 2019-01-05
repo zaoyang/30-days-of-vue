@@ -14,7 +14,8 @@ Here's an example of the root instance template rendering a `single-line-templat
 
 ```html
     <div id="app">
-      <single-line-template :message="message"></single-line-template>
+      <single-line-template :message="message">
+      </single-line-template>
     </div>
 ```
 
@@ -43,7 +44,7 @@ new Vue({
          >
 </iframe>
 
-Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
+Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks).
 
 ```javascript
 let multiLineTemplate = {
@@ -81,7 +82,9 @@ As of this moment, the `inline-temp` component has no template and nothing will 
 ```html
       <inline-temp :message="message" inline-template>
         <div class="card">
-          <header class="card-header card-header-title">{{ message }}</header>
+          <header class="card-header card-header-title">
+            {{ message }}
+          </header>
         </div>
       </inline-temp>
 ```
@@ -92,7 +95,7 @@ As of this moment, the `inline-temp` component has no template and nothing will 
          >
 </iframe>
 
-The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, **should not be used**. 
+The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, **should usually not be used**. 
 
 ### X Templates
 
@@ -123,13 +126,15 @@ In the root template, we can first render the `x-temp` component and pass in the
 </div>
 ```
 
-To specify the template of the `x-temp` component, we can write a _separate_ `<script></script>` tag in the root markup that has `type=text/x-template` and `id=x-template-component`. The `x-template-component` id is the value of the `template` option in the `xTemp` component object. The template of the component will then be the inner contents of this script tag.
+To specify the template of the `x-temp` component, we can write a _separate_ `<script></script>` tag in the root markup that has `type="text/x-template"` and `id"=x-template-component"`. The `x-template-component` id is the value of the `template` option in the `xTemp` component object. The template of the component will then be the inner contents of this script tag.
 
 ```html
     <div id="app">
       <x-temp :message="message"></x-temp>
 
-      <script type="text/x-template" id="x-template-component">
+      <script
+        type="text/x-template"
+        id="x-template-component">
         <div class="card">
           <header class="card-header card-header-title">
             {{ message }}

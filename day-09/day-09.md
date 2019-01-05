@@ -31,7 +31,7 @@ We’ll use the **v-model** directive to bind the `km` and `m` data properties t
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
@@ -129,7 +129,7 @@ new Vue({
 });
 ```
 
-We’re using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
+We’re using the ternary operator to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
 
 <iframe src='./src/watchers-example/index.html'
         height="215"

@@ -155,12 +155,12 @@ new Vue({
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
     <div id="app">
-      <p>Three different components with each containing an independant data object.</p>
+      <p>Three different components.</p>
       <counter-one></counter-one>
       <counter-two></counter-two>
       <counter-three></counter-three>

@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css">
   </head>
 
   <body>
@@ -10,16 +10,18 @@
       <div class="field">
         <label class="label">Name</label>
         <input v-model="name"
-              class="input"
-              type="text"
-              placeholder="Text input" />
+          class="input"
+          type="text"
+          placeholder="Text input" />
       </div>
 
       <div class="field">
         <label class="label">Subject</label>
         <div class="select">
           <select v-model="subject">
-            <option disabled value="">Select dropdown</option>
+            <option disabled value="">
+              Select dropdown
+            </option>
             <option>Engineering</option>
             <option>Computer Science</option>
             <option>Biology</option>
@@ -30,17 +32,24 @@
 
       <div class="field">
         <label class="checkbox">
-          <input v-model="termsAndConditions" type="checkbox" />
+          <input v-model="termsAndConditions"
+            type="checkbox" />
           I agree to the terms and conditions
         </label>
       </div>
 
       <div class="field">
         <label class="radio">
-          <input type="radio" value="Yes" v-model="yesOrNo" /> Yes
+          <input v-model="yesOrNo"
+            type="radio"
+            value="Yes" />
+          Yes
         </label>
         <label class="radio"> 
-          <input type="radio" value="No" v-model="yesOrNo" /> No
+          <input v-model="yesOrNo"
+            type="radio"
+            value="No" />
+          No
         </label>
       </div>
 

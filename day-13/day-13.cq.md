@@ -52,7 +52,8 @@ Vue.component('tweet-content', {
       </div>
       <div class="level-left">
         // ...
-        <a class="level-item" @click="$emit('add', tweet)"">
+        <a class="level-item"
+          @click="$emit('add', tweet)">
           <span class="icon is-small">
             <i class="fas fa-plus"></i>
           </span>
@@ -76,7 +77,7 @@ Vue.component('tweet-component', {
         <article class="media">
           // ...
           <tweet-content :tweet="tweet"
-                          @add="$emit('add', $event)">
+            @add="$emit('add', $event)">
           </tweet-content>
         </article>
       </div>
@@ -95,7 +96,7 @@ In the root template, we can now create the final listener. We’ll specify the 
 
 We’ll now create the `addTweetMessage` method in the root instance to introduce a copy of the event `tweet` object into our `tweets` array. To keep each tweet object unique, we’ll shallow copy the tweet event object and set the `id` of the copied object to be one greater than the last item in our `tweets` array. We’ll then push the newly copied item to the end of the data array with the help of the Array [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method.
 
-{lang=javascript,line-numbers=off,crop-start-line=82,crop-end-line=101}
+{lang=javascript,line-numbers=off,crop-start-line=84,crop-end-line=104}
 <<[src/custom-events-example/main.js](./src/custom-events-example/main.js)
 
 Awesome! We’ll now be able to add copied tweet elements to the end of the list by clicking the add icon on any tweet element.

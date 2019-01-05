@@ -10,7 +10,7 @@ In this article, we're going to look at two specific properties of the Vue insta
 
 We used methods in articles **#2** and **#3** to highlight reactivity of data contained within a Vue instance. To reiterate, methods in a Vue instance behave like normal JavaScript functions and are evaluated only when explicitly called. Instead of using methods we could always write our intended functionality change _inline_ in the template.
 
-Let’s see an example of this. We’ll reuse an [example](https://vuejs.org/v2/guide/computed.html#Computed-Properties) seen in the Vue documentation that involves reversing a series of characters from a string. We'll first create a Vue instance that contains a single `greeting` property that has a value of `'Greetings!'`:
+Let’s see an example of this. We’ll reuse an example seen in the Vue documentation that involves reversing a series of characters from a string. We'll first create a Vue instance that contains a single `message` property that has a value of `'Greetings!'`:
 
 ```javascript
 new Vue({
@@ -21,25 +21,27 @@ new Vue({
 });
 ```
 
-In the template, we’ll bind the `message` directly and also bind the `message` in its reversed state. We’ll reverse the value of `message` by splitting the property into an array of characters (`.split('')`), reversing the elements in the array (`.reverse()`), and rejoining the reversed array back into a single string (`.join('')`).
+In the template, we’ll look to bind the `message` directly and also bind the `message` in its reversed state. We’ll reverse the value of `message` by splitting the property into an array of characters (`.split('')`), reversing the elements in the array (`.reverse()`), and rejoining the reversed array back into a single string (`.join('')`).
 
 ```html
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css">
   </head>
 
   <body>
     <div id="app">
       <div class="card">
         <header class="card-header card-header-title">
-          <span>Original:</span> {{ message }}
+          <span>Original:</span>
+          {{ message }}
         </header>
         
         <header class="card-header card-header-title">
-          <span>Reversed:</span> {{ message.split('').reverse().join('') }}
+          <span>Reversed:</span>
+          {{ message.split('').reverse().join('') }}
         </header>
       </div>
     </div>
@@ -49,7 +51,7 @@ In the template, we’ll bind the `message` directly and also bind the `message`
 </html>
 ```
 
-With the help of the styling given to us by [Bulma](https://bulma.io/documentation/), our simple app will look like the following:
+With the help of the styling given to us by Bulma, our simple app will look like the following:
 
 <iframe src='./src/inline-example/index.html'
         height="120"
@@ -82,18 +84,20 @@ The method is given a name of `reverseString` and expects a payload. We can decl
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css">
   </head>
 
   <body>
     <div id="app">
       <div class="card">
         <header class="card-header card-header-title">
-          <span>Original:</span> {{ message }}
+          <span>Original:</span>
+          {{ message }}
         </header>
         
         <header class="card-header card-header-title">
-          <span>Reversed:</span> {{ reverseString(message) }}
+          <span>Reversed:</span>
+          {{ reverseString(message) }}
         </header>
       </div>
     </div>
@@ -140,18 +144,20 @@ In the template, we can render the value of the `reverseMessage` computed proper
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css">
   </head>
 
   <body>
     <div id="app">
       <div class="card">
         <header class="card-header card-header-title">
-          <span>Original:</span> {{ message }}
+          <span>Original:</span>
+          {{ message }}
         </header>
         
         <header class="card-header card-header-title">
-          <span>Reversed:</span> {{ reverseMessage }}
+          <span>Reversed:</span>
+          {{ reverseMessage }}
         </header>
       </div>
     </div>
@@ -169,7 +175,7 @@ With this, our app will behave as desired:
          >
 </iframe>
 
-This begs the question, what difference is there to using a **computed** property or have a **method** instead return a value?
+This begs the question, what difference is there to using a **computed** property or having a **method** instead return a value?
 
 ## Methods vs. Computed Properties
 
@@ -204,25 +210,29 @@ In the template, we can aim to render the `reverseMessage` computed property a c
 <div id="app">
   <div class="card">
     <header class="card-header card-header-title">
-      <span>Original:</span> {{ message }}
+      <span>Original:</span>
+      {{ message }}
     </header>
   </div>
   
   <div class="card">
     <header class="card-header card-header-title">
-      <span>Reversed:</span> {{ reverseMessage }}
+      <span>Reversed:</span>
+      {{ reverseMessage }}
     </header>
   </div>
   
   <div class="card">
     <header class="card-header card-header-title">
-      <span>Reversed:</span> {{ reverseMessage }}
+      <span>Reversed:</span>
+      {{ reverseMessage }}
     </header>
   </div>
   
   <div class="card">
     <header class="card-header card-header-title">
-      <span>Reversed:</span> {{ reverseMessage }}
+      <span>Reversed:</span>
+      {{ reverseMessage }}
     </header>
   </div>
 </div>

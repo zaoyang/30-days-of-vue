@@ -14,7 +14,7 @@ Vue is an open source JavaScript framework geared towards building user interfac
 
 ### Progressive
 
-Vue is recognized to be **progressive** since it can be scaled down as well as it scales up. For very simple use cases, you can use Vue like you use jQuery - by dropping a single script tag:
+Vue is recognized to be **progressive** since it can often be scaled down as well as it scales up. For very simple use cases, you can use Vue like you use jQuery - by dropping a single script tag:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -54,7 +54,7 @@ In the simplest way possible, we can get started working with Vue by placing a s
 </html>
 ```
 
-Since the Vue library is available, we’re able to now create a new Vue application. We’ll create this application by declaring the Vue Instance - which is the heart of a Vue application - in the `main.js` file. The Vue instance is created by declaring the `new Vue({})` constructor:
+With the Vue library available, we’re able to create a new Vue application. We’ll create this application by declaring the Vue Instance - which is the heart of a Vue application - in the `main.js` file. The Vue instance is created by declaring the `new Vue({})` constructor:
 
 ```javascript
 new Vue({
@@ -84,7 +84,9 @@ To have the `greeting` data value be presented in the template, we’ll first ne
 ```html
 <html>
   <body>
-    <div id="app"><!--  where our Vue template code will live --></div>
+    <div id="app">
+      <!--  where our Vue template code will live -->
+    </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
   </body>
@@ -100,4 +102,4 @@ The `greeting` data property in the template is now directly bound to the value 
 
 <iframe src='./src/index.html'  ></iframe>
 
-That was easy, wasn’t it? In the next article, we'll take a deeper look at the `data` property of a Vue instance and how it enables the _reactivity_ of our Vue applications.
+That was easy, wasn’t it? In the next article, we'll take a deeper look at the `data` property of a Vue instance and how it enables _reactivity_ of our Vue applications.

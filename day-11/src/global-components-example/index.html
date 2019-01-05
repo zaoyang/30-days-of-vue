@@ -2,14 +2,18 @@
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>
     <div id="app">
-      <tweet-component v-for="tweet in tweets" :key="tweet.id"></tweet-component>
+      <tweet-component
+        v-for="tweet in tweets" :key="tweet.id">
+      </tweet-component>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>

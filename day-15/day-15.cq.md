@@ -12,7 +12,7 @@ The `template` option of a component expects a string, so we’re able to define
 
 Here's an example of the root instance template rendering a `single-line-template` component while passing in a `message` prop.
 
-{lang=html,line-numbers=off,crop-start-line=9,crop-end-line=11}
+{lang=html,line-numbers=off,crop-start-line=9,crop-end-line=12}
 <<[src/standard-strings-template/index.html](./src/standard-strings-template/index.html)
 
 The `template` of the `single-line-template` component is kept within standard strings.
@@ -26,7 +26,7 @@ The `template` of the `single-line-template` component is kept within standard s
          >
 </iframe>
 
-Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks ``).
+Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks).
 
 ```javascript
 let multiLineTemplate = {
@@ -61,7 +61,7 @@ In the root template, we can render the `inline-temp` component and pass in the 
 
 As of this moment, the `inline-temp` component has no template and nothing will be shown. We can use the `inline-template` keyword and declare the template of the component _as the inner content between the component opening and closing tags_.
 
-{lang=html,line-numbers=off,crop-start-line=10,crop-end-line=14}
+{lang=html,line-numbers=off,crop-start-line=10,crop-end-line=16}
 <<[src/inline-template/index.html](./src/inline-template/index.html)
 
 <iframe src='./src/inline-template/index.html'
@@ -70,7 +70,7 @@ As of this moment, the `inline-temp` component has no template and nothing will 
          >
 </iframe>
 
-The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, __should not be used__. 
+The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, __should usually not be used__. 
 
 ### X Templates
 
@@ -87,9 +87,9 @@ In the root template, we can first render the `x-temp` component and pass in the
 </div>
 ```
 
-To specify the template of the `x-temp` component, we can write a _separate_ `<script></script>` tag in the root markup that has `type=text/x-template` and `id=x-template-component`. The `x-template-component` id is the value of the `template` option in the `xTemp` component object. The template of the component will then be the inner contents of this script tag.
+To specify the template of the `x-temp` component, we can write a _separate_ `<script></script>` tag in the root markup that has `type="text/x-template"` and `id"=x-template-component"`. The `x-template-component` id is the value of the `template` option in the `xTemp` component object. The template of the component will then be the inner contents of this script tag.
 
-{lang=html,line-numbers=off,crop-start-line=9,crop-end-line=19}
+{lang=html,line-numbers=off,crop-start-line=9,crop-end-line=21}
 <<[src/x-template/index.html](./src/x-template/index.html)
 
 <iframe src='./src/x-template/index.html'

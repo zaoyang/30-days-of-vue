@@ -28,24 +28,24 @@ const tweets = [
     id: 1,
     name: 'James',
     handle: '@jokerjames',
-    img: 'https://semantic-ui.com/images/avatar2/large/matthew.png',
-    tweet: "If you don't succeed, dust yourself off and try again.",
+    img: './images/james.png',
+    tweet: "If you don't succeed, dust yourself off...",
     likes: 10,
   },
   { 
     id: 2,
     name: 'Fatima',
     handle: '@fantasticfatima',
-    img: 'https://semantic-ui.com/images/avatar2/large/molly.png',
-    tweet: 'Better late than never but never late is better.',
+    img: './images/fatima.png',
+    tweet: 'Better late than never but never late...',
     likes: 12,
   },
   {
     id: 3,
     name: 'Xin',
     handle: '@xeroxin',
-    img: 'https://semantic-ui.com/images/avatar2/large/elyse.png',
-    tweet: 'Beauty in the struggle, ugliness in the success.',
+    img: './images/xin.png',
+    tweet: 'Beauty in the struggle...',
     likes: 18,
   }
 ];
@@ -65,9 +65,11 @@ By binding the information of just the first `tweet` object on to the template, 
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>  
@@ -94,14 +96,17 @@ By binding the information of just the first `tweet` object on to the template, 
                   <span class="icon is-small">
                     <i class="fas fa-heart"></i>
                   </span>
-                  <span class="likes">{{tweets[0].likes}}</span>
+                  <span class="likes">
+                    {{tweets[0].likes}}
+                  </span>
                 </a>
               </div>
             </div>
           </article>
         </div>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-small" placeholder="Tweet your reply..." />
+        <div class="control has-icons-left">
+          <input class="input is-small"
+            placeholder="Tweet your reply..." />
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -114,6 +119,8 @@ By binding the information of just the first `tweet` object on to the template, 
 </html>
 ```
 
+> We've introduced the [Font Awesome](http://fontawesome.io/) library for icons and are referencing images that are kept within the `images` folder of our project.
+ 
 With the appropriate styles already prepared for us, our application will now look like this:
 
 ![](./public/assets/single-tweet.png)
@@ -125,14 +132,18 @@ Our aim is to show a tweet element for every single `tweet` object available in 
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>
     <div id="app">
-      <div class="tweet" v-for="tweet in tweets" :key="tweet.id">
+      <div class="tweet"
+        v-for="tweet in tweets"
+        :key="tweet.id">
         <div class="box">
           <article class="media">
             <div class="media-left">
@@ -154,14 +165,17 @@ Our aim is to show a tweet element for every single `tweet` object available in 
                   <span class="icon is-small">
                     <i class="fas fa-heart"></i>
                   </span>
-                  <span class="likes">{{tweet.likes}}</span>
+                  <span class="likes">
+                    {{tweet.likes}}
+                  </span>
                 </a>
               </div>
             </div>
           </article>
         </div>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-small" placeholder="Tweet your reply..." />
+        <div class="control has-icons-left">
+          <input class="input is-small"
+            placeholder="Tweet your reply..." />
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -202,8 +216,50 @@ I> We haven’t found the need to use the __template__ option in our root instan
 
 To get things started, we’ll create a __tweet-component__ with hard-coded data. We’ll specify the template of the component to simply be the markup associated with `<div class="tweet">...</div>`. We'll create this component right before the instantiation of our root instance.
 
-{lang=javascript,line-numbers=off,crop-start-line=28,crop-end-line=66}
-<<[src/global-components-example/main.js](./src/global-components-example/main.js)
+```javascript
+Vue.component('tweet-component', {
+  template: `   
+    <div class="tweet">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="./images/james.png">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>James</strong>
+                <small>@jokerjames</small>
+                <br>
+                If you don't succeed, dust yourself off...
+              </p>
+            </div>
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span class="likes">
+                  10
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="control has-icons-left">
+        <input class="input is-small"
+          placeholder="Tweet your reply..." />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </div>
+    </div>
+  `
+});
+```
 
 We’ve declared the template of the component within backticks (i.e. [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)) to be able to neatly arrange the markup in multi-line format.
 

@@ -1,3 +1,7 @@
+---
+coverImageBackgroundPosition: '50% 87%;'
+---
+
 # The Vue Instance - Data
 
 > Now that we know how to instantiate a Vue application with the Vue instance, let's take a deeper look into how the data property of a Vue instance helps enable reactivity.
@@ -36,7 +40,7 @@ We've introduced `user` and `city` data properties that have values of `'Hassan 
 </html>
 ```
 
-> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling to our application.
+> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
 
 With the data being bound to the template, we're now able to see the values of these different data properties.
 
@@ -70,7 +74,7 @@ Let’s see an example of data reactivity. To help facilitate a change in data, 
 </html>
 ```
 
-As of right now, our button doesn’t do anything. We can attach a click listener to the button to trigger some functionality change that would do the work to change the instance greeting property. This would be a good moment to use the instance's [methods](https://vuejs.org/v2/guide/events.html#Method-Event-Handlers) property:
+As of right now, our button doesn’t do anything. We can attach a click listener to the button to trigger a change to the instance `greeting` property. To facilitate this change, we can use the instance's [methods](https://vuejs.org/v2/guide/events.html#Method-Event-Handlers) property:
 
 ```javascript
 new Vue({
@@ -130,7 +134,9 @@ The **v-on** directive is one of the many native Vue directives available to us 
     <div id="app">
       <h2>{{ greeting }}</h2>
       <p>by {{ user }} who lives in {{ city }}</p>
-      <button v-on:click="changeGreeting">Change Greeting</button>
+      <button v-on:click="changeGreeting">
+        Change Greeting
+      </button>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>

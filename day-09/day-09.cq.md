@@ -85,7 +85,7 @@ As each __watch__ function runs, we’ll update the other data property by eithe
 {lang=javascript,line-numbers=off}
 <<[src/watchers-example/main.js](./src/watchers-example/main.js)
 
-We’re using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
+We’re using the ternary operator to update the value of the non-watched input to 0 if the watched property is ever invalid. Now, whenever a value is entered in an input; the other input field will be updated to show the change!
 
 <iframe src='./src/watchers-example/index.html'
         height="215"

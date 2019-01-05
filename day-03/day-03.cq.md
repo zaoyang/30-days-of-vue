@@ -68,7 +68,8 @@ new Vue({
   },
   methods: {
     addGreeting() {
-      this.greeting = 'Hello World!'; // greeting is not initialized :(
+      // greeting is not initialized :(
+      this.greeting = 'Hello World!';
     }
   }
 });
@@ -77,22 +78,23 @@ new Vue({
 In the example above, Vue would emit a console warning along the lines of:
 
 ```shell
-Property or method "greeting" is not defined on the instance but referenced during render. Make sure that this property is reactive, either in the data option, or for class-based components, by initializing the property...
+Property ... "greeting" is not defined on the instance...
 ```
 
-We’re expected to initialize all the properties we intend to use.
+We’re expected to initialize all the properties we intend to use upfront.
 
 ```javascript
 new Vue({
   el: '#app',
   data: {
-    greeting: '', // greeting is initialized with an empty string
+    greeting: '', // greeting is initialized
     user: 'Hassan Djirdeh',
     city: 'Toronto'
   },
   methods: {
     addGreeting() {
-      this.greeting = 'Hello World!'; // greeting can now be updated!
+      // greeting can now be updated!
+      this.greeting = 'Hello World!';
     }
   }
 });

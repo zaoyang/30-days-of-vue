@@ -11,13 +11,17 @@ The [**v-on**](https://vuejs.org/v2/guide/events.html) directive can be used to 
 In article **#2**, the **v-on** directive was used to call an instance `changeGreeting()` method when a button was clicked:
 
 ```html
-<button v-on:click="changeGreeting">Change Greeting</button>
+<button v-on:click="changeGreeting">
+  Change Greeting
+</button>
 ```
 
 Instead of triggering a method in the instance, we’re also able to run JavaScript _inline_ in the template:
 
 ```html
-<button v-on:click="greeting = 'Hi there!'">Change Greeting</button>
+<button v-on:click="greeting = 'Hi there!'">
+  Change Greeting
+</button>
 ```
 
 Though inline JavaScript works just as well, calling methods bound to the instance is often preferable when intended functionality change gets more complicated.
@@ -27,9 +31,11 @@ It's important to keep in mind that the **v-on** directive can be used with virt
 ```html
 <h1 v-on:click="method">Click me!</h1>
 <h1 v-on:dblclick="method">Double Click me!</h1>
-<input v-on:keydown="method" placeholder="Press down on keys" />
-<input v-on:keyup="method" placeholder="Release keys" />
 <form v-on:submit="method">...</form>
+<input v-on:keydown="method"
+  placeholder="Press down on keys" />
+<input v-on:keyup="method"
+  placeholder="Release keys" />
 <!-- ... -->
 ```
 
@@ -56,7 +62,7 @@ Here’s a code sample that shows some different event listeners with different 
       <input v-on:keyup="alertMessageGreeting"
              placeholder="Type something" />
       <input v-on:keyup.enter="alertEnterGreeting" 
-             placeholder="Type something and release the Enter key" />
+             placeholder="Type and release Enter" />
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
@@ -83,7 +89,7 @@ new Vue({
       this.alertMessage = 'You typed something!';
     },
     alertEnterGreeting() {
-      this.alertMessage = 'You typed something and pressed Enter!';
+      this.alertMessage = 'You typed and pressed Enter!';
     },
   }
 });
@@ -95,7 +101,7 @@ new Vue({
          >
 </iframe>
 
-From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the Enter key.
+From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the `Enter` key.
 
 Finally, event handlers usually have an event object that contains details about the event. In the **v-on** directive, we’re able to access this original event object by explicitly passing in the `$event` variable:
 
@@ -185,7 +191,9 @@ To see an example of conditional rendering, let’s first add a button to our pr
       <h2>{{ greeting }}</h2>
       <p>by {{ user }} who lives in {{ city }}</p>
       <img v-bind:src="cityImage" />
-      <button v-on:click="changeCity">Change City</button>
+      <button v-on:click="changeCity">
+        Change City
+      </button>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
@@ -233,8 +241,12 @@ If we wanted to render some content in _certain conditions_ (e.g. when `city ===
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p v-if="city === 'Toronto'">by {{ user }} who lives in {{ city }}</p>
-      <p v-if="city === 'Lagos'">by {{ user }} who wishes to visit {{ city }}</p>
+      <p v-if="city === 'Toronto'">
+        by {{ user }} who lives in {{ city }}
+      </p>
+      <p v-if="city === 'Lagos'">
+        by {{ user }} who wishes to visit {{ city }}
+      </p>
       <img v-bind:src="cityImage" />
       <button v-on:click="changeCity">Change City</button>
     </div>
@@ -265,8 +277,12 @@ Instead of the **v-if** directive, we could also use the **v-show** directive to
   <body>
     <div id="app">
       <h2>{{ greeting }}</h2>
-      <p v-show="city === 'Toronto'">by {{ user }} who lives in {{ city }}</p>
-      <p v-show="city === 'Lagos'">by {{ user }} who wishes to visit {{ city }}</p>
+      <p v-show="city === 'Toronto'">
+        by {{ user }} who lives in {{ city }}
+      </p>
+      <p v-show="city === 'Lagos'">
+        by {{ user }} who wishes to visit {{ city }}
+      </p>
       <img v-bind:src="cityImage" />
       <button v-on:click="changeCity">Change City</button>
     </div>

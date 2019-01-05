@@ -12,7 +12,7 @@ For today's article, let's attempt to display a card element in which its conten
 
 ![](./public/assets/card-element.png)
 
-The external data source that is to provide us with the data we need would be the [`/users`](https://jsonplaceholder.typicode.com/users) resource of [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - a fake online REST API for testing and prototyping.
+The external data source that is to provide us with the data we need would be the [`/users`](https://jsonplaceholder.typicode.com/users) resource of JSONPlaceholder - a fake online REST API for testing and prototyping.
 
 As we set our up our Vue instance, we’ll need to initialize all the data we intend to have displayed in the template:
 
@@ -55,10 +55,11 @@ new Vue({
     }
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then((response) => {
+    axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    ).then((response) => {
         // Use response to update data
-      });
+    });
   },
 });
 ```
@@ -72,15 +73,19 @@ new Vue({
     // ...
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then((response) => {
+    axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    ).then((response) => {
         const data = response.data;
-        const randomUser = response.data[Math.floor(Math.random() * data.length)];
+        const randomUser = response.data[
+          Math.floor(Math.random() * data.length)
+        ];
  
         this.name = randomUser.name;
         this.email = randomUser.email;
         this.company.name = randomUser.company.name;
-        this.company.catchPhrase = randomUser.company.catchPhrase;
+        this.company.catchPhrase = 
+          randomUser.company.catchPhrase;
       });
   },
 });
@@ -160,7 +165,7 @@ Since we’re able to access the resolved DOM, the __`mounted()`__ hook is often
 
 In article __#3__ of the course, we discussed how Vue applications are _reactive_ in nature. In short, when data is changed - the template is re-rendered (i.e. updated) to show the change. The __`updated()`__ hook gets fired whenever a data change is made that causes the instance to be updated/re-rendered.
 
-I> The __`updated()`__ hook behaves like the __watch__ property but for the entire instance. It’s important to know that for specific state changes, the __watch__ property (or oftentimes __computed__ properties) should always be used instead.
+I> The __`updated()`__ hook behaves like the __watch__ property but for the _entire instance_. It’s important to know that for specific state changes, the __watch__ property (or oftentimes __computed__ properties) should always be used instead.
 
 In the __`updated()`__ hook, the accessible DOM refers to the resolved DOM _after_ the update has been made.
 

@@ -79,7 +79,7 @@ In addition to helping make the template be more [D.R.Y](https://en.wikipedia.or
 
 It’s common practice to specify a [__key__](https://vuejs.org/v2/guide/list.html#key) attribute for every iterated element within a rendered __v-for__ list. This is because Vue uses the __key__ attribute to create __unique bindings for each node’s identity__.
 
-If there were any dynamic UI changes to our list (e.g. numbers list gets randomly reshuffled), Vue will (by default) opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our __v-for__ list depends on DOM state and/or child component state, this can cause some unintended behavior.
+If there were any dynamic UI changes to our list (e.g. the numbers list gets randomly reshuffled), Vue will (by default) opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our __v-for__ list depends on DOM state and/or child component state, this can cause some unintended behavior.
 
 Let’s see an example of this. Instead of rendering just the `number` content within each element, let’s render both the `number` value and an `input` element for each number in the `numbers` array.
 

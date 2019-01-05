@@ -2,14 +2,16 @@
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
     <div id="app">
       <inline-temp :message="message" inline-template>
         <div class="card">
-          <header class="card-header card-header-title">{{ message }}</header>
+          <header class="card-header card-header-title">
+            {{ message }}
+          </header>
         </div>
       </inline-temp>
     </div>

@@ -12,7 +12,7 @@ For today's article, let's attempt to display a card element in which its conten
 
 ![](./public/assets/card-element.png)
 
-The external data source that is to provide us with the data we need would be the [`/users`](https://jsonplaceholder.typicode.com/users) resource of [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - a fake online REST API for testing and prototyping.
+The external data source that is to provide us with the data we need would be the [`/users`](https://jsonplaceholder.typicode.com/users) resource of JSONPlaceholder - a fake online REST API for testing and prototyping.
 
 As we set our up our Vue instance, we’ll need to initialize all the data we intend to have displayed in the template:
 
@@ -37,7 +37,7 @@ We’ll utilize the [Card UI element from Bulma](https://bulma.io/documentation/
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
@@ -55,12 +55,16 @@ We’ll utilize the [Card UI element from Bulma](https://bulma.io/documentation/
           </div>
         </div>
         <footer class="card-footer">
-          <a href="#" class="card-footer-item">{{email}}</a>
+          <a href="#" class="card-footer-item">
+            {{email}}
+          </a>
         </footer>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script 
+      src="https://unpkg.com/axios/dist/axios.min.js">
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>
@@ -86,10 +90,11 @@ new Vue({
     }
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then((response) => {
+    axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    ).then((response) => {
         // Use response to update data
-      });
+    });
   },
 });
 ```
@@ -103,15 +108,19 @@ new Vue({
     // ...
   },
   created() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then((response) => {
+    axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    ).then((response) => {
         const data = response.data;
-        const randomUser = response.data[Math.floor(Math.random() * data.length)];
+        const randomUser = response.data[
+          Math.floor(Math.random() * data.length)
+        ];
  
         this.name = randomUser.name;
         this.email = randomUser.email;
         this.company.name = randomUser.company.name;
-        this.company.catchPhrase = randomUser.company.catchPhrase;
+        this.company.catchPhrase = 
+          randomUser.company.catchPhrase;
       });
   },
 });
@@ -191,7 +200,7 @@ Since we’re able to access the resolved DOM, the **`mounted()`** hook is often
 
 In article **#3** of the course, we discussed how Vue applications are _reactive_ in nature. In short, when data is changed - the template is re-rendered (i.e. updated) to show the change. The **`updated()`** hook gets fired whenever a data change is made that causes the instance to be updated/re-rendered.
 
-I> The **`updated()`** hook behaves like the **watch** property but for the entire instance. It’s important to know that for specific state changes, the **watch** property (or oftentimes **computed** properties) should always be used instead.
+I> The **`updated()`** hook behaves like the **watch** property but for the _entire instance_. It’s important to know that for specific state changes, the **watch** property (or oftentimes **computed** properties) should always be used instead.
 
 In the **`updated()`** hook, the accessible DOM refers to the resolved DOM _after_ the update has been made.
 

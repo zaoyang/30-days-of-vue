@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
@@ -20,12 +20,16 @@
           </div>
         </div>
         <footer class="card-footer">
-          <a href="#" class="card-footer-item">{{email}}</a>
+          <a href="#" class="card-footer-item">
+            {{email}}
+          </a>
         </footer>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script 
+      src="https://unpkg.com/axios/dist/axios.min.js">
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>

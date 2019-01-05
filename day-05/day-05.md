@@ -1,6 +1,6 @@
 # List Rendering with v-for
 
-> Today we're going to work through how the **v-for** directive can be used to render a list of elements based on a data source.
+> Today we're going to work through how the **v-for** directive can be used to dynamically render a list of elements based on a data source.
 
 Today's article is a summarized and simpler version of the article **List Rendering and Vue's v-for directive**, which was originally posted on [CSS-Tricks](https://css-tricks.com/list-rendering-and-vues-v-for-directive/) and the [freeCodeCamp](https://medium.freecodecamp.org/an-introduction-to-dynamic-list-rendering-in-vue-js-a70eea3e321) blogs.
 
@@ -10,7 +10,7 @@ List rendering is one of the most commonly used practices in front-end web devel
 
 Take a website like [Twitter](https://twitter.com) for example. When logged in and in the main index route, we’re presented with a view similar to this:
 
-![](./public/assets/twitter-lists.png)
+![Twitter uses lists of elements everywhere. Here we have a list of trends, a list of tweets, and a list of potential followers](./public/assets/twitter-lists.png)
 
 On the homepage, we’ve become accustomed to seeing a list of trends, a list of tweets, a list of potential followers, etc. The content displayed in these lists depends on a multitude of factors—our Twitter history, who we follow, our likes, etc. As a result, it's probably safe to say all this data is dynamic.
 
@@ -50,8 +50,7 @@ Let’s see a very simple example of this in practice. Assume we have a template
 
 <iframe src='./src/static-list-example/index.html'
         height="275"
-        scrolling="no"
-         >
+        scrolling="no">
 </iframe>
 
 If we had the list of numbers available to us in a collection (e.g. an array) in our Vue instance:
@@ -101,7 +100,7 @@ In addition to helping make the template be more [D.R.Y](https://en.wikipedia.or
 
 It’s common practice to specify a [**key**](https://vuejs.org/v2/guide/list.html#key) attribute for every iterated element within a rendered **v-for** list. This is because Vue uses the **key** attribute to create **unique bindings for each node’s identity**.
 
-If there were any dynamic UI changes to our list (e.g. numbers list gets randomly reshuffled), Vue will (by default) opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our **v-for** list depends on DOM state and/or child component state, this can cause some unintended behavior.
+If there were any dynamic UI changes to our list (e.g. the numbers list gets randomly reshuffled), Vue will (by default) opt towards changing data within each element _instead_ of moving the DOM elements accordingly. This won’t be an issue in most cases. However, in certain instances where our **v-for** list depends on DOM state and/or child component state, this can cause some unintended behavior.
 
 Let’s see an example of this. Instead of rendering just the `number` content within each element, let’s render both the `number` value and an `input` element for each number in the `numbers` array.
 
@@ -145,7 +144,9 @@ Assume we wanted to introduce another new feature into our app. This feature wou
       <button @click="shuffle">Shuffle!</button>
     </div>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash/lodash.js">
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>
@@ -228,7 +229,9 @@ In the template, we’ll now reference `number.value` as the text content that w
       <button @click="shuffle">Shuffle!</button>
     </div>
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash/lodash.js">
+    </script>
     <script src="./main.js"></script>
   </body>
 </html>

@@ -40,7 +40,7 @@ We've introduced `user` and `city` data properties that have values of `'Hassan 
 </html>
 ```
 
-> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling to our application.
+> In the code above, we're also introducing a local stylesheet, `styles.css`, to apply some simple styling on to our application.
 
 With the data being bound to the template, we're now able to see the values of these different data properties.
 
@@ -74,7 +74,7 @@ Let’s see an example of data reactivity. To help facilitate a change in data, 
 </html>
 ```
 
-As of right now, our button doesn’t do anything. We can attach a click listener to the button to trigger some functionality change that would do the work to change the instance greeting property. This would be a good moment to use the instance's [methods](https://vuejs.org/v2/guide/events.html#Method-Event-Handlers) property:
+As of right now, our button doesn’t do anything. We can attach a click listener to the button to trigger a change to the instance `greeting` property. To facilitate this change, we can use the instance's [methods](https://vuejs.org/v2/guide/events.html#Method-Event-Handlers) property:
 
 ```javascript
 new Vue({

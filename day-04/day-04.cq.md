@@ -11,13 +11,17 @@ The [__v-on__](https://vuejs.org/v2/guide/events.html) directive can be used to 
 In article __#2__, the __v-on__ directive was used to call an instance `changeGreeting()` method when a button was clicked:
 
 ```html
-<button v-on:click="changeGreeting">Change Greeting</button>
+<button v-on:click="changeGreeting">
+  Change Greeting
+</button>
 ```
 
 Instead of triggering a method in the instance, we’re also able to run JavaScript _inline_ in the template:
 
 ```html
-<button v-on:click="greeting = 'Hi there!'">Change Greeting</button>
+<button v-on:click="greeting = 'Hi there!'">
+  Change Greeting
+</button>
 ```
 
 Though inline JavaScript works just as well, calling methods bound to the instance is often preferable when intended functionality change gets more complicated.
@@ -27,9 +31,11 @@ It's important to keep in mind that the __v-on__ directive can be used with virt
 ```html
 <h1 v-on:click="method">Click me!</h1>
 <h1 v-on:dblclick="method">Double Click me!</h1>
-<input v-on:keydown="method" placeholder="Press down on keys" />
-<input v-on:keyup="method" placeholder="Release keys" />
 <form v-on:submit="method">...</form>
+<input v-on:keydown="method"
+  placeholder="Press down on keys" />
+<input v-on:keyup="method"
+  placeholder="Release keys" />
 <!-- ... -->
 ```
 
@@ -51,7 +57,7 @@ Here’s a code sample that shows some different event listeners with different 
          >
 </iframe>
 
-From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the Enter key.
+From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the `Enter` key.
 
 Finally, event handlers usually have an event object that contains details about the event. In the __v-on__ directive, we’re able to access this original event object by explicitly passing in the `$event` variable:
 
@@ -117,7 +123,9 @@ To see an example of conditional rendering, let’s first add a button to our pr
       <h2>{{ greeting }}</h2>
       <p>by {{ user }} who lives in {{ city }}</p>
       <img v-bind:src="cityImage" />
-      <button v-on:click="changeCity">Change City</button>
+      <button v-on:click="changeCity">
+        Change City
+      </button>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>

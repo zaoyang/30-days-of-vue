@@ -28,24 +28,24 @@ const tweets = [
     id: 1,
     name: 'James',
     handle: '@jokerjames',
-    img: 'https://semantic-ui.com/images/avatar2/large/matthew.png',
-    tweet: "If you don't succeed, dust yourself off and try again.",
+    img: './images/james.png',
+    tweet: "If you don't succeed, dust yourself off...",
     likes: 10,
   },
   { 
     id: 2,
     name: 'Fatima',
     handle: '@fantasticfatima',
-    img: 'https://semantic-ui.com/images/avatar2/large/molly.png',
-    tweet: 'Better late than never but never late is better.',
+    img: './images/fatima.png',
+    tweet: 'Better late than never but never late...',
     likes: 12,
   },
   {
     id: 3,
     name: 'Xin',
     handle: '@xeroxin',
-    img: 'https://semantic-ui.com/images/avatar2/large/elyse.png',
-    tweet: 'Beauty in the struggle, ugliness in the success.',
+    img: './images/xin.png',
+    tweet: 'Beauty in the struggle...',
     likes: 18,
   }
 ];
@@ -65,9 +65,11 @@ By binding the information of just the first `tweet` object on to the template, 
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>  
@@ -94,14 +96,17 @@ By binding the information of just the first `tweet` object on to the template, 
                   <span class="icon is-small">
                     <i class="fas fa-heart"></i>
                   </span>
-                  <span class="likes">{{tweets[0].likes}}</span>
+                  <span class="likes">
+                    {{tweets[0].likes}}
+                  </span>
                 </a>
               </div>
             </div>
           </article>
         </div>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-small" placeholder="Tweet your reply..." />
+        <div class="control has-icons-left">
+          <input class="input is-small"
+            placeholder="Tweet your reply..." />
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -114,6 +119,8 @@ By binding the information of just the first `tweet` object on to the template, 
 </html>
 ```
 
+> We've introduced the [Font Awesome](http://fontawesome.io/) library for icons and are referencing images that are kept within the `images` folder of our project.
+
 With the appropriate styles already prepared for us, our application will now look like this:
 
 ![](./public/assets/single-tweet.png)
@@ -125,14 +132,18 @@ Our aim is to show a tweet element for every single `tweet` object available in 
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>
     <div id="app">
-      <div class="tweet" v-for="tweet in tweets" :key="tweet.id">
+      <div class="tweet"
+        v-for="tweet in tweets"
+        :key="tweet.id">
         <div class="box">
           <article class="media">
             <div class="media-left">
@@ -154,14 +165,17 @@ Our aim is to show a tweet element for every single `tweet` object available in 
                   <span class="icon is-small">
                     <i class="fas fa-heart"></i>
                   </span>
-                  <span class="likes">{{tweet.likes}}</span>
+                  <span class="likes">
+                    {{tweet.likes}}
+                  </span>
                 </a>
               </div>
             </div>
           </article>
         </div>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-small" placeholder="Tweet your reply..." />
+        <div class="control has-icons-left">
+          <input class="input is-small"
+            placeholder="Tweet your reply..." />
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -210,7 +224,7 @@ Vue.component('tweet-component', {
         <article class="media">
           <div class="media-left">
             <figure class="image is-64x64">
-              <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+              <img src="./images/james.png">
             </figure>
           </div>
           <div class="media-content">
@@ -219,7 +233,7 @@ Vue.component('tweet-component', {
                 <strong>James</strong>
                 <small>@jokerjames</small>
                 <br>
-                If you don't succeed, dust yourself off and try again.
+                If you don't succeed, dust yourself off...
               </p>
             </div>
             <div class="level-left">
@@ -227,14 +241,17 @@ Vue.component('tweet-component', {
                 <span class="icon is-small">
                   <i class="fas fa-heart"></i>
                 </span>
-                <span class="likes">10</span>
+                <span class="likes">
+                  10
+                </span>
               </a>
             </div>
           </div>
         </article>
       </div>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-small" placeholder="Tweet your reply..." />
+      <div class="control has-icons-left">
+        <input class="input is-small"
+          placeholder="Tweet your reply..." />
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
@@ -255,14 +272,18 @@ With the component created, we’ll now be able to render the component in the r
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css" >
+      href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      href="
+        https://use.fontawesome.com/releases/v5.6.1/css/all.css
+      " />
   </head>
 
   <body>
     <div id="app">
-      <tweet-component v-for="tweet in tweets" :key="tweet.id"></tweet-component>
+      <tweet-component
+        v-for="tweet in tweets" :key="tweet.id">
+      </tweet-component>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
