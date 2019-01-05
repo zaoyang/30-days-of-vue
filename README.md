@@ -1,16 +1,11 @@
-![](./images/readme_banner.jpg)
-
-<h1 align="center">
-  30 Days of Vue
-</h1>
 <p align="center">
   <img src="./images/30-days-of-vue-hardcover.jpg"/>
 </p>
-<h2 align="center">
-  ✨ An Introduction to Vue - <b>in 30 Bite-Size Morsels</b> ✨
-</h2>
 <p align="center">
-  Written by the authors of <a href="https://fullstack.io/vue">Fullstack Vue</a></a>
+  ✨ 30 Days of Vue ✨
+</p>
+<p align="center">
+  An Introduction to Vue - in 30 Bite-Size Morsels. Written by the authors of <a href="https://fullstack.io/vue">Fullstack Vue</a></a>
 </p>
 <p align="center">
   <a href="https://app.monstercampaigns.com/c/opsh28ygz42xhvtlq4vd/">
@@ -42,7 +37,9 @@ Each day contains either contains a full Vue application or code samples that bu
 
 The steps to run standalone Vue applications:
 
-- Open the `index.html` file in your favourite browser.
+```bash
+Open the `index.html` file in your favourite browser.
+```
 
 The steps to run Webpack based Vue applications:
 
