@@ -24,6 +24,8 @@ In the last article, we discussed different template techniques to construct a s
          >
 </iframe>
 
+> Live version - https://30dofv-singlestringtemp.surge.sh
+
 The markup of the card element we’ve created was pretty straightforward and contained a `<div>` element encompassing a `<header>` element. The text content of the `<header>` element displayed the value of the `message` prop.
 
 ```html
@@ -169,6 +171,8 @@ By declaring the created component in the root template like we've done before, 
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-renderfunctions.surge.sh
 
 I> [Sarah Drasner](https://twitter.com/sarah_edo) (Vue Core Team Member) has a great article on CSS-Tricks that explains the usage of the term `h` (short for `hyperscript`) in Vue render functions - https://css-tricks.com/what-does-the-h-stand-for-in-vues-render-method/.
 

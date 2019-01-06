@@ -93,6 +93,8 @@ We’re using the ternary operator to update the value of the non-watched input 
          >
 </iframe>
 
+> Live version - https://30dofv-watchers.surge.sh
+
 Awesome! Though this works perfectly well, a good question to ask right now would be - do we need __watchers__ to do what we just did?
 
 ## Watchers vs. Computed properties
@@ -148,6 +150,8 @@ Our app would now work as expected! When one input changes, the other is updated
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-computed2.surge.sh
 
 Can we always use __computed__ properties in place of a __watcher__? No. In certain cases, you may find yourself in need of using the specific __watch__ property.  The [Vue documentation](https://vuejs.org/v2/guide/computed.html#Watchers) states that _“[__watchers__ are] most useful when you want to perform asynchronous or expensive operations in response to changing data”_. In most cases, however, __watchers__ tend to be overused where it might be [more appropriate to instead use a __computed__ property](https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property).
 

@@ -138,6 +138,8 @@ And there we have it! If we save all the work we’ve done, we now have a fully 
          >
 </iframe>
 
+> Live version - https://30dofv-pokemon-routing.surge.sh
+
 I> If you’d like to re-absorb the subject of client-side routing in Vue - you can watch a talk I’ve given on this subject [here](https://www.youtube.com/watch?v=YFnimUl8Qjo)!
 
 Vue Router provides so much more functionality that we don't have time to cover in our brisk intro to routing. Though this was a simple introduction, Vue Router provides more intermediate and advanced features like dynamic route matching, navigation guards, and lazy loading routes. For more information, be sure to check out the following links:

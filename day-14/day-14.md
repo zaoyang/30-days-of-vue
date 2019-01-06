@@ -98,7 +98,7 @@ By having data in components be functions that return objects, each component is
 ```javascript
 let counterOne = {
   template: `
-    <button class="button is-primary" @click="counter++">
+    <button class="component-button" @click="counter++">
       You clicked me {{counter}} times
     </button>
   `,
@@ -111,7 +111,7 @@ let counterOne = {
 
 let counterTwo = {
   template: `
-    <button class="button is-primary" @click="counter++">
+    <button class="component-button" @click="counter++">
       You clicked me {{counter}} times
     </button>
   `,
@@ -124,7 +124,7 @@ let counterTwo = {
 
 let counterThree = {
   template: `
-    <button class="button is-primary" @click="counter++">
+    <button class="component-button" @click="counter++">
       You clicked me {{counter}} times
     </button>
   `,
@@ -172,10 +172,12 @@ new Vue({
 ```
 
 <iframe src='./src/components-data-example/index.html'
-        height="115"
+        height="90"
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-componentsdata.surge.sh>
 
 ## Single Root Template
 

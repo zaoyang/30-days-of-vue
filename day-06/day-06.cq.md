@@ -74,6 +74,8 @@ We can now go ahead and test our application. If we populate our form, click the
          >
 </iframe>
 
+> Live version - https://30dofv-vmodel.surge.sh
+
 Here’s a sample expected response:
 
 ![](./public/assets/v-model-example-app-submit.png)

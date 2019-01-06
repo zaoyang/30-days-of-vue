@@ -222,6 +222,8 @@ Our application will now work as intended with the help of a Vuex store.
          >
 </iframe>
 
+> Live version - <https://30dofv-vuex.surge.sh>
+
 We can see that Vuex extends the simple store method by introducing **explicitly defined actions, mutations, and getters**. This is where the initial boilerplate, as well as the main advantage comes in. In addition, another significant advantage to using Vuex is the integration with the Vue Devtools to provide **time-travel debugging**.
 
 Here’s a quick gif that shows how the Vue Devtools helps us observe store information as mutations occur, as well as the ability to _time-travel_ the UI to the moment a particular mutation has occurred.

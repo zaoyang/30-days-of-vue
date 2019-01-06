@@ -46,6 +46,8 @@ The store method receives the payload and directly mutates the `store.numbers` a
          >
 </iframe>
 
+> Live version - https://30dofv-globalstore.surge.sh
+
 When we say components interact with one another here, we’re using the term ‘interact’ loosely. `NumberDisplay` and `NumberSubmit` aren’t going to do anything directly to each other but instead invoke changes to one another _through_ the store.
 
 ![](./public/assets/store-diagram.png)

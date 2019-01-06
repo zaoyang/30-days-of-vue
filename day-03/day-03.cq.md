@@ -20,6 +20,8 @@ The reactive nature of data in Vue help facilitates the possibility of building 
          >
 </iframe>
 
+> Live version - https://30dofv-simpledatachange.surge.sh
+
 Let’s assume we wanted to scale the application and introduce capabilities like:
 
 - Displaying the current date and time.

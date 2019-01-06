@@ -117,4 +117,6 @@ The `greeting` data property in the template is now directly bound to the value 
 
 <iframe src='./src/index.html'  ></iframe>
 
+> Live version - <https://30dofv-helloworld.surge.sh>
+
 That was easy, wasn’t it? In the next article, we'll take a deeper look at the `data` property of a Vue instance and how it enables _reactivity_ of our Vue applications.

@@ -278,6 +278,8 @@ At this moment, our application would look like the following:
          >
 </iframe>
 
+> Live version - https://30dofv-globalcomponents.surge.sh
+
 I> Notice how the root template is a lot easier to read now? This is in part due to using components to encapsulate relevant content within themselves. This is a very simple application, but for larger apps - the importance of well structured and named components can’t be stressed enough.
 
 Though we’re rendering a list of components, the application isn’t where we want it to be since each component is rendering the same static information. What we intend to do is have the template of every __tweet-component__ render the details of a single unique tweet object from the `tweets` array.

@@ -59,6 +59,8 @@ With the help of the styling given to us by Bulma, our simple app will look like
          >
 </iframe>
 
+> Live version - <https://30dofv-inline.surge.sh>
+
 There’s nothing inherently wrong with specifying functionality change, like the above, inline. However, **methods** are often times more appropriate to use when the intended changes get harder to decipher.
 
 We can change the above example to instead use a **method** in our Vue instance to help reverse the `message` string:
@@ -114,6 +116,8 @@ Our UI would behave just the way it had before by displaying the message greetin
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-methods.surge.sh>
 
 Functionality wise - the above two examples achieve the same thing. Methods might be seen to be more appropriate since it keeps the template cleaner and easier to understand.
 
@@ -174,6 +178,8 @@ With this, our app will behave as desired:
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-computed.surge.sh>
 
 This begs the question, what difference is there to using a **computed** property or having a **method** instead return a value?
 

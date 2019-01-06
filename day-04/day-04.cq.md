@@ -57,6 +57,8 @@ Here’s a code sample that shows some different event listeners with different 
          >
 </iframe>
 
+> Live version - https://30dofv-von.surge.sh
+
 From the code sample above, you may have noticed the `v-on` directive be used on a `keyup.enter` event. `keyup.enter` is one of the [unique key modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers) Vue provides to allow us to react to events from commonly used keys like the `Enter` key.
 
 Finally, event handlers usually have an event object that contains details about the event. In the __v-on__ directive, we’re able to access this original event object by explicitly passing in the `$event` variable:
@@ -100,13 +102,15 @@ Here’s an example of using the __v-bind__ directive to bind a data property (n
 {lang=javascript,line-numbers=off}
 <<[src/v-bind-example/main.js](./src/v-bind-example/main.js)
 
-With the `cityImage` appropriately bound, we’ll be presented with a view of Toronto’s skyline:
+With the `cityImage` appropriately bound to a hosted image of Toronto, we’ll be presented with a view of Toronto’s skyline:
 
 <iframe src='./src/v-bind-example/index.html'
         height="325"
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-vbind.surge.sh
 
 ## Conditional rendering with v-if (or v-show)
 
@@ -153,6 +157,8 @@ The text content of the first `<p>` tag that says `by Hassan who lives in Toront
          >
 </iframe>
 
+> Live version - https://30dofv-vif.surge.sh
+
 I> Vue also provides the [__v-else__](https://vuejs.org/v2/guide/conditional.html#v-else) directive to describe an else block and the [__v-else-if__](https://vuejs.org/v2/guide/conditional.html#v-else-if) directive to describe an else-if-block.
 
 Instead of the __v-if__ directive, we could also use the __v-show__ directive to conditionally render content:
@@ -165,6 +171,8 @@ Instead of the __v-if__ directive, we could also use the __v-show__ directive to
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-vshow.surge.sh
 
 Though they achieve a similar outcome, the __v-if__ and __v-show__ directives differ from one another. The __v-if__ directive __does not render the element__ only until the stated condition is `true`. The __v-show__ directive, on the other hand, __always renders the element__ _but_ controls the CSS [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property depending on whether the stated condition is `true`.
 

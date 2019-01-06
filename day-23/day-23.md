@@ -51,7 +51,9 @@ Each Pokémon component will be a simple presentational component that has almos
 
 ```html
 <template>
-  <div class="card card--charizard has-text-weight-bold has-text-white">
+  <div class="card card--charizard
+    has-text-weight-bold
+    has-text-white">
     <div class="card-image">
       <div class="card-image-container">
         <img src="../../static/charizard.png"/>
@@ -120,5 +122,7 @@ The starting point of our application will only have the `CharizardCard` compone
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-pokemon-start.surge.sh>
 
 We’ve covered a simple introduction to routing and talked about the application starting point we’ll use for our **Vue Router** example. We’ll begin tomorrow by integrating and using the components **Vue Router** provides to enable client-side routing in our Pokémon app!

@@ -42,11 +42,13 @@ Let’s use the Vue Devtools on the application we’ve set up in the last artic
          >
 </iframe>
 
+> Live version - <https://30dofv-vmodel.surge.sh>
+
 Launching the application, opening the browser Devtools, and locating the Vue tab - we’ll be able use the Vue Devtools to debug our application:
 
 ![](./public/assets/vue-devtools-v-model-app.png)
 
-> To use the Vue Devtools, you may need to open the application in a separate tab/window instead of surveying the app within the iframe. All code samples can be found for each respective article/day at the [Github Repo](https://github.com/fullstackio/30-days-of-vue/) (at [https://github.com/fullstackio/30-days-of-vue](https://github.com/fullstackio/30-days-of-vue/)).
+> To use the Vue Devtools, you may need to open the application in a separate tab/window instead of surveying the app within the iframe. All code samples can be found for each respective article/day at the [Github Repo](https://github.com/fullstackio/30-days-of-vue/).
 
 In the "Components" tab, we're able to survey all the components (i.e. instances and child-instances) in our application. Our application only contains a single `<Root>` component which refers to the Vue instance of the entire Vue app. By selecting the `<Root>` component, we’re then able to survey the data properties instantiated in our app:
 

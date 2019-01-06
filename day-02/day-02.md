@@ -50,6 +50,8 @@ With the data being bound to the template, we're now able to see the values of t
          >
 </iframe>
 
+> Live version - <https://30dofv-simplebinding.surge.sh>
+
 In Vue, information within the `data` property of an instance is known to be [reactive](https://vuejs.org/v2/guide/reactivity.html). This means that if we manage to modify or change the data values of a Vue instance, Vue will _recognize_ this change and re-render the template to show the _updated_ data values.
 
 ## Methods and Handling Events
@@ -153,5 +155,7 @@ Give it a try! Click the 'Change Greeting' button multiple times to witness the 
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-simpledatachange.surge.sh>
 
 We’ll stop here for now and spend a little time tomorrow discussing how the things we’ve learned today shape the way we build data-driven applications in Vue.

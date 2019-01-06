@@ -67,4 +67,6 @@ The starting point of our application will only have the `CharizardCard` compone
          >
 </iframe>
 
+> Live version - https://30dofv-pokemon-start.surge.sh
+
 We’ve covered a simple introduction to routing and talked about the application starting point we’ll use for our __Vue Router__ example. We’ll begin tomorrow by integrating and using the components __Vue Router__ provides to enable client-side routing in our Pokémon app!

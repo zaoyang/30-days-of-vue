@@ -95,6 +95,8 @@ With the `App` component appropriately declared in the root Vue instance (in the
          >
 </iframe>
 
+> Live version - <https://30dofv-todomvc.surge.sh>
+
 ## Writing tests
 
 The Vue CLI introduces a `tests/` directory adjacent to the `src/` directory for a scaffolded project that has either the 'Unit Testing' or 'E2E Testing' option selected during manual set-up.

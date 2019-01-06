@@ -109,6 +109,8 @@ By having data in components be functions that return objects, each component is
          >
 </iframe>
 
+> Live version - https://30dofv-componentsdata.surge.sh
+
 ## Single Root Template
 
 With Vue template declarations, it’s a __must__ to wrap the template of components in a single root element. If we attempted to have the template of a component render two sibling elements like below:

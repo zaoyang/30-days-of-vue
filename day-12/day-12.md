@@ -10,6 +10,8 @@ In yesterday’s article, we created our first component (named `tweet-component
          >
 </iframe>
 
+> Live version - <https://30dofv-globalcomponents.surge.sh>
+
 Our aim today is to have each `tweet-component` render unique tweet data from the `tweets` data array kept in the root instance. We’ll achieve this with the help of [**props**](https://vuejs.org/v2/guide/components-props.html).
 
 ## Props
@@ -99,6 +101,8 @@ Our application will now display information from all the different tweets in ou
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-props.surge.sh>
 
 ## Prop Validation
 
@@ -203,6 +207,8 @@ Our application UI will remain the same but now be composed of two nested compon
         scrolling="no"
          >
 </iframe>
+
+> Live version - <https://30dofv-nestcomponents.surge.sh>
 
 The Vue Devtools is incredibly useful in helping debug our application and inspect what data is being passed from one component to another. By launching the Vue Devtools, we’ll be able to see all the components in our application and the props available within each component.
 

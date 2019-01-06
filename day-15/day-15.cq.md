@@ -26,6 +26,8 @@ The `template` of the `single-line-template` component is kept within standard s
          >
 </iframe>
 
+> Live version - https://30dofv-singlestringtemp.surge.sh
+
 Standard strings (i.e. ‘ ‘ ) in JavaScript expect the string to be defined in _a single line_ which can make reading the markup of a component difficult. If we wanted to break our component template into multi-line format - we can take advantage of [ES6 Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (i.e. back-ticks).
 
 ```javascript
@@ -70,6 +72,8 @@ As of this moment, the `inline-temp` component has no template and nothing will 
          >
 </iframe>
 
+> Live version - https://30dofv-inlinetemplates.surge.sh
+
 The [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#Inline-Templates) states that inline templates make it harder to understand the template of a component and as a best practice, __should usually not be used__. 
 
 ### X Templates
@@ -97,6 +101,8 @@ To specify the template of the `x-temp` component, we can write a _separate_ `<s
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-xtemplates.surge.sh
 
 Though x-templates may seem to be a pretty neat feature, there are significant downsides to having the template of a component _completely separate_ from the actual component definition. For this reason, the [Vue documentation](https://vuejs.org/v2/guide/components-edge-cases.html#X-Templates) states that x-templates __should be avoided in most cases__.
 

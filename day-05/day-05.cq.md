@@ -53,6 +53,8 @@ Let’s see a very simple example of this in practice. Assume we have a template
         scrolling="no">
 </iframe>
 
+> Live version - https://30dofv-staticlist.surge.sh
+
 If we had the list of numbers available to us in a collection (e.g. an array) in our Vue instance:
 
 {lang=javascript,line-numbers=off}
@@ -72,6 +74,8 @@ At this moment, the __v-for__ directive would display the list of static numbers
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-vfor.surge.sh
 
 In addition to helping make the template be more [D.R.Y](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), the __v-for__ directive is helpful since our application is now entirely dynamic. Regardless of how the `numbers` array changes over time, our set up will always render all the numbers in the collection in the same markup we expect.
 
@@ -126,6 +130,8 @@ If we save our changes, refresh the app, and click the shuffle button a few time
          >
 </iframe>
 
+> Live version - https://30dofv-vfornokey.surge.sh
+
 However, if we type some information in the input of each list element _then_ click shuffle; we’ll notice something peculiar happening:
 
 [![GIF - Typing in inputs then shuffling](./public/assets/numbers-list-no-shuffle.gif)](https://bit.ly/2VyaAQI)
@@ -151,6 +157,8 @@ Vue will now recognize each list element’s identity; and thus _reorder_ the el
         scrolling="no"
          >
 </iframe>
+
+> Live version - https://30dofv-vforkey.surge.sh
 
 Should the __key__ attribute always be used? __It’s recommended__. The [Vue docs](https://vuejs.org/v2/guide/list.html#key) specify that the __key__ attribute should only be omitted if:
 
