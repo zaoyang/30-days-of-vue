@@ -1,4 +1,4 @@
-# Vue Components - Local Registration, Data, and Single Root Templates
+# Vue Components - Nice To Knows
 
 > Today, we'll cover some interesting points that govern the use of Vue components such as the ability to locally register components, the requirement to having the component `data` property always be a function, and the restriction to using a single root template.
 
