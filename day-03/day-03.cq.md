@@ -38,12 +38,12 @@ In contrast, let’s aim to reproduce the functionality of the application in th
 ### HTML
 
 {lang=html,line-numbers=off}
-<<[src/index.html](./src/index.html)
+<<[src/vanilla-js-toggle/index.html](./src/vanilla-js-toggle/index.html)
 
 ### JS
 
 {lang=javascript,line-numbers=off}
-<<[src/main.js](./src/main.js)
+<<[src/vanilla-js-toggle/main.js](./src/vanilla-js-toggle/main.js)
 
 The functionality that achieves the direct toggle between the different text content is inherently similar to what we had before:
 

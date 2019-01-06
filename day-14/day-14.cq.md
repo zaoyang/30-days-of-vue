@@ -88,7 +88,7 @@ let componentObject = {
 The reason behind this is that Vue doesn’t recognize the difference between data objects used in different instances and as a result _treats them all as the same single data object_. If you try declaring a standard data object in a component, Vue will emit a console warning along the lines of:
 
 ```shell
-[Vue warn]: The "data" option should be a function that returns a per-instance value in component definitions.
+[Vue warn]: The "data" option should be a function...
 ```
 
 By having data in components be functions that return objects, each component is able to maintain its own independent data object. Here's an [adapted example from the Vue documentation](https://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function) that displays three identical components with each having their own independent data object.

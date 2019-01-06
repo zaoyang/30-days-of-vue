@@ -62,7 +62,7 @@ We'll now create the template and use the **v-model** directive to bind the appr
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css">
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>

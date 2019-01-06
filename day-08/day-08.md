@@ -28,7 +28,7 @@ In the template, we’ll look to bind the `message` directly and also bind the `
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css">
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
@@ -84,7 +84,7 @@ The method is given a name of `reverseString` and expects a payload. We can decl
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css">
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>
@@ -144,7 +144,7 @@ In the template, we can render the value of the `reverseMessage` computed proper
   <head>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css">
+      href="https://unpkg.com/bulma/css/bulma.css" />
   </head>
 
   <body>

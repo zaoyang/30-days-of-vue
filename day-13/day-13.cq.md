@@ -91,7 +91,7 @@ In the event listener, we’re able to __access the event object that has been p
 
 In the root template, we can now create the final listener. We’ll specify the event listener where `tweet-component` is being rendered and when triggered call a method labelled `addTweetMessage`. `addTweetMessage` will pass in the `$event` payload as the only argument to the method.
 
-{lang=html,line-numbers=off,crop-start-line=12,crop-end-line=16}
+{lang=html,line-numbers=off,crop-start-line=14,crop-end-line=18}
 <<[src/custom-events-example/index.html](./src/custom-events-example/index.html)
 
 We’ll now create the `addTweetMessage` method in the root instance to introduce a copy of the event `tweet` object into our `tweets` array. To keep each tweet object unique, we’ll shallow copy the tweet event object and set the `id` of the copied object to be one greater than the last item in our `tweets` array. We’ll then push the newly copied item to the end of the data array with the help of the Array [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method.

@@ -25,8 +25,8 @@ In our mock twitter application, we’re interested in passing a single tweet ob
 ```html
     <div id="app">
       <tweet-component v-for="tweet in tweets"
-                      :key="tweet.id"
-                      :tweet="tweet">
+        :key="tweet.id"
+        :tweet="tweet">
       </tweet-component>
     </div>
 ```

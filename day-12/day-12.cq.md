@@ -21,7 +21,7 @@ Using props is fairly simple. The first step involves binding the data that is t
 
 In our mock twitter application, we’re interested in passing a single tweet object to every `tweet-component` that is rendered. Since the tweet components are rendered with the help of the __v-for__ directive, we can pass the iterated `tweet` object as props down to each component.
 
-{lang=html,line-numbers=off,crop-start-line=11,crop-end-line=16}
+{lang=html,line-numbers=off,crop-start-line=13,crop-end-line=18}
 <<[src/props-example/index.html](./src/props-example/index.html)
 
 We’re using the __v-bind__ directive to bind the iterated `tweet` data object to a prop of the same name.
