@@ -109,8 +109,9 @@ We'll use custom events to have `ChildComponent` be able to facilitate a change 
   <div>
     <h2>{{ numbers }}</h2>
     <input v-model="number" type="number" />
-    <button @click="$emit('number-added', Number(number))">
-     Add new number
+    <button
+      @click="$emit('number-added', Number(number))">
+      Add new number
     </button>
   </div>
 </template>
@@ -266,7 +267,9 @@ export default {
 Since `NumberDisplay` is isolated from `NumberSubmit`, we’re declaring the custom event listener programmatically with `$on`:
 
 ```javascript
-EventBus.$on('number-added', () => { callback function... })
+EventBus.$on('number-added', () => {
+  // callback function...
+});
 ```
 
 We’re attaching the EventBus listener, `EventBus.$on`, on the `created()` lifecycle hook of the `NumberDisplay` component. Throughout the life of the `NumberDisplay` component, whenever this event gets triggered - the listener callback function will run which pushes the `number` event payload to the component `numbers` array.

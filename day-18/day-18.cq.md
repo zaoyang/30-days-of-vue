@@ -72,7 +72,7 @@ npm run serve
 
 ![](./public/assets/vue-cli-serve.png)
 
-With the Webpack server running, we’re then able to view our app at http://localhost:8080/!
+With the Webpack server running, we’re then able to view our app at http://localhost:8080/.
 
 ![](./public/assets/vue-cli-live.png)
 

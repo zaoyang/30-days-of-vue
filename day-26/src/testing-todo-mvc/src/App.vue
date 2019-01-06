@@ -12,10 +12,14 @@
       </header>
       <section class="main">
         <ul class="todo-list">
-          <li class="todo" v-for="(todo, key) in todos" :key="key">
+          <li class="todo"
+            v-for="(todo, key) in todos"
+            :key="key">
             <div class="view">
               <label>{{ todo }}</label>
-              <button class="destroy" @click="removeTodo(todo);"></button>
+              <button class="destroy"
+                @click="removeTodo(todo)">
+              </button>
             </div>
           </li>
         </ul>

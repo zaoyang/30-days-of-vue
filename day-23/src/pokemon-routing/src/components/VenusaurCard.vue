@@ -1,5 +1,7 @@
 <template>
-  <div class="card card--venusaur has-text-weight-bold has-text-white">
+  <div class="card card--venusaur
+    has-text-weight-bold
+    has-text-white">
     <div class="card-image">
       <div class="card-image-container">
         <img src="../../static/venusaur.png" />

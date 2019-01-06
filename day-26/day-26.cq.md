@@ -151,7 +151,6 @@ Jest provides a few global commands in our tests by default (i.e. things you don
 - [`toBe()`](https://jestjs.io/docs/en/expect#tobevalue)
 - [`toEqual()`](https://jestjs.io/docs/en/expect#toequalvalue)
 - [`toBeDefined()`](https://jestjs.io/docs/en/expect#tobedefined)
-- [`toHaveBeenCalled()`](https://jestjs.io/docs/en/expect#tohavebeencalled)
 - etc...
 
 The entire suite of expectations (i.e. `expect()` matchers) is available on the Jest documentation page at: [https://jestjs.io/docs/en/expect](https://jestjs.io/docs/en/expect).

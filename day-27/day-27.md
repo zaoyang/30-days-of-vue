@@ -104,10 +104,10 @@ describe('App', () => {
     const Constructor = Vue.extend(App);
     const vm = new Constructor().$mount();
 
-    expect(vm.$el.querySelector('.title').textContent).toBe('todos');
-    expect(vm.$el.querySelector('.new-todo').placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(vm.$el.querySelector('.title').textContent)
+      .toBe('todos');
+    expect(vm.$el.querySelector('.new-todo').placeholder)
+      .toBe('What needs to be done?');
   });
 });
 ```
@@ -133,10 +133,10 @@ describe('App.vue', () => {
     const Constructor = Vue.extend(App);
     const vm = new Constructor().$mount();
     
-    expect(vm.$el.querySelector('.title').textContent).toBe('todos');
-    expect(vm.$el.querySelector('.new-todo').placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(vm.$el.querySelector('.title').textContent)
+      .toBe('todos');
+    expect(vm.$el.querySelector('.new-todo').placeholder)
+      .toBe('What needs to be done?');
   });
   
   it('should set correct default data', () => {

@@ -10,10 +10,10 @@ describe('App', () => {
 
   it('should render correct contents', () => {
     let wrapper = shallowMount(App);
-    expect(wrapper.find('.title').text()).toBe('todos');
-    expect(wrapper.find('.new-todo').element.placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(wrapper.find('.title').text())
+      .toBe('todos');
+    expect(wrapper.find('.new-todo').element.placeholder)
+      .toBe('What needs to be done?');
   });
   
   it('should set correct default data', () => {
@@ -21,7 +21,7 @@ describe('App', () => {
     expect(wrapper.vm.newTodo).toEqual('');
   });
   
-  describe('the user populates the text input field', () => {
+  describe('user populates the text input field', () => {
     let inputField;
 
     beforeEach(() => {
@@ -30,19 +30,19 @@ describe('App', () => {
       inputField.trigger('input');
     });
 
-    it('should update the "newTodo" data property', () => {
+    it('should update "newTodo"', () => {
       expect(wrapper.vm.newTodo).toEqual('New Todo');
     });
 
     describe('and presses Enter', () => {
-      it('should add a new todo to the "todos" array', () => {
+      it('should add a new todo to "todos"', () => {
         inputField.trigger('keyup.enter');
         expect(wrapper.vm.todos).toEqual(['New Todo']);
       });
     });
 
-    describe('and presses Enter and then removes the todo item', () => {
-      it('should have the new todo removed from the "todos" array', () => {
+    describe('and presses Enter + removes todo', () => {
+      it('should have the new todo removed', () => {
         inputField.trigger("keyup.enter");
         const removeIcon = wrapper.find(".destroy");
         

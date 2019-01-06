@@ -8,6 +8,9 @@ yarn install
 
 # serve the project
 yarn serve
+
+# run tests
+yarn test:unit
 ```
 
 Article photo by the talented [Jordan Whitt](https://unsplash.com/photos/zFj4XdcHaqc)

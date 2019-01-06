@@ -1,6 +1,6 @@
 # Wrap-up and more resources
 
-> We've made it! Day 30. Congrats! Now you have enough information to create Vue applications with the **Vue CLI**, integrated with data with **Vuex**, client-side routed with **Vue Router**, and even tested with the **Vue Test Utils** library.
+> We've made it! Day 30. Congrats! Now you have enough information to create Vue applications with the **Vue CLI**, integrate data with **Vuex**, enable client-side routing with **Vue Router**, and even conduct testing with the **Vue Test Utils** library.
 
 <p align="center">
   <img src="./public/assets/carpe-diem.png" />

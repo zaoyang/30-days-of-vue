@@ -2,7 +2,7 @@
   <div>
     <input v-model="numberInput" type="number" />
     <button @click="addNumber(numberInput)">
-     Add new number
+      Add new number
     </button>
   </div>
 </template>
@@ -17,7 +17,10 @@ export default {
   },
   methods: {
     addNumber(numberInput) {
-      this.$store.dispatch("addNumber", Number(numberInput));
+      this.$store.dispatch(
+        "addNumber",
+        Number(numberInput)
+      );
     }
   }
 };

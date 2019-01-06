@@ -53,7 +53,10 @@ export default {
   },
   computed: {
     getGreeting() {
-      return this.reversedGreeting.split("").reverse().join("");
+      return this.reversedGreeting
+        .split("")
+        .reverse()
+        .join("");
     }
   }
 }
@@ -100,7 +103,7 @@ Components, in modern web applications, have given us the ability to break our a
 
 ```shell
 login/
-  LoginPage.vue // CSS, HTML, and JS of component all declared here
+  LoginPage.vue // CSS, HTML, and JS all declared here
 ```
 
 With Single File Components, we still separate the concerns of a section UI (i.e. component) but achieve this in a slightly different way. Here’s a reconstruction of an especially useful diagram, [created and presented by Evan You](https://www.youtube.com/watch?v=wZN_FtZRYC8&feature=youtu.be&t=352), that I've found helpful in visualizing this.

@@ -31,10 +31,14 @@ The single `App.vue` component file that makes up our app will look like the fol
       </header>
       <section class="main">
         <ul class="todo-list">
-          <li class="todo" v-for="(todo, key) in todos" :key="key">
+          <li class="todo"
+            v-for="(todo, key) in todos"
+            :key="key">
             <div class="view">
               <label>{{ todo }}</label>
-              <button class="destroy" @click="removeTodo(todo);"></button>
+              <button class="destroy"
+                @click="removeTodo(todo)">
+              </button>
             </div>
           </li>
         </ul>
@@ -216,7 +220,6 @@ Jest provides a few global commands in our tests by default (i.e. things you don
 -   [`toBe()`](https://jestjs.io/docs/en/expect#tobevalue)
 -   [`toEqual()`](https://jestjs.io/docs/en/expect#toequalvalue)
 -   [`toBeDefined()`](https://jestjs.io/docs/en/expect#tobedefined)
--   [`toHaveBeenCalled()`](https://jestjs.io/docs/en/expect#tohavebeencalled)
 -   etc...
 
 The entire suite of expectations (i.e. `expect()` matchers) is available on the Jest documentation page at: <https://jestjs.io/docs/en/expect>.

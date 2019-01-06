@@ -133,7 +133,9 @@ Now we can have the completely isolated component, `NumberDisplay`, be responsib
 Since `NumberDisplay` is isolated from `NumberSubmit`, we’re declaring the custom event listener programmatically with `$on`:
 
 ```javascript
-EventBus.$on('number-added', () => { callback function... })
+EventBus.$on('number-added', () => {
+  // callback function...
+});
 ```
 
 We’re attaching the EventBus listener, `EventBus.$on`, on the `created()` lifecycle hook of the `NumberDisplay` component. Throughout the life of the `NumberDisplay` component, whenever this event gets triggered - the listener callback function will run which pushes the `number` event payload to the component `numbers` array.

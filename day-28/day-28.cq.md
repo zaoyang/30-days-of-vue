@@ -50,7 +50,7 @@ I> The advantages behind shallow rendering is the enforcement of testing the com
 
 To render our component, we can use the `shallowMount()` method and store the result in a variable. Then, we'll query the rendered component for different HTML elements that are rendered inside its virtual DOM.
 
-Our first test will be comprised of three lines:
+Our first test will be comprised of only a few lines:
 
 ```javascript
 import App from '@/App';
@@ -59,10 +59,10 @@ import { shallowMount } from '@vue/test-utils';
 describe('App', () => {
   it('should render correct contents', () => {
     let wrapper = shallowMount(App);
-    expect(wrapper.find('.title').text()).toBe('todos');
-    expect(wrapper.find('.new-todo').element.placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(wrapper.find('.title').text())
+      .toBe('todos');
+    expect(wrapper.find('.new-todo').element.placeholder)
+      .toBe('What needs to be done?');
   });
   
   it('should set correct default data', () => {
@@ -82,10 +82,10 @@ import { shallowMount } from '@vue/test-utils';
 describe('App', () => {
   it('should render correct contents', () => {
     let wrapper = shallowMount(App);
-    expect(wrapper.find('.title').text()).toBe('todos');
-    expect(wrapper.find('.new-todo').element.placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(wrapper.find('.title').text())
+      .toBe('todos');
+    expect(wrapper.find('.new-todo').element.placeholder)
+      .toBe('What needs to be done?');
   });
   
   it('should set correct default data', () => {
@@ -127,10 +127,10 @@ describe('App', () => {
 
   it('should render correct contents', () => {
     let wrapper = shallowMount(App);
-    expect(wrapper.find('.title').text()).toBe('todos');
-    expect(wrapper.find('.new-todo').element.placeholder).toBe(
-      'What needs to be done?'
-    );
+    expect(wrapper.find('.title').text())
+      .toBe('todos');
+    expect(wrapper.find('.new-todo').element.placeholder)
+      .toBe('What needs to be done?');
   });
   
   it('should set correct default data', () => {
@@ -138,15 +138,15 @@ describe('App', () => {
     expect(wrapper.vm.newTodo).toEqual('');
   });
   
-  describe('the user populates the text input field', () => {
-    it('should update the "newTodo" data property', () => {});
+  describe('user populates the text input field', () => {
+    it('should update "newTodo"', () => {});
 
     describe('and presses Enter', () => {
-      it('should add a new todo to the "todos" array', () => {});
+      it('should add a new todo to "todos"', () => {});
     });
 
-    describe('and presses Enter and then removes the todo item', () => {
-      it('should have the new todo removed from the "todos" array', () => {});
+    describe('and presses Enter + removes todo', () => {
+      it('should have the new todo removed', () => {});
     });
   });
 });
@@ -167,7 +167,7 @@ describe('App', () => {
 
   // ...
   
-  describe('the user populates the text input field', () => {
+  describe('user populates the text input field', () => {
     let inputField;
 
 
@@ -177,14 +177,14 @@ describe('App', () => {
       inputField.trigger('input');
     });
 
-    it('should update the "newTodo" data property', () => {});
+    it('should update "newTodo"', () => {});
 
     describe('and presses Enter', () => {
-      it('should add a new todo to the "todos" array', () => {});
+      it('should add a new todo to "todos', () => {});
     });
 
-    describe('and presses Enter and then removes the todo item', () => {
-      it('should have the new todo removed from the "todos" array', () => {});
+    describe('and presses Enter + removes todo', () => {
+      it('should have the new todo removed', () => {});
     });
   });
 });
@@ -201,9 +201,8 @@ We’re now able to write specs related to the context where the user has just p
 To verify if the `newTodo` data property has been updated, we’ll simply assert whether the `newTodo` property is equal to the input value we’ve set in the `beforeEach()` function:
 
 ```javascript
-describe('the user populates the text input field', () => {
+describe('user populates the text input field', () => {
   let inputField;
-
 
   beforeEach(() => {
     inputField = wrapper.find('.new-todo');
@@ -211,16 +210,16 @@ describe('the user populates the text input field', () => {
     inputField.trigger('input');
   });
 
-  it('should update the "newTodo" data property', () => {
+  it('should update "newTodo"', () => {
     expect(wrapper.vm.newTodo).toEqual('New Todo');
   });
 
   describe('and presses Enter', () => {
-    it('should add a new todo to the "todos" array', () => {});
+    it('should add a new todo to "todos"', () => {});
   });
 
-  describe('and presses Enter and then removes the todo item', () => {
-    it('should have the new todo removed from the "todos" array', () => {});
+  describe('and presses Enter + removes todo', () => {
+    it('should have the new todo removed', () => {});
   });
 });
 ```
@@ -228,10 +227,10 @@ describe('the user populates the text input field', () => {
 The next test involves asserting whether the todo item is added to the list when the user releases the Enter key after the text input field is populated. For this assertion, we’ll first trigger the `keyup.enter` event before asserting the value of the `todos` array in the component data.
 
 ```javascript
-describe('the user populates the text input field', () => {
+describe('user populates the text input field', () => {
     // ...
     describe('and presses Enter', () => {
-      it('should add a new todo to the "todos" array', () => {
+      it('should add a new todo to "todos"', () => {
         inputField.trigger('keyup.enter');
         expect(wrapper.vm.todos).toEqual(['New Todo']);
       });
@@ -243,10 +242,10 @@ describe('the user populates the text input field', () => {
 For the last assertion, we’ll first trigger the `keyup.enter` event before asserting whether the removal of a todo item works as intended. To mimic the removal of a todo item, we’ll `find()` the wrapper of the remove icon element based on its class (`.destroy`), trigger a click event on this found wrapper, and assert that the value of the `todos` array doesn’t contain the item that was just added in the `beforeEach()` function.
 
 ```javascript
-describe('the user populates the text input field', () => {
+describe('user populates the text input field', () => {
   // ...
-  describe('and presses Enter and then removes the todo item', () => {
-    it('should have the new todo removed from the "todos" array', () => {
+  describe('and presses Enter + removes todo', () => {
+    it('should have the new todo removed', () => {
         inputField.trigger("keyup.enter");
         const removeIcon = wrapper.find(".destroy");
         
@@ -272,12 +271,12 @@ Before we close out for today, we’ll talk briefly about the interface of a Vue
 
 When we’ve shallow mounted the `App` component, or used the `find()` method to locate an element, the returned values aren’t the component or element itself but instead a `Wrapper` object. This `Wrapper` object (i.e. instance) contains the mounted component (or element) and the accompanying methods to help test the component/element. The `Wrapper` has a bunch of functions we can use to make our assertions easier and more maintainable:
 
-- [`wrapper.html()`](https://vue-test-utils.vuejs.org/api/wrapper/#html): returns the HTML of the rendered instance.
-- [`wrapper.find()`](https://vue-test-utils.vuejs.org/api/wrapper/find.html): returns the `Wrapper` instance of the found node.
-- [`wrapper.trigger()`](https://vue-test-utils.vuejs.org/api/wrapper/#trigger-eventtype-options): triggers an event on the `Wrapper` node.
-- [`wrapper.setData()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setdata-data): sets the data on the `Wrapper` instance.
-- [`wrapper.setProps()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setprops-props): sets the props the `Wrapper` would receive.
-- [`wrapper.setMethods()`](https://vue-test-utils.vuejs.org/api/wrapper-array/#setmethods-methods): sets the methods on the `Wrapper` instance.
+- `wrapper.html()`: returns the HTML of the rendered instance.
+- `wrapper.find()`: returns the `Wrapper` instance of the found node.
+- `wrapper.trigger()`: triggers an event on the `Wrapper` node.
+- `wrapper.setData()`: sets the data on the `Wrapper` instance.
+- `wrapper.setProps()`: sets the props the `Wrapper` would receive.
+- `wrapper.setMethods()`: sets the methods on the `Wrapper` instance.
 - etc…
 
 Be sure to check out the [Vue Test Utils documentation](https://vue-test-utils.vuejs.org/) to see all the different functions and helper methods we can apply on a `Wrapper` instance.
