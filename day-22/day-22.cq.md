@@ -140,7 +140,7 @@ We can see that Vuex extends the simple store method by introducing __explicitly
 
 Here’s a quick gif that shows how the Vue Devtools helps us observe store information as mutations occur, as well as the ability to _time-travel_ the UI to the moment a particular mutation has occurred.
 
-![](./public/assets/vuex-devtools-time-travel.gif)
+[![](./public/assets/vuex-devtools-time-travel.gif)](https://bit.ly/2VAhHIl)
 
 > The app in the gif above is the [TodoMVC](https://vuejs.org/v2/examples/todomvc.html) example implementation built by the Vue core team.
 

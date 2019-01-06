@@ -27,7 +27,7 @@ In the last article, we discussed different template techniques to construct a s
 The markup of the card element we’ve created was pretty straightforward and contained a `<div>` element encompassing a `<header>` element. The text content of the `<header>` element displayed the value of the `message` prop.
 
 ```html
-<div class="card">
+<div class="render-card">
   <header class="card-header card-header-title">
     {{ message }}
   </header>
@@ -73,7 +73,7 @@ let renderComponent = {
 }
 ```
 
-Since we’re interested in applying a `card` CSS class to the parent `div` element, we’ll declare the `data` object in the second argument of the `createElement` function to have an `attrs` property. In `attrs`, we'll specify a `class` key that has a string value of `'card'`:
+Since we’re interested in applying a `card` CSS class to the parent `div` element, we’ll declare the `data` object in the second argument of the `createElement` function to have an `attrs` property. In `attrs`, we'll specify a `class` key that has a string value of `'render-card'`:
 
 ```javascript
 let renderComponent = {
@@ -81,7 +81,7 @@ let renderComponent = {
     return createElement(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }
     );
@@ -100,7 +100,7 @@ let renderComponent = {
     return createElement(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }, [
         createElement('header')
@@ -119,7 +119,7 @@ let renderComponent = {
     return createElement(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }, [
         createElement('header', {
@@ -142,7 +142,7 @@ let renderComponent = {
     return createElement(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }, [
         createElement('header', {
@@ -165,7 +165,7 @@ let renderComponent = {
     return h(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }, [
         h('header', {
@@ -206,7 +206,7 @@ JSX can help recreate our `renderComponent` implementation in a way that is a lo
 let renderComponent = {
   render(h) {
     return (
-      <div class="card">
+      <div class="render-card">
         <header class="card-header card-header-title">
           {this.message}
         </header>

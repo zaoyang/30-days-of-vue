@@ -182,7 +182,7 @@ If we save our changes, refresh the app, and click the shuffle button a few time
 
 However, if we type some information in the input of each list element _then_ click shuffle; we’ll notice something peculiar happening:
 
-![GIF - Typing in inputs then shuffling](./public/assets/numbers-list-no-shuffle.gif)
+[![GIF - Typing in inputs then shuffling](./public/assets/numbers-list-no-shuffle.gif)](https://bit.ly/2VyaAQI)
 
 Though each rendered list element contains its own displayed `number` and `input` field, when we shuffle the list - the `number` in the element **is the only portion that gets shuffled**. This is because since we haven’t opted to using the **key** attribute, Vue has not created unique bindings to each list item. As a result, when we’re aiming to reorder the list items, Vue takes the more performant saving approach to _simply change (or patch)_ data in each element. Since the temporary DOM state (i.e. the inputted text) remains in place, we experience this potentially unintended mismatch.
 

@@ -10,9 +10,13 @@ At the last stage of building our mock twitter app, we had the root instance ren
 
 ![](./public/assets/twitter-app-structure.png)
 
-Assume we wanted to introduce a link (or button) to the tweet element that upon click will re-introduce another copy of the _same_ tweet element into the bottom of the list of tweets. Though this might be a strange use case, it'll be a useful way to show how we intend to communicate information from the child _up to_ the parent.
+Assume we wanted to introduce a new link (or button) to the tweet element.
 
-![](./public/assets/twitter-app-add-tweet.gif)
+![](./public/assets/twitter-app-structure-add-new.png)
+
+Upon click of the new link, let's attempt to re-introduce another copy of the _same_ tweet element into the bottom of the list of tweets. Though this might be a strange use case, it'll be a useful way to show how we intend to communicate information from the child _up to_ the parent.
+
+![](./public/assets/twitter-app-adding-new-tweet.png)
 
 The link that adds a new element upon click will be part of the `tweet-content` component while the data (`tweets` array) that controls the tweet elements in our list is part of the root instance.
 

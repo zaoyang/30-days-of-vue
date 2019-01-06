@@ -59,7 +59,7 @@ To better recognize how the __v-model__ directive allows for _two-way_ data bind
 
 Here's a GIF displaying just that.
 
-![](./public/assets/v-model-two-way-binding.gif)
+[![](./public/assets/v-model-two-way-binding.gif)](https://bit.ly/2RxFolt)
 
 By being able to directly update our application and monitor data changes (and vice-versa), the Vue Devtools is an especially useful tool for debugging Vue apps.
 

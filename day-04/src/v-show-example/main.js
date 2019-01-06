@@ -4,18 +4,16 @@ new Vue({
     greeting: 'Hello World!',
     user: 'Hassan Djirdeh',
     city: 'Toronto',
-    cityImage: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tdot.jpg'
+    cityImage: 'https://bit.ly/2SKJPqJ'
   },
   methods: {
     changeCity() {
       if (this.city === 'Toronto') {
         this.city = 'Lagos';
-        this.cityImage
-          = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/lagos.jpg';
+        this.cityImage = 'https://bit.ly/2Rd4gQ3';
       } else {
       	this.city = 'Toronto';
-        this.cityImage
-          = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tdot.jpg';
+        this.cityImage = 'https://bit.ly/2SKJPqJ';
       }
     }
   }

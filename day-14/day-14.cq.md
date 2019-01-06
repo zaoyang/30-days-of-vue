@@ -104,7 +104,7 @@ By having data in components be functions that return objects, each component is
 <<[src/components-data-example/index.html](./src/components-data-example/index.html)
 
 <iframe src='./src/components-data-example/index.html'
-        height="115"
+        height="90"
         scrolling="no"
          >
 </iframe>

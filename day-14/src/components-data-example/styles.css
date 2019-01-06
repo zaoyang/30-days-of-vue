@@ -7,11 +7,19 @@ html, body {
 #app {
   height: 100%;
   max-width: 1000px;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 12px;
 }
 
-.button {
+p {
+  padding-bottom: 5px;
+}
+
+.component-button {
   display: inline-block;
   margin-top: 10px;
+  background-color: #00d1b2;
+  color: #FFF;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
 }

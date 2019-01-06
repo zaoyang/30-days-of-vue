@@ -93,7 +93,7 @@ new Vue({
 
 When we launch our app, the __`created()`__ hook would run even before the DOM is mounted on the template. The axios call that gets fired in the hook happens _asynchronously_. With potentially poorer connections, the DOM might already be mounted while the _async call is still in-flight_. This could have the user see the card in its blank slate temporarily.
 
-![](./public/assets/async-blank-card.gif)
+[![](./public/assets/async-blank-card.gif)](https://bit.ly/2sfiK2U)
 
 To make a quick change to alert the user that data might still be in the process of being fetched, we can initialize our instance data properties with `'Loading…'` values instead of a blank string:
 
@@ -116,7 +116,9 @@ new Vue({
 
 The user would now recognize that the app is “loading” if the data hasn’t yet been made available.
 
-![](./public/assets/async-loading-card.gif)
+[![](./public/assets/async-loading-card.gif)](https://bit.ly/2QqCmuP)
+
+At the final state, the app will render the card element with information about a certain user.
 
 <iframe src='./src/created-example/index.html'
         height="250"

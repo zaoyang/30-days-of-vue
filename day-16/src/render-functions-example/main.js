@@ -3,7 +3,7 @@ let renderComponent = {
     return h(
       'div', {
         'attrs': {
-          class: 'card'
+          class: 'render-card'
         },
       }, [
         h('header', {
