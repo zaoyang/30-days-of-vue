@@ -80,7 +80,7 @@ new Vue({
 In the example above, Vue would emit a console warning along the lines of:
 
 ```shell
-Property ... "greeting" is not defined on the instance...
+Property "greeting" is not defined on the instance...
 ```
 
 We’re expected to initialize all the properties we intend to use upfront.
