@@ -17,7 +17,7 @@
 
 Over the next 30 days, we'll walk through everything you need to know to work with Vue. From the very beginning through topics like the Vue Instance, Components, and even Testing.
 
-This repository contains the entire source and content for the article series of [30 Days of Vue](https://www.fullstack.io/vue/30-days-of-vue) hosted by the [Fullstack Vue](https://fullstack.io/vue) team.
+This repository contains the entire source and content for the article series of [30 Days of Vue](https://www.fullstack.io/30-days-of-vue) hosted by the [Fullstack Vue](https://fullstack.io/vue) team.
 
 ## 👀 What's inside?
 
